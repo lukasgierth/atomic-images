@@ -8,26 +8,35 @@ image-version: 42
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  # - type: files
+  #   files:
+  #     - source: system
+  #       destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: rpm-ostree
+  - type: dnf
     remove:
-      - "*-audio-firmware"
-      - "*-gpu-firmware"
-      - fwupd-*
-      - nano
-      - ntfs-3g
-      - toolbox
+      packages:
+        - "*-audio-firmware"
+        - "*-gpu-firmware"
+        - fwupd-*
+        - nano
+        - ntfs-3g
+        - toolbox
 
-  - type: rpm-ostree
+  - type: dnf
     install:
-      - curl
-      - duf
-      - openssh
-      - python
-      - rsync
+      packages:
+        - curl
+        - duf
+        - openssh
+        - python
+        - rsync
 
+  - type: os-release
+    properties:
+      ID: cheeky-carot
+      NAME: Cheeky Carot
+      PRETTY_NAME: Cheeky Carot
+
+  - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
