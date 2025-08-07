@@ -40,11 +40,8 @@ modules:
       packages:
         - flatpak-kcm
 
-  - from-file: shared/desktop-shared.yaml
-  - from-file: shared/ublue-packages.yaml
-  - from-file: shared/virtualization.yaml
-  - from-file: shared/docker.yaml
-  - from-file: shared/shared.yaml
+  - from-file: desktop-shared.yaml
+  - from-file: modules/flatpaks-kde.yaml
 
   - type: os-release
     properties:

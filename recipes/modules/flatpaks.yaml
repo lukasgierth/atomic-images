@@ -1,0 +1,24 @@
+modules:
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        notify: true
+        repo:
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
+          name: flathub-system
+          title: "Flathub (System)"
+        install:
+          - com.google.Chrome
+          - dev.vencord.Vesktop
+          - hu.irl.cameractrls
+          - io.dbeaver.DBeaverCommunity
+          - io.dbeaver.DBeaverCommunity.Client.pgsql
+          - io.github.dweymouth.supersonic
+          - io.mpv.Mpv
+          - it.mijorus.gearlever
+          - org.libreoffice.LibreOffice
+          - org.mozilla.Thunderbird
+          - org.mozilla.firefox
+          - org.musicbrainz.Picard
+          - org.raspberrypi.rpi-imager
+          - org.wezfurlong.wezterm

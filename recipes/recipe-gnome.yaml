@@ -30,11 +30,8 @@ modules:
       packages:
         - gnome-shell-extension-caffeine
 
-  - from-file: shared/desktop-shared.yaml
-  - from-file: shared/ublue-packages.yaml
-  - from-file: shared/virtualization.yaml
-  - from-file: shared/docker.yaml
-  - from-file: shared/shared.yaml
+  - from-file: desktop-shared.yaml
+  - from-file: modules/flatpaks-gnome.yaml
 
   - type: os-release
     properties:
