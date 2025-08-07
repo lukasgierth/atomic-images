@@ -1,5 +1,5 @@
 ---
-name: cheeky-carot
+name: cheeky-carrot
 description: Image based on Fedora Server for VM usage
 
 base-image: quay.io/fedora/fedora-bootc
@@ -28,9 +28,9 @@ modules:
 
   - type: os-release
     properties:
-      ID: cheeky-carot
-      NAME: Cheeky Carot
-      PRETTY_NAME: Cheeky Carot
+      ID: cheeky-carrot
+      NAME: Cheeky Carrot
+      PRETTY_NAME: Cheeky Carrot
 
   - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

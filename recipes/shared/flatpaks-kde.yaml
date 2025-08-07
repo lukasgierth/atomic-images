@@ -3,16 +3,9 @@ modules:
     configurations:
       - scope: system
         notify: true
-        system:
-          repo:
-            url: https://dl.flathub.org/repo/flathub.flatpakrepo
-            name: flathub-system
-            title: "Flathub (System)"
-          install:
-            - io.github.dweymouth.supersonic
-
-        # user:
-        #   repo:
-        #     url: https://dl.flathub.org/repo/flathub.flatpakrepo
-        #     name: flathub-user
-        #     title: "Flathub (User)"
+        repo:
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
+          name: flathub-system
+          title: "Flathub (System)"
+        install:
+          - io.github.dweymouth.supersonic
