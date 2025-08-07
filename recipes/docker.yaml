@@ -14,4 +14,5 @@ modules:
 
   - type: systemd
     system:
-      enabled: docker.service
+      enabled:
+        - docker.service
