@@ -123,3 +123,9 @@ modules:
       - amdgpu.cik_support=1
       - nouveau.config=NvGspRm=1
       - rd.luks.options=discard
+
+  - from-file: modules/ublue-packages.yaml
+  - from-file: modules/virtualization.yaml
+  - from-file: modules/docker.yaml
+  - from-file: modules/shared.yaml
+  - from-file: modules/flatpaks.yaml

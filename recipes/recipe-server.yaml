@@ -23,8 +23,8 @@ modules:
         - python
         - rsync
 
-  - from-file: shared/docker.yaml
-  - from-file: shared/shared.yaml
+  - from-file: modules/docker.yaml
+  - from-file: shared.yaml
 
   - type: os-release
     properties:
