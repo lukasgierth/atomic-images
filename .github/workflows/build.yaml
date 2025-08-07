@@ -1,4 +1,4 @@
-name: build
+name: Build Images
 on:
   schedule:
     - cron: "00 06 * * *" # build at 06:00 UTC every day
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build Custom Images
+    name: Build custom images with bluebuild
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -24,7 +24,7 @@ jobs:
           - recipe-kde.yaml
     steps:
       # the build is fully handled by the reusable github action
-      - name: Build Custom Image
+      - name: Build custom image
         uses: blue-build/github-action@v1.8
         with:
           recipe: ${{ matrix.recipe }}
