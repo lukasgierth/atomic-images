@@ -11,7 +11,7 @@ modules:
       disabled:
         - flatpak-system-update.timer
 
-  - type: scripts
+  - type: script
     snippets:
       - "echo 'Hidden=true' >> /usr/share/applications/btop.desktop"
       - "echo 'Hidden=true' >> /usr/share/applications/gcdmaster.desktop"
