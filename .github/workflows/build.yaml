@@ -21,6 +21,7 @@ jobs:
       matrix:
         recipe:
           - recipe-server.yaml
+          - recipe-kde.yaml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image

@@ -17,3 +17,14 @@ modules:
       - "echo 'Hidden=true' >> /usr/share/applications/gcdmaster.desktop"
       - "echo 'Hidden=true' >> /usr/share/applications/nvim.desktop"
       - "echo 'Hidden=true' >> /usr/share/applications/nvtop.desktop"
+
+  - type: kargs
+    arch: x86_64, aarch64
+    kargs:
+      - preempt=full
+      - radeon.si_support=0
+      - radeon.cik_support=0
+      - amdgpu.si_support=1
+      - amdgpu.cik_support=1
+      - nouveau.config=NvGspRm=1
+      - rd.luks.options=discard
