@@ -26,6 +26,11 @@ modules:
   - from-file: modules/docker.yaml
   - from-file: shared.yaml
 
+  - type: systemd
+    system:
+      disabled:
+        - firewalld.service
+
   - type: os-release
     properties:
       ID: cheeky-carrot
