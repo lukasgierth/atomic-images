@@ -1,0 +1,10 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+    install:
+      packages:
+        - ublue-os-libvirt-workarounds
+        - ublue-os-udev-rules
+        - ublue-os-polkit-rules

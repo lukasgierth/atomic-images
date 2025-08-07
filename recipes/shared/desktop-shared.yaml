@@ -1,0 +1,19 @@
+modules:
+  - type: files
+    files:
+      - source: desktop-shared
+        destination: /
+
+  - type: systemd
+    system:
+      enabled:
+        - podman.socket
+      disabled:
+        - flatpak-system-update.timer
+
+  - type: scripts
+    snippets:
+      - "echo 'Hidden=true' >> /usr/share/applications/btop.desktop"
+      - "echo 'Hidden=true' >> /usr/share/applications/gcdmaster.desktop"
+      - "echo 'Hidden=true' >> /usr/share/applications/nvim.desktop"
+      - "echo 'Hidden=true' >> /usr/share/applications/nvtop.desktop"

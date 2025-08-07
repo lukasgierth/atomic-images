@@ -3,3 +3,8 @@ modules:
     system:
       disabled:
         - rpm-ostreed-automatic.timer
+
+  - type: files
+    files:
+      - source: shared
+        destination: /

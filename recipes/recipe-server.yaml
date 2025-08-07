@@ -31,7 +31,7 @@ modules:
         - rsync
 
   - from-file: shared/docker.yaml
-  - from-file: shared/rpm-ostree.yaml
+  - from-file: shared/shared.yaml
 
   - type: os-release
     properties:

@@ -1,0 +1,14 @@
+modules:
+  - type: dnf
+    install:
+      packages:
+        - libvirt-daemon-config-network
+        - libvirt-daemon-kvm
+        - qemu-kvm
+        - virt-install
+        - virt-manager
+
+  - type: systemd
+    system:
+      enabled:
+        - libvirtd.service
