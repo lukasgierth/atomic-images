@@ -1,3 +1,4 @@
-- type: systemd
-  system:
-    disabled: rpm-ostreed-automatic.timer
+modules:
+  - type: systemd
+    system:
+      disabled: rpm-ostreed-automatic.timer
