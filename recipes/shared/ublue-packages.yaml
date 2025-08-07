@@ -7,4 +7,4 @@ modules:
       packages:
         - ublue-os-libvirt-workarounds
         - ublue-os-udev-rules
-        - ublue-os-polkit-rules
+        - ublue-polkit-rules
