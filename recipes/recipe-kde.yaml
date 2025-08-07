@@ -45,6 +45,8 @@ modules:
   - from-file: shared/virtualization.yaml
   - from-file: shared/docker.yaml
   - from-file: shared/shared.yaml
+  # - from-file: shared/flatpaks-shared.yaml
+  - from-file: shared/flatpaks-kde.yaml
 
   - type: os-release
     properties:

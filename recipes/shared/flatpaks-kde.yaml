@@ -1,0 +1,16 @@
+modules:
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        notify: true
+        system:
+          repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+          repo-name: flathub-system
+          repo-title: "Flathub (System)"
+          install:
+            - io.github.dweymouth.supersonic
+
+        # user:
+        #   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+        #   repo-name: flathub-user
+        #   repo-title: "Flathub (User)"
