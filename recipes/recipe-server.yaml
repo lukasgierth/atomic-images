@@ -22,8 +22,6 @@ modules:
         - nano
         - ntfs-3g
         - toolbox
-
-  - type: dnf
     install:
       packages:
         - curl
@@ -32,14 +30,14 @@ modules:
         - python
         - rsync
 
+  - from-file: shared/docker.yaml
+  - from-file: shared/rpm-ostree.yaml
+
   - type: os-release
     properties:
       ID: cheeky-carot
       NAME: Cheeky Carot
       PRETTY_NAME: Cheeky Carot
-
-  - from-file: docker.yaml
-  - from-file: cleanup.yaml
 
   - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
