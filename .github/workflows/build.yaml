@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build custom images with bluebuild
+    name: Build custom image
     runs-on: ubuntu-latest
     permissions:
       contents: read
