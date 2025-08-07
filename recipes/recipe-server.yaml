@@ -38,5 +38,7 @@ modules:
       NAME: Cheeky Carot
       PRETTY_NAME: Cheeky Carot
 
+  - from-file: docker.yaml
+
   - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
