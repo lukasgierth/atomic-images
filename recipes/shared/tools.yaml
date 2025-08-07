@@ -3,6 +3,7 @@ modules:
     repos:
       files:
         - https://mise.jdx.dev/rpm/mise.repo
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       nonfree: rpmfusion
     install:
       packages:
