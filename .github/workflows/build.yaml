@@ -20,6 +20,7 @@ jobs:
       matrix:
         recipe:
           - recipe-server.yaml
+          - recipe-gnome.yaml
           - recipe-kde.yaml
     steps:
       # the build is fully handled by the reusable github action
