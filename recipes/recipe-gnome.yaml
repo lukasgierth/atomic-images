@@ -32,6 +32,7 @@ modules:
 
   - from-file: desktop-shared.yaml
   - from-file: modules/flatpaks-gnome.yaml
+  - from-file: modules/flatpak-workaround.yaml
 
   - type: os-release
     properties:
