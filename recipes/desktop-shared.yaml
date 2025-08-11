@@ -46,6 +46,7 @@ modules:
         - f3
         - fastfetch
         - fd-find
+        - ffmpegthumbnailer
         - fish
         - flatpak-spawn
         - fuse # for AppImages
