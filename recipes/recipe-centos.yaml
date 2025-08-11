@@ -15,5 +15,6 @@ modules:
       NAME: Angelic Aubergine
       PRETTY_NAME: Angelic Aubergine
 
-  - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
+  # # INFO: not working here yet, needs settings that centos stream does not have
+  # - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
