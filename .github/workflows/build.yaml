@@ -19,9 +19,11 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          - recipe-server.yaml
-          - recipe-gnome.yaml
-          - recipe-kde.yaml
+          - recipe-fedora-server.yaml
+          - recipe-fedora-silverblue.yaml
+          - recipe-fedora-kinoite.yaml
+          - recipe-alma.yaml
+          - recipe-centos.yaml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build custom image
