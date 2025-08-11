@@ -1,25 +1,23 @@
 modules:
-  - type: default-flatpaks
-    configurations:
-      - scope: system
-        notify: true
-        repo:
-          url: https://dl.flathub.org/repo/flathub.flatpakrepo
-          name: flathub-system
-          title: "Flathub (System)"
-        install:
-          - org.kde.filelight
-          - org.kde.francis
-          - org.kde.gwenview
-          - org.kde.haruna
-          - org.kde.isoimagewriter
-          - org.kde.kamoso
-          - org.kde.kcalc
-          - org.kde.kcharselect
-          - org.kde.kcolorchooser
-          - org.kde.krdc
-          - org.kde.krita
-          - org.kde.kwalletmanager5
-          - org.kde.kwrite
-          - org.kde.okular
-          - org.kde.skanpage
+  - type: default-flatpaks@v1
+    notify: true
+    system:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub-system
+      repo-title: "Flathub (System)"
+      install:
+        - org.kde.filelight
+        - org.kde.francis
+        - org.kde.gwenview
+        - org.kde.haruna
+        - org.kde.isoimagewriter
+        - org.kde.kamoso
+        - org.kde.kcalc
+        - org.kde.kcharselect
+        - org.kde.kcolorchooser
+        - org.kde.krdc
+        - org.kde.krita
+        - org.kde.kwalletmanager5
+        - org.kde.kwrite
+        - org.kde.okular
+        - org.kde.skanpage
