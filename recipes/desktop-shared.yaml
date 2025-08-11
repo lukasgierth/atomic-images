@@ -97,8 +97,10 @@ modules:
         - git-cliff
         - hurl
         - lazygit
+        - rainfrog
         - rs-tftpd
         - sjust
+        - somo
         - systemctl-tui
         - sysz
         - trippy
