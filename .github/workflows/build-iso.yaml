@@ -2,6 +2,8 @@ name: Build ISO installer
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *" # Build & upload ISO every month
 
 env:
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
