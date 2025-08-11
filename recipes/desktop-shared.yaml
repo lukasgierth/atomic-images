@@ -79,7 +79,6 @@ modules:
         - pamu2fcfg
         - pandoc
         - picocom
-        - pipewire-libs-extra
         - podman-compose
         - podman-tui
         - procs
