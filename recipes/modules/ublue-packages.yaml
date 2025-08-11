@@ -3,7 +3,7 @@ modules:
     repos:
       copr:
         - ublue-os/packages
-    cleanup: true
+      cleanup: true
     install:
       packages:
         - ublue-os-libvirt-workarounds
