@@ -1,0 +1,18 @@
+modules:
+  - type: dnf
+    repos:
+      files:
+        - https://download.docker.com/linux/centos/docker-ce.repo
+      cleanup: true
+    install:
+      packages:
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-ce
+        - docker-ce-cli
+        - docker-compose-plugin
+
+  - type: systemd
+    system:
+      enabled:
+        - docker.service

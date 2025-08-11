@@ -7,6 +7,9 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 
 modules:
+  - from-file: shared-desktop.yaml
+  - from-file: modules/flatpaks-gnome.yaml
+
   - type: dnf
     remove:
       packages:
@@ -23,9 +26,6 @@ modules:
     install:
       packages:
         - gnome-shell-extension-caffeine
-
-  - from-file: desktop-shared.yaml
-  - from-file: modules/flatpaks-gnome.yaml
 
   - type: os-release
     properties:

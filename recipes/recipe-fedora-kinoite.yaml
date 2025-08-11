@@ -7,6 +7,9 @@ base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 42
 
 modules:
+  - from-file: shared-desktop.yaml
+  - from-file: modules/flatpaks-kde.yaml
+
   - type: dnf
     remove:
       packages:
@@ -33,9 +36,6 @@ modules:
     install:
       packages:
         - flatpak-kcm
-
-  - from-file: desktop-shared.yaml
-  - from-file: modules/flatpaks-kde.yaml
 
   - type: os-release
     properties:

@@ -109,7 +109,7 @@ modules:
 
   - type: files
     files:
-      - source: desktop-shared
+      - source: shared-desktop
         destination: /
 
   - type: systemd

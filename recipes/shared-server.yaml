@@ -1,0 +1,21 @@
+modules:
+  - type: dnf
+    remove:
+      packages:
+        - "*-audio-firmware"
+        - "*-gpu-firmware"
+        - nano
+        - toolbox
+    install:
+      packages:
+        - curl
+        - openssh
+        - python
+        - rsync
+
+  - from-file: shared.yaml
+
+  - type: systemd
+    system:
+      disabled:
+        - firewalld.service
