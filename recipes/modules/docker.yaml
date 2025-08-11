@@ -3,6 +3,7 @@ modules:
     repos:
       files:
         - https://download.docker.com/linux/fedora/docker-ce.repo
+    cleanup: true
     install:
       packages:
         - containerd.io

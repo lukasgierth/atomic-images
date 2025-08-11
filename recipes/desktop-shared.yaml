@@ -5,11 +5,19 @@ modules:
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       nonfree: rpmfusion
+      cleanup: true
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
+        - net-tools
     install:
       packages:
         - ImageMagick
         - abcde
+        - alsa-firmware
         - android-tools
+        - android-udev-rules
         - ansible
         - aria2
         - arp-scan
@@ -31,15 +39,22 @@ modules:
         - fd-find
         - ffmpeg
         - fish
+        - flatpak-spawn
+        - fuse # for AppImages
         - fzf
         - gcc
         - gcc-c++
         - gdu
         - git
         - glibc-static
+        - grub2-tools-extra
         - gzip
         - httpx
+        - intel-vaapi-driver
         - iperf3
+        - libavcodec
+        - libheif
+        - lshw
         - luajit
         - make
         - mediainfo
@@ -48,9 +63,15 @@ modules:
         - neovim
         - newsboat
         - nodejs
-        - onefetch # for most of nvim lsp
+        - onefetch # for nvim lsp
+        - openrgb-udev-rules
+        - openssl
+        - pam-u2f
+        - pam_yubico
+        - pamu2fcfg
         - pandoc
         - picocom
+        - pipewire-libs-extra
         - podman-compose
         - podman-tui
         - procs
@@ -58,9 +79,13 @@ modules:
         - rsync
         - ruby # for nvim lsp
         - shntool
+        - smartmontools
+        - solaar-udev
+        - squashfs-tools
         - stow
         - stress-ng
         - subfinder
+        - symlinks
         - tailscale
         - tcpdump
         - tealdeer
@@ -68,13 +93,18 @@ modules:
         - unzip
         - uv
         - whipper
+        - wireguard-tools
         - wireshark
+        - wl-clipboard
         - yt-dlp
+        - yubikey-manager
+        - zstd
 
   - type: dnf
     repos:
       copr:
         - gierth/tiny-tools
+      cleanup: true
     install:
       packages:
         - RustScan

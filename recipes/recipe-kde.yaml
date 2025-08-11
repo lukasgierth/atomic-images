@@ -2,43 +2,26 @@
 name: tipsy-tippete
 description: Image based on ublue Kinoite
 
-base-image: ghcr.io/ublue-os/kinoite-main
-# base-image: quay.io/fedora-ostree-desktops/kinoite
+base-image: quay.io/fedora-ostree-desktops/kinoite
 image-version: 42
 
 modules:
   - type: dnf
     remove:
       packages:
-        - firefox
-        - firefox-langpacks
-        - htop
-        - net-tools
-        - ublue-os-just
-        - vim
-        - plasma-discover
-        - plasma-welcome
-        - kate
-        - kwrite
-        - plasma-emojier
         - filelight
-        - khelpcenter
         - firewall-config
-        - kjournald
         - kcharselect
-        - fcitx5-qt
-        - fcitx5-gtk
-        - fcitx5-chinese-addons
-        - fcitx5-hangul
-        - fcitx5-libthai
-        - fcitx5-mozc
-        - fcitx5-sayura
-        - fcitx5-unikey
-        - fcitx5-configtool
-        - kcm-fcitx5
+        - khelpcenter
+        - kjournald
+        - kwrite
+        - plasma-discover
+        - plasma-emojier
+        - plasma-welcome
     install:
       packages:
         - flatpak-kcm
+        - qt6-qtimageformats
 
   - from-file: desktop-shared.yaml
   - from-file: modules/flatpaks-kde.yaml
