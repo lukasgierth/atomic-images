@@ -11,6 +11,15 @@ modules:
         - firefox
         - firefox-langpacks
         - net-tools
+    replace:
+      - from-repo: fedora-multimedia
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
+          - old: libfdk-aac-free
+            new: libfdk-aac
+          - old: libavcodec-free
+            new: libavcodec
     install:
       packages:
         - ImageMagick
@@ -37,7 +46,6 @@ modules:
         - f3
         - fastfetch
         - fd-find
-        - ffmpeg
         - fish
         - flatpak-spawn
         - fuse # for AppImages
@@ -52,7 +60,6 @@ modules:
         - httpx
         - intel-vaapi-driver
         - iperf3
-        - libavcodec
         - libheif
         - lshw
         - luajit
