@@ -20,9 +20,22 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_name: [sleepy-schaf]
-        major_version: [42]
-        image_tag: [latest]
+        include:
+          - image_name: sleepy-schaf
+            major_version: 42
+            image_tag: latest
+          # - image_name: tipsy-tippete
+          #   major_version: 42
+          #   image_tag: latest
+          - image_name: cheeky-carrot
+            major_version: 42
+            image_tag: latest
+          # - image_name: angelic-aubergine
+          #   major_version: stream10
+          #   image_tag: latest
+          # - image_name: ethereal-elephant
+          #   major_version: 10
+          #   image_tag: latest
 
     steps:
       - name: Set timezone to Berlin
