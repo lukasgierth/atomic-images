@@ -13,6 +13,7 @@ modules:
         - htop
         - net-tools
         - ublue-os-just
+        - ublue-os-update-services
         - vim
     install:
       packages:
