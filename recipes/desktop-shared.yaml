@@ -10,21 +10,14 @@ modules:
       packages:
         - firefox
         - firefox-langpacks
+        - htop
         - net-tools
-    replace:
-      - from-repo: fedora-multimedia
-        packages:
-          - old: ffmpeg-free
-            new: ffmpeg
-          - old: libfdk-aac-free
-            new: libfdk-aac
-          - old: libavcodec-free
-            new: libavcodec
+        - ublue-os-just
+        - vim
     install:
       packages:
         - ImageMagick
         - abcde
-        - alsa-firmware
         - android-tools
         - ansible
         - aria2
@@ -45,23 +38,17 @@ modules:
         - f3
         - fastfetch
         - fd-find
-        - ffmpegthumbnailer
+        - ffmpeg
         - fish
-        - flatpak-spawn
-        - fuse # for AppImages
         - fzf
         - gcc
         - gcc-c++
         - gdu
         - git
         - glibc-static
-        - grub2-tools-extra
         - gzip
         - httpx
-        - intel-vaapi-driver
         - iperf3
-        - libheif
-        - lshw
         - luajit
         - make
         - mediainfo
@@ -70,12 +57,7 @@ modules:
         - neovim
         - newsboat
         - nodejs
-        - onefetch # for nvim lsp
-        - openrgb-udev-rules
-        - openssl
-        - pam-u2f
-        - pam_yubico
-        - pamu2fcfg
+        - onefetch # for most of nvim lsp
         - pandoc
         - picocom
         - podman-compose
@@ -85,13 +67,9 @@ modules:
         - rsync
         - ruby # for nvim lsp
         - shntool
-        - smartmontools
-        - solaar-udev
-        - squashfs-tools
         - stow
         - stress-ng
         - subfinder
-        - symlinks
         - tailscale
         - tcpdump
         - tealdeer
@@ -99,12 +77,8 @@ modules:
         - unzip
         - uv
         - whipper
-        - wireguard-tools
         - wireshark
-        - wl-clipboard
         - yt-dlp
-        - yubikey-manager
-        - zstd
 
   - type: dnf
     repos:
