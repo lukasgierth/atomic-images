@@ -2,7 +2,7 @@
 name: ethereal-elephant
 description: Image based on Alma Linux for VM usage
 
-base-image: quay.io/almalinux/almalinux-bootc
+base-image: quay.io/almalinuxorg/almalinux-bootc
 image-version: 10
 
 modules:
