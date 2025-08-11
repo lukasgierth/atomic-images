@@ -2,7 +2,8 @@ modules:
   - type: dnf
     repos:
       files:
-        - https://download.docker.com/linux/centos/docker-ce.repo
+        # - https://download.docker.com/linux/centos/docker-ce.repo # disable for now because it fails with the automated debug repo
+        - docker-ce-centos.repo
       cleanup: true
     install:
       packages:
