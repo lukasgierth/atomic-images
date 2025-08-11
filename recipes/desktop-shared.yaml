@@ -26,7 +26,6 @@ modules:
         - abcde
         - alsa-firmware
         - android-tools
-        - android-udev-rules
         - ansible
         - aria2
         - arp-scan
