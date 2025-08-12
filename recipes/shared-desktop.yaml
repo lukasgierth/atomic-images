@@ -97,6 +97,7 @@ modules:
         - git-cliff
         - hurl
         - lazygit
+        - oha
         - rainfrog
         - rs-tftpd
         - sjust
