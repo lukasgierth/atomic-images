@@ -9,6 +9,7 @@ modules:
     install:
       packages:
         - curl
+        - greenboot-default-health-checks
         - openssh
         - python
         - qemu-guest-agent
