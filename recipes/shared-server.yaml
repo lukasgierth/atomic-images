@@ -11,6 +11,7 @@ modules:
         - curl
         - openssh
         - python
+        - qemu-guest-agent
         - rsync
 
   - from-file: shared.yaml
