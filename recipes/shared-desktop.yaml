@@ -131,6 +131,7 @@ modules:
     arch: x86_64, aarch64
     kargs:
       - preempt=full
+      - mitigations=on
       - rd.luks.options=discard
       # - radeon.si_support=0
       # - radeon.cik_support=0
