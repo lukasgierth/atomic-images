@@ -23,6 +23,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          - image_name: ethereal-elephant
+            major_version: 10
+            image_tag: latest
           - image_name: sleepy-schaf
             major_version: 42
             image_tag: latest
@@ -34,9 +37,6 @@ jobs:
           #   image_tag: latest
           # - image_name: angelic-aubergine
           #   major_version: stream10
-          #   image_tag: latest
-          # - image_name: ethereal-elephant
-          #   major_version: 10
           #   image_tag: latest
 
     steps:
