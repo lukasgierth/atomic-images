@@ -33,6 +33,10 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
-
+          registry: ghcr.io
+          registry_namespace: ${{ github.repository_owner }}
+          rechunk: false # experimental, test at later date
+          use_cache: false
+          squash: false
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
