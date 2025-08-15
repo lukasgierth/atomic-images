@@ -131,13 +131,8 @@ modules:
     arch: x86_64, aarch64
     kargs:
       - preempt=full
-      - mitigations=on
+      - mitigations=auto
       - rd.luks.options=discard
-      # - radeon.si_support=0
-      # - radeon.cik_support=0
-      # - amdgpu.si_support=1
-      # - amdgpu.cik_support=1
-      # - nouveau.config=NvGspRm=1
 
   - from-file: modules/ublue-packages.yaml
   - from-file: modules/virtualization.yaml
