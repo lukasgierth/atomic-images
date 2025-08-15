@@ -130,8 +130,8 @@ modules:
   - type: kargs
     arch: x86_64, aarch64
     kargs:
-      - preempt=full
       - mitigations=auto
+      - preempt=full
       - rd.luks.options=discard
 
   - from-file: modules/ublue-packages.yaml
