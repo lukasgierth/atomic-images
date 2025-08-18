@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Bash Shell
-cat << 'EOF' > /etc/profile.d/prefer-bootc-over-rpm-ostree.sh
+cat <<'EOF' >/etc/profile.d/prefer-bootc-over-rpm-ostree.sh
 # Prefer 'bootc update/upgrade' & 'bootc switch' over rpm-ostree's equivalent functionality
 rpm-ostree() {
   if [[ ${#} -eq 0 ]]; then
@@ -23,7 +23,7 @@ export -f rpm-ostree
 EOF
 
 # Fish Shell
-cat << 'EOF' > /usr/share/fish/vendor_functions.d/rpm-ostree.fish
+cat <<'EOF' >/usr/share/fish/vendor_functions.d/rpm-ostree.fish
 # Prefer 'bootc update/upgrade' & 'bootc switch' over rpm-ostree's equivalent functionality
 function rpm-ostree
     if test (count $argv) -eq 0
@@ -43,7 +43,7 @@ EOF
 # Patch bootc to not need sudo for updating
 
 # Bash Shell
-cat << 'EOF' > /etc/profile.d/bootc.sh
+cat <<'EOF' >/etc/profile.d/bootc.sh
 if [ "$EUID" -ne 0 ]; then
     bootc() {
         # Check if the command is already running with sudo
@@ -57,7 +57,7 @@ fi
 EOF
 
 # Fish Shell
-cat << 'EOF' > /usr/share/fish/vendor_conf.d/01-bootc.sh
+cat <<'EOF' >/usr/share/fish/vendor_conf.d/01-bootc.fish
 if test (id -u) -ne 0
     function bootc
         if test (id -u) -eq 0
@@ -69,6 +69,6 @@ if test (id -u) -ne 0
 end
 EOF
 
-cat << 'EOF' > /etc/sudoers.d/001-bootc
+cat <<'EOF' >/etc/sudoers.d/001-bootc
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/bootc update, /usr/bin/bootc upgrade, /usr/bin/bootc status, /usr/bin/bootc status --booted
 EOF
