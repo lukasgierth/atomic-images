@@ -1,4 +1,8 @@
 modules:
+  - type: script
+    snippets:
+      - chmod 0755 /tmp/files/bash-scripts/*
+
   - type: files
     files:
       - source: fish-functions
