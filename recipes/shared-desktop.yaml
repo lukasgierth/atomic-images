@@ -125,7 +125,11 @@ modules:
   - type: script
     scripts:
       - sudo-additional.sh
-      - fish-functions.sh
+
+  - type: files
+    files:
+      - source: fish-functions
+        destination: /usr/share/fish/vendor_functions.d/
 
   - from-file: modules/ublue-packages.yaml
   - from-file: modules/virtualization.yaml
