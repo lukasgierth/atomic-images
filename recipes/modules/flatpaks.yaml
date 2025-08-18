@@ -23,8 +23,6 @@ modules:
 
   - type: systemd
     system:
-      disabled:
-        - flatpak-system-update.timer
       enabled:
         # for PodmanDesktop capabilities
         - podman.socket
