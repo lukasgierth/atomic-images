@@ -120,24 +120,11 @@ modules:
   - from-file: modules/docker.yaml
   - from-file: modules/flatpaks.yaml
   - from-file: modules/rpm-ostreed.yaml
-
-  - type: kargs
-    arch: x86_64, aarch64
-    kargs:
-      - mitigations=auto
-      - preempt=full
-      - rd.luks.options=discard
-
-  - type: files
-    files:
-      - source: fish-functions
-        destination: /usr/share/fish/vendor_functions.d
-      - source: bash-scripts
-        destination: /var/usrlocal/bin
+  - from-file: modules/scripts-and-functions.yaml
+  - from-file: modules/kargs.yaml
 
   - type: script
     scripts:
+      - hide-applications.sh
+      - prefer-bootc-over-rpm-ostree.sh
       - sudo-additional.sh
-    snippets:
-      # Needed until files module support chmod while copying
-      - chmod 0755 /var/usrlocal/bin/*.sh
