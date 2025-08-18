@@ -49,6 +49,7 @@ modules:
       - disable-layering.sh
       - hide-applications.sh
       - prefer-bootc-over-rpm-ostree.sh
+      - sudo-additional.sh
 
   - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
