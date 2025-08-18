@@ -1,4 +1,10 @@
 modules:
+  - type: script
+    snippets:
+      - chmod 0755 files/bash-scripts/*.sh
+      - ls -l ./
+      - pwd
+
   - type: files
     files:
       - source: fish-functions
