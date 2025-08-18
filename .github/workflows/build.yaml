@@ -20,8 +20,8 @@ jobs:
       matrix:
         recipe:
           - recipe-alma.yaml
-          - recipe-fedora-kinoite.yaml
           - recipe-fedora-silverblue.yaml
+          # - recipe-fedora-kinoite.yaml
           # - recipe-centos.yaml
           # - recipe-fedora-server.yaml
     steps:
