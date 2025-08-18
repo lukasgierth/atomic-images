@@ -118,8 +118,8 @@ modules:
   - from-file: modules/ublue-packages.yaml
   - from-file: modules/virtualization.yaml
   - from-file: modules/docker.yaml
-  - from-file: shared.yaml
   - from-file: modules/flatpaks.yaml
+  - from-file: modules/rpm-ostreed.yaml
 
   - type: kargs
     arch: x86_64, aarch64

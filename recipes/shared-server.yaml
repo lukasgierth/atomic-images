@@ -15,7 +15,7 @@ modules:
         - qemu-guest-agent
         - rsync
 
-  - from-file: shared.yaml
+  - from-file: modules/rpm-ostreed.yaml
 
   - type: systemd
     system:

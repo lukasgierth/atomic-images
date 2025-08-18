@@ -6,5 +6,5 @@ modules:
 
   - type: files
     files:
-      - source: rpm-ostree
-        destination: /
+      - source: rpm-ostreed
+        destination: /etc
