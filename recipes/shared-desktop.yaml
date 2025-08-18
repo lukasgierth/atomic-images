@@ -108,11 +108,6 @@ modules:
         - yazi
         - zellij
 
-  - type: files
-    files:
-      - source: shared-desktop
-        destination: /
-
   - type: systemd
     system:
       enabled:

@@ -6,5 +6,5 @@ modules:
 
   - type: files
     files:
-      - source: shared
+      - source: rpm-ostree
         destination: /
