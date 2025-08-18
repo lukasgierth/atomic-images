@@ -131,6 +131,16 @@ modules:
       - source: fish-functions
         destination: /usr/share/fish/vendor_functions.d/
 
+  - type: files
+    files:
+      - source: bash-scripts
+        destination: /var/usrlocal/bin/
+
+  # Needed until files module support chmod while copying
+  - type: script
+    snippets:
+      - "chmod 0755 /var/usrlocal/bin/*"
+
   - from-file: modules/ublue-packages.yaml
   - from-file: modules/virtualization.yaml
   - from-file: modules/docker.yaml
