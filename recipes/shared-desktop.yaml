@@ -122,6 +122,11 @@ modules:
       - preempt=full
       - rd.luks.options=discard
 
+  - type: script
+    scripts:
+      - sudo-additional.sh
+      - fish-functions.sh
+
   - from-file: modules/ublue-packages.yaml
   - from-file: modules/virtualization.yaml
   - from-file: modules/docker.yaml
