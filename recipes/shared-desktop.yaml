@@ -122,6 +122,7 @@ modules:
 
   - type: script
     scripts:
+      - disable-layering.sh
       - prefer-bootc-over-rpm-ostree.sh
     snippets:
       - "echo 'Hidden=true' >> /usr/share/applications/btop.desktop"
