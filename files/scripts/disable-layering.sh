@@ -11,6 +11,7 @@ package_managers=(
 "/usr/bin/dnf"
 "/usr/bin/dnf5"
 "/usr/bin/yum"
+"/usr/bin/microdnf"
 )
 
 for pkg_mgr in "${package_managers[@]}"; do
