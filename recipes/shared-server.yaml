@@ -1,20 +1,5 @@
 modules:
-  - type: dnf
-    remove:
-      packages:
-        - "*-audio-firmware"
-        - "*-gpu-firmware"
-        - nano
-        - toolbox
-    install:
-      packages:
-        - curl
-        - greenboot-default-health-checks
-        - openssh
-        - python
-        - qemu-guest-agent
-        - rsync
-
+  - from-file: modules/utils-server.yaml
   - from-file: modules/rpm-ostreed.yaml
 
   - type: systemd
