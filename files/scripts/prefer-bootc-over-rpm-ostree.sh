@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+# Bash Shell
 cat << 'EOF' > /etc/profile.d/prefer-bootc-over-rpm-ostree.sh
 # Prefer 'bootc update/upgrade' & 'bootc switch' over rpm-ostree's equivalent functionality
 rpm-ostree() {
@@ -9,10 +10,10 @@ rpm-ostree() {
     /usr/bin/rpm-ostree
   elif [[ -n "$(awk '/(^|\s)('update'|'upgrade')($|\s)/' <<< "${@}")" ]]; then
     echo "ERROR: Don't use 'rpm-ostree update/upgrade', use 'sudo bootc update/upgrade' instead."
-    echo "       Some functionality like kargs.d is only available when using bootc, hence why Gidro-OS slowly deprecates using rpm-ostree."
+    echo "       Some functionality like kargs.d is only available when using bootc, hence why we slowly deprecate rpm-ostree."
   elif [[ -n "$(awk '/(^|\s)('rebase')($|\s)/' <<< "${@}")" ]]; then
     echo "ERROR: Don't use 'rpm-ostree rebase', use 'sudo bootc switch' instead."
-    echo "       Some functionality like kargs.d is only available when using bootc, hence why Gidro-OS slowly deprecates using rpm-ostree."
+    echo "       Some functionality like kargs.d is only available when using bootc, hence why we slowly deprecate rpm-ostree."
   else
     /usr/bin/rpm-ostree "${@}"
   fi
@@ -21,8 +22,27 @@ rpm-ostree() {
 export -f rpm-ostree
 EOF
 
+# Fish Shell
+cat << 'EOF' > /usr/share/fish/vendor_functions.d/rpm-ostree.fish
+# Prefer 'bootc update/upgrade' & 'bootc switch' over rpm-ostree's equivalent functionality
+function rpm-ostree
+    if test (count $argv) -eq 0
+        /usr/bin/rpm-ostree
+    else if echo $argv | string match -rq '(^|\s)(update|upgrade)($|\s)'
+        echo "ERROR: Don't use 'rpm-ostree update/upgrade', use 'sudo bootc update/upgrade' instead."
+        echo "       Some functionality like kargs.d is only available when using bootc, hence why we slowly deprecatec rpm-ostree."
+    else if echo $argv | string match -rq '(^|\s)rebase($|\s)'
+        echo "ERROR: Don't use 'rpm-ostree rebase', use 'sudo bootc switch' instead."
+        echo "       Some functionality like kargs.d is only available when using bootc, hence why we slowly deprecate rpm-ostree."
+    else
+        /usr/bin/rpm-ostree $argv
+    end
+end
+EOF
+
 # Patch bootc to not need sudo for updating
 
+# Bash Shell
 cat << 'EOF' > /etc/profile.d/bootc.sh
 if [ "$EUID" -ne 0 ]; then
     bootc() {
@@ -34,6 +54,19 @@ if [ "$EUID" -ne 0 ]; then
         fi
     }
 fi
+EOF
+
+# Fish Shell
+cat << 'EOF' > /usr/share/fish/vendor_conf.d/01-bootc.sh
+if test (id -u) -ne 0
+    function bootc
+        if test (id -u) -eq 0
+            /usr/bin/bootc $argv
+        else
+            sudo /usr/bin/bootc $argv
+        end
+    end
+end
 EOF
 
 cat << 'EOF' > /etc/sudoers.d/001-bootc
