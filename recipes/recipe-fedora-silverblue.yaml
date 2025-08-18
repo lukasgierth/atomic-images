@@ -33,5 +33,12 @@ modules:
       NAME: Sleepy Schaf
       PRETTY_NAME: Sleepy Schaf
 
+  # Needs to be at the end, because of dnf removing
+  - type: script
+    scripts:
+      - disable-layering.sh
+      - hide-applications.sh
+      - prefer-bootc-over-rpm-ostree.sh
+
   - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
