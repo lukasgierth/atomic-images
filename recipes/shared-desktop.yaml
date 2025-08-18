@@ -121,6 +121,8 @@ modules:
         - flatpak-system-update.timer
 
   - type: script
+    scripts:
+      - prefer-bootc-over-rpm-ostree.sh
     snippets:
       - "echo 'Hidden=true' >> /usr/share/applications/btop.desktop"
       - "echo 'Hidden=true' >> /usr/share/applications/gcdmaster.desktop"
