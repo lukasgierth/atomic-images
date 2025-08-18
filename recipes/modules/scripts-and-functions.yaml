@@ -1,10 +1,9 @@
 modules:
   - type: script
     snippets:
-      - ls -l ./
-      - pwd
-      - mount
-      - chmod 0755 ./files/bash-scripts/*.sh
+      - ls -l /home/runner/work
+      - ls -l /home/runner/work/atomic-images/atomic-images
+      - chmod 0755 /home/runner/work/atomic-images/atomic-images
 
   - type: files
     files:
