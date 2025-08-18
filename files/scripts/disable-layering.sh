@@ -21,5 +21,6 @@ for pkg_mgr in "${package_managers[@]}"; do
 cat << EOF > "${pkg_mgr}"
 #!/usr/bin/env bash
 echo "Package/application layering is disabled to ensure that reliability & integrity of the system remains untouched!"
+exit 1
 EOF
 done
