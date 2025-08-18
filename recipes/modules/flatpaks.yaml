@@ -20,3 +20,11 @@ modules:
         - org.musicbrainz.Picard
         - org.raspberrypi.rpi-imager
         - org.wezfurlong.wezterm
+
+  - type: systemd
+    system:
+      disabled:
+        - flatpak-system-update.timer
+      enabled:
+        # for PodmanDesktop capabilities
+        - podman.socket

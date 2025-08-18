@@ -1,0 +1,109 @@
+modules:
+  - type: dnf
+    repos:
+      files:
+        - https://mise.jdx.dev/rpm/mise.repo
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      nonfree: rpmfusion
+      cleanup: true
+    remove:
+      packages:
+        - firefox
+        - firefox-langpacks
+        - htop
+        - net-tools
+        - ublue-os-just
+        - ublue-os-update-services
+        - vim
+    install:
+      packages:
+        - ImageMagick
+        - abcde
+        - android-tools
+        - ansible
+        - aria2
+        - arp-scan
+        - bat
+        - borgbackup
+        - borgmatic
+        - btop
+        - cmake
+        - ctags
+        - curl
+        - ddrescue
+        - detox
+        - dfu-util
+        - distrobox
+        - duf
+        - esptool
+        - f3
+        - fastfetch
+        - fd-find
+        - ffmpeg
+        - fish
+        - fzf
+        - gcc
+        - gcc-c++
+        - gdu
+        - git
+        - glibc-static
+        - gzip
+        - httpx
+        - iperf3
+        - luajit
+        - make
+        - mediainfo
+        - mise
+        - mosh
+        - neovim
+        - newsboat
+        - nodejs
+        - onefetch # for most of nvim lsp
+        - pandoc
+        - picocom
+        - podman-compose
+        - podman-tui
+        - procs
+        - ripgrep
+        - rsync
+        - ruby # for nvim lsp
+        - shntool
+        - stow
+        - stress-ng
+        - subfinder
+        - tailscale
+        - tcpdump
+        - tealdeer
+        - tmux
+        - unzip
+        - uv
+        - whipper
+        - wireshark
+        - yt-dlp
+
+  - type: dnf
+    repos:
+      copr:
+        - gierth/tiny-tools
+      cleanup: true
+    install:
+      packages:
+        - RustScan
+        - ansel-bin
+        - blisp
+        - chezmoi
+        - dfu-programmer
+        - eza
+        - git-cliff
+        - hurl
+        - lazygit
+        - oha
+        - rainfrog
+        - rs-tftpd
+        - sjust
+        - somo
+        - systemctl-tui
+        - sysz
+        - trippy
+        - yazi
+        - zellij
