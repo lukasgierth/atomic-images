@@ -120,12 +120,6 @@ modules:
       disabled:
         - flatpak-system-update.timer
 
-  - type: script
-    scripts:
-      - disable-layering.sh
-      - hide-applications.sh
-      - prefer-bootc-over-rpm-ostree.sh
-
   - type: kargs
     arch: x86_64, aarch64
     kargs:
@@ -138,3 +132,10 @@ modules:
   - from-file: modules/docker.yaml
   - from-file: shared.yaml
   - from-file: modules/flatpaks.yaml
+
+  # Needs to be at the end, because of dnf removing
+  - type: script
+    scripts:
+      - disable-layering.sh
+      - hide-applications.sh
+      - prefer-bootc-over-rpm-ostree.sh
