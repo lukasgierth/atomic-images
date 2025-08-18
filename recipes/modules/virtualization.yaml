@@ -12,3 +12,8 @@ modules:
     system:
       enabled:
         - libvirtd.service
+
+  - type: files
+    files:
+      - source: virtualization
+        destination: /

@@ -1,0 +1,10 @@
+modules:
+  - type: systemd
+    system:
+      disabled:
+        - rpm-ostreed-automatic.timer
+
+  - type: files
+    files:
+      - source: rpm-ostreed
+        destination: /etc

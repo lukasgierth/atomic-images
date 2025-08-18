@@ -1,0 +1,14 @@
+modules:
+  - from-file: modules/utils-desktop.yaml
+  - from-file: modules/virtualization.yaml
+  - from-file: modules/docker.yaml
+  - from-file: modules/flatpaks.yaml
+  - from-file: modules/rpm-ostreed.yaml
+  - from-file: modules/scripts-and-functions.yaml
+  - from-file: modules/kargs.yaml
+
+  - type: script
+    scripts:
+      - hide-applications.sh
+      - prefer-bootc-over-rpm-ostree.sh
+      - sudo-additional.sh
