@@ -115,6 +115,12 @@ modules:
       disabled:
         - flatpak-system-update.timer
 
+  - from-file: modules/ublue-packages.yaml
+  - from-file: modules/virtualization.yaml
+  - from-file: modules/docker.yaml
+  - from-file: shared.yaml
+  - from-file: modules/flatpaks.yaml
+
   - type: kargs
     arch: x86_64, aarch64
     kargs:
@@ -122,27 +128,16 @@ modules:
       - preempt=full
       - rd.luks.options=discard
 
-  - type: script
-    scripts:
-      - sudo-additional.sh
-
   - type: files
     files:
       - source: fish-functions
-        destination: /usr/share/fish/vendor_functions.d/
-
-  - type: files
-    files:
+        destination: /usr/share/fish/vendor_functions.d
       - source: bash-scripts
-        destination: /var/usrlocal/bin/
+        destination: /var/usrlocal/bin
 
-  # Needed until files module support chmod while copying
   - type: script
+    scripts:
+      - sudo-additional.sh
     snippets:
-      - "chmod 0755 /var/usrlocal/bin/*"
-
-  - from-file: modules/ublue-packages.yaml
-  - from-file: modules/virtualization.yaml
-  - from-file: modules/docker.yaml
-  - from-file: shared.yaml
-  - from-file: modules/flatpaks.yaml
+      # Needed until files module support chmod while copying
+      - chmod 0755 /var/usrlocal/bin/*.sh
