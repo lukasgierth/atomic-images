@@ -1,11 +1,5 @@
 modules:
-  - type: script
-    snippets:
-      - chmod 0755 /tmp/files/bash-scripts/*
-
   - type: files
     files:
       - source: fish-functions
         destination: /usr/share/fish/vendor_functions.d
-      - source: bash-scripts
-        destination: /usr/bin
