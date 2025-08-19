@@ -57,6 +57,7 @@ modules:
         - mosh
         - neovim
         - newsboat
+        - nodejs
         - onefetch
         - pandoc
         - picocom
@@ -65,6 +66,7 @@ modules:
         - procs
         - ripgrep
         - rsync
+        - ruby
         - shntool
         - stow
         - stress-ng
