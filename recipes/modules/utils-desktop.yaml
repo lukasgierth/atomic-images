@@ -92,6 +92,7 @@ modules:
         - chezmoi
         - dfu-programmer
         - eza
+        - fisher
         - git-cliff
         - hurl
         - lazygit
