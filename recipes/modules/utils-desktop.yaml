@@ -78,6 +78,7 @@ modules:
         - whipper
         - wireshark
         - yt-dlp
+        - zoxide
 
   - type: dnf
     repos:
