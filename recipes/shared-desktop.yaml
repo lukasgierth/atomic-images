@@ -4,7 +4,7 @@ modules:
   - from-file: modules/docker.yaml
   - from-file: modules/flatpaks.yaml
   - from-file: modules/rpm-ostreed.yaml
-  - from-file: modules/scripts-and-functions.yaml
+  - from-file: modules/fish.yaml
   - from-file: modules/kargs.yaml
 
   - type: script

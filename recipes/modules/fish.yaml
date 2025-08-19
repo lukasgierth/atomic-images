@@ -3,3 +3,5 @@ modules:
     files:
       - source: fish-functions
         destination: /usr/share/fish/vendor_functions.d
+      - source: fish-configs
+        destination: /usr/share/fish/vendor_conf.d
