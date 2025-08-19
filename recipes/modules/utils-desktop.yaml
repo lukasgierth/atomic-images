@@ -57,8 +57,7 @@ modules:
         - mosh
         - neovim
         - newsboat
-        - nodejs
-        - onefetch # for most of nvim lsp
+        - onefetch
         - pandoc
         - picocom
         - podman-compose
@@ -66,7 +65,6 @@ modules:
         - procs
         - ripgrep
         - rsync
-        - ruby # for nvim lsp
         - shntool
         - stow
         - stress-ng
