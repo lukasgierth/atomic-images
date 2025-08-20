@@ -69,7 +69,8 @@ if test (id -u) -ne 0
 end
 EOF
 
-# something puts it here, remove if exists
+# created by ublue-polkit-rules packages, but we have our own here!
+# FIX: remove package and add parts that we want ourselves
 if [ -f /etc/sudoers.d/001-bootc ]; then
 	echo "/etc/sudoers.d/001-bootc found, remove"
 	rm -f /etc/sudoers.d/001-bootc
