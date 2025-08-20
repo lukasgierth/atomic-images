@@ -99,6 +99,7 @@ modules:
         - git-cliff
         - hurl
         - lazygit
+        - oh-my-posh
         - oha
         - rainfrog
         - rs-tftpd
