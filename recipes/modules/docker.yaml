@@ -16,3 +16,7 @@ modules:
     system:
       enabled:
         - docker.service
+
+  - type: script
+    scripts:
+      - allow-docker.sh
