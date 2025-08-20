@@ -69,13 +69,9 @@ if test (id -u) -ne 0
 end
 EOF
 
-# created by ublue-polkit-rules packages, but we have our own here!
-# FIX: remove package and add parts that we want ourselves
-if [ -f /etc/sudoers.d/001-bootc ]; then
-	echo "/etc/sudoers.d/001-bootc found, remove"
-	rm -f /etc/sudoers.d/001-bootc
-fi
-
 cat <<'EOF' >/etc/sudoers.d/bootc
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/bootc update, /usr/bin/bootc upgrade, /usr/bin/bootc status, /usr/bin/bootc status --booted
 EOF
+
+# INFO: created by ublue-polkit-rules package, but we have our own here! Fail image creation here, if file has changed/doesnt exist anymore
+rm /etc/sudoers.d/001-bootc
