@@ -80,6 +80,7 @@ modules:
         - ruby
         - shntool
         - smartmontools
+        - solaar-udev
         - squashfs-tools
         - stow
         - stress-ng
