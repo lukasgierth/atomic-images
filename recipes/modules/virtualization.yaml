@@ -7,6 +7,15 @@ modules:
         - qemu-kvm
         - virt-install
         - virt-manager
+        
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+      cleanup: true
+    install:
+      packages:
+        - ublue-os-libvirt-workarounds
 
   - type: systemd
     system:

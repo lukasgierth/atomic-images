@@ -117,6 +117,5 @@ modules:
       cleanup: true
     install:
       packages:
-        - ublue-os-libvirt-workarounds
         - ublue-os-udev-rules
         - ublue-polkit-rules
