@@ -59,7 +59,6 @@ modules:
         - newsboat
         - nodejs
         - onefetch
-        - openrgb-udev-rules
         - pandoc
         - picocom
         - podman-compose
@@ -69,7 +68,6 @@ modules:
         - rsync
         - ruby
         - shntool
-        - solaar-udev
         - stow
         - stress-ng
         - subfinder
