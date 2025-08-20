@@ -1,9 +1,8 @@
 ---
 name: tipsy-tippete
-description: Image based on ublue Kinoite
+description: Image based on Kinoite
 
-base-image: ghcr.io/ublue-os/kinoite-main
-# base-image: quay.io/fedora-ostree-desktops/kinoite
+base-image: quay.io/fedora-ostree-desktops/kinoite
 image-version: 42
 
 modules:
@@ -15,7 +14,6 @@ modules:
       packages:
         - plasma-discover
         - plasma-welcome
-        - kate
         - kwrite
         - plasma-emojier
         - filelight
@@ -23,16 +21,6 @@ modules:
         - firewall-config
         - kjournald
         - kcharselect
-        - fcitx5-qt
-        - fcitx5-gtk
-        - fcitx5-chinese-addons
-        - fcitx5-hangul
-        - fcitx5-libthai
-        - fcitx5-mozc
-        - fcitx5-sayura
-        - fcitx5-unikey
-        - fcitx5-configtool
-        - kcm-fcitx5
     install:
       packages:
         - flatpak-kcm

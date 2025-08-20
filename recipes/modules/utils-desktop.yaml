@@ -19,6 +19,7 @@ modules:
       packages:
         - ImageMagick
         - abcde
+        - alsa-firmware
         - android-tools
         - ansible
         - aria2
@@ -47,9 +48,13 @@ modules:
         - gdu
         - git
         - glibc-static
+        - grub2-tools-extra
         - gzip
+        - heif-pixbuf-loader
         - httpx
+        - intel-vaapi-driver
         - iperf3
+        - libva-utils
         - luajit
         - make
         - mediainfo
@@ -58,7 +63,12 @@ modules:
         - neovim
         - newsboat
         - nodejs
+        - nvme-cli
         - onefetch
+        - openssl
+        - pam-u2f
+        - pam_yubico
+        - pamu2fcfg
         - pandoc
         - picocom
         - podman-compose
@@ -68,6 +78,8 @@ modules:
         - rsync
         - ruby
         - shntool
+        - smartmontools
+        - squashfs-tools
         - stow
         - stress-ng
         - subfinder
@@ -78,9 +90,22 @@ modules:
         - unzip
         - uv
         - whipper
+        - wireguard-tools
         - wireshark
+        - wl-clipboard
         - yt-dlp
+        - yubikey-manager
         - zoxide
+        - zstd
+    replace:
+      - from-repo: fedora-multimedia
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
+          - old: libfdk-aac-free
+            new: libfdk-aac
+          - old: libavcodec-free
+            new: libavcodec
 
   - type: dnf
     repos:

@@ -1,9 +1,8 @@
 ---
 name: sleepy-schaf
-description: Image based on ublue Silverblue
+description: Image based on Silverblue
 
-base-image: ghcr.io/ublue-os/silverblue-main
-# base-image: quay.io/fedora-ostree-desktops/silverblue
+base-image: quay.io/fedora-ostree-desktops/silverblue
 image-version: 42
 
 modules:
@@ -22,10 +21,14 @@ modules:
         - gnome-software
         - gnome-tour
         - gnome-tweaks
+        - totem-video-thumbnailer
         - yelp
     install:
       packages:
+        - adw-gtk3-theme
+        - ffmpegthumbnailer
         - gnome-shell-extension-caffeine
+        - gvfs-nfs
 
   - type: os-release
     properties:
