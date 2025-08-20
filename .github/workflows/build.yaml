@@ -21,9 +21,7 @@ jobs:
         recipe:
           - recipe-fedora-silverblue.yaml
           - recipe-fedora-server.yaml
-          # - recipe-alma.yaml
-          # - recipe-centos.yaml
-          # - recipe-fedora-kinoite.yaml         
+          # - recipe-fedora-kinoite.yaml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build custom image
