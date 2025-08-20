@@ -20,7 +20,7 @@ jobs:
       matrix:
         recipe:
           - recipe-fedora-silverblue.yaml
-          - recipe-fedora-server.yaml
+          # - recipe-fedora-server.yaml
           # - recipe-fedora-kinoite.yaml
     steps:
       # the build is fully handled by the reusable github action
