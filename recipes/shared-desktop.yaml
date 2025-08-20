@@ -11,4 +11,4 @@ modules:
     scripts:
       - hide-applications.sh
       - prefer-bootc-over-rpm-ostree.sh
-      - sudo-additional.sh
+      - allow-journalctl.sh

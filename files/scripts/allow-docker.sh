@@ -19,7 +19,7 @@ fi
 EOF
 
 # Fish Shell
-cat <<'EOF' >/usr/share/fish/vendor_conf.d/01-docker.fish
+cat <<'EOF' >/usr/share/fish/vendor_conf.d/docker.fish
 if test (id -u) -ne 0
     function docker
         if test (id -u) -eq 0
@@ -31,6 +31,6 @@ if test (id -u) -ne 0
 end
 EOF
 
-cat <<'EOF' >/etc/sudoers.d/002-docker
+cat <<'EOF' >/etc/sudoers.d/docker
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/docker
 EOF

@@ -57,7 +57,7 @@ fi
 EOF
 
 # Fish Shell
-cat <<'EOF' >/usr/share/fish/vendor_conf.d/01-bootc.fish
+cat <<'EOF' >/usr/share/fish/vendor_conf.d/bootc.fish
 if test (id -u) -ne 0
     function bootc
         if test (id -u) -eq 0
@@ -69,6 +69,6 @@ if test (id -u) -ne 0
 end
 EOF
 
-cat <<'EOF' >/etc/sudoers.d/001-bootc
+cat <<'EOF' >/etc/sudoers.d/bootc
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/bootc update, /usr/bin/bootc upgrade, /usr/bin/bootc status, /usr/bin/bootc status --booted
 EOF
