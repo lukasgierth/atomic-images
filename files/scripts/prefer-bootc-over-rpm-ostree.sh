@@ -69,6 +69,12 @@ if test (id -u) -ne 0
 end
 EOF
 
+# something puts it here, remove if exists
+if [ -f /etc/sudoers.d/001-bootc ]; then
+	echo "/etc/sudoers.d/001-bootc found, remove"
+	rm -f /etc/sudoers.d/001-bootc
+fi
+
 cat <<'EOF' >/etc/sudoers.d/bootc
 %wheel ALL=(ALL) NOPASSWD: /usr/bin/bootc update, /usr/bin/bootc upgrade, /usr/bin/bootc status, /usr/bin/bootc status --booted
 EOF
