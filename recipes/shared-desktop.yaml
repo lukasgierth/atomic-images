@@ -12,8 +12,3 @@ modules:
       - hide-applications.sh
       - prefer-bootc-over-rpm-ostree.sh
       - allow-journalctl.sh
-
-  - type: files
-    files:
-      - source: yubikey-polkit
-        destination: /etc/polkit-1/rules.d
