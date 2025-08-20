@@ -91,6 +91,9 @@ modules:
       packages:
         - RustScan
         - ansel-bin
+        - act-cli
+        - backgrounds-aurora
+        - backgrounds-lakeside
         - blisp
         - chezmoi
         - dfu-programmer
