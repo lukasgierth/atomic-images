@@ -13,7 +13,6 @@ modules:
         - io.github.dweymouth.supersonic
         - io.mpv.Mpv
         - it.mijorus.gearlever
-        - io.podman_desktop.PodmanDesktop
         - org.libreoffice.LibreOffice
         - org.mozilla.Thunderbird
         - org.mozilla.firefox
