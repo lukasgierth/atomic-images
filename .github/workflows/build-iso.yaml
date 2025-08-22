@@ -3,10 +3,13 @@ name: Build ISO installer
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 1 * *" # Build & upload ISO every month
+    - cron: "0 0 1 * *"
 
 env:
-  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+  # TODO: change here to our own image?
+  IMAGE_REGISTRY: quay.io/fedora-ostree-desktops
+  IMAGE_NAME: silverblue
+  IMAGE_TAG: 42
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
@@ -17,63 +20,46 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write
+      packages: read
       id-token: write
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - image_name: sleepy-schaf
-            major_version: 42
-            image_tag: latest
+        disk-type: ["anaconda-iso"]
 
     steps:
-      - name: Set timezone to Berlin
-        uses: MathRobin/timezone-action@v1.1
-        with:
-          timezoneLinux: "Europe/Berlin"
-
-      - name: Fetch current date
-        shell: bash
+      - name: Prepare environment
         run: |
-          TIMESTAMP="$(date +%d-%m-%Y)"
-          echo "TIMESTAMP=${TIMESTAMP}" >> $GITHUB_ENV
+          USER_UID=$(id -u)
+          USER_GID=$(id -g)
+          echo "USER_UID=${USER_UID}" >> ${GITHUB_ENV}
+          echo "USER_GID=${USER_GID}" >> ${GITHUB_ENV}
 
-      - name: Checkout Repo
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v9
+        with:
+          remove-codeql: true
+
+      - name: Checkout
         uses: actions/checkout@v5
 
       - name: Build ISO
-        uses: jasonn3/build-container-installer@v1.3.0
         id: build
+        uses: osbuild/bootc-image-builder-action@main
         with:
-          arch: x86_64
-          version: ${{ matrix.major_version }}
-          image_repo: ${{ env.IMAGE_REGISTRY }}
-          image_name: ${{ matrix.image_name }}
-          image_tag: ${{ matrix.image_tag }}
-          variant: "Kinoite" # Silverblue skips/disables user creation in installer, because it uses gnome onboarding
-          iso_name: ${{ matrix.image_name }}_${{ env.TIMESTAMP }}.iso
-          enable_cache_dnf: "false"
-          enable_cache_skopeo: "false"
-          enable_flatpak_dependencies: "false"
-          flatpak_remote_name: "flathub"
-          flatpak_remote_url: "https://flathub.org/repo/flathub.flatpakrepo"
+          builder-image: "quay.io/centos-bootc/bootc-image-builder:latest"
+          config-file: ${{ './iso.toml' }}
+          image: ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          chown: ${{ env.USER_UID }}:${{ env.USER_GID }}
+          types: ${{ matrix.disk-type }}
+          rootfs: ext4
+          additional-args: --use-librepo=True
 
-      - name: Move ISO to Upload Directory
-        id: upload-directory
-        shell: bash
-        run: |
-          ISO_UPLOAD_DIR=${{ github.workspace }}/upload
-          mkdir ${ISO_UPLOAD_DIR}
-          mv ${{ steps.build.outputs.iso_path }}/${{ steps.build.outputs.iso_name }} ${ISO_UPLOAD_DIR}
-          mv ${{ steps.build.outputs.iso_path }}/${{ steps.build.outputs.iso_name }}-CHECKSUM ${ISO_UPLOAD_DIR}
-          echo "iso-upload-dir=${ISO_UPLOAD_DIR}" >> $GITHUB_OUTPUT
-
-      - name: Upload ISO and Checksum to Job Artifacts
+      - name: Upload disk images and Checksum to Job Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.image_name }}
-          path: ${{ steps.upload-directory.outputs.iso-upload-dir }}
+          name: sleepy-schaf
+          path: ${{ steps.build.outputs.output-directory }}
           if-no-files-found: error
           retention-days: 90
           compression-level: 0
