@@ -5,12 +5,6 @@ on:
   schedule:
     - cron: "0 0 1 * *"
 
-env:
-  # TODO: change here to our own image?
-  IMAGE_REGISTRY: quay.io/fedora-ostree-desktops
-  IMAGE_NAME: silverblue
-  IMAGE_TAG: 42
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
@@ -25,7 +19,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        disk-type: ["anaconda-iso"]
+        include:
+          - image_name: sleepy-schaf
+            base_image: quay.io/fedora-ostree-desktops/silverblue:42
+            config: "./iso-silverblue.toml"
+            disk-type: ["anaconda-iso"]
+          # - image_name: tipsy-tippete
+          #   base_image: quay.io/fedora-ostree-desktops/kinoite:42
+          #   config: "./iso-kinoite.toml"
+          #   disk-type: ["anaconda-iso"]
 
     steps:
       - name: Prepare environment
@@ -54,8 +56,8 @@ jobs:
         uses: osbuild/bootc-image-builder-action@main
         with:
           builder-image: "quay.io/centos-bootc/bootc-image-builder:latest"
-          config-file: ${{ './iso.toml' }}
-          image: ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          config-file: ${{ matrix.config }}
+          image: ${{ matrix.base_image }}
           chown: ${{ env.USER_UID }}:${{ env.USER_GID }}
           types: ${{ matrix.disk-type }}
           rootfs: ext4
@@ -64,7 +66,7 @@ jobs:
       - name: Upload disk images and Checksum to Job Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: sleepy-schaf_${{ env.TIMESTAMP }}
+          name: ${{ matrix.image_name }}_${{ env.TIMESTAMP }}
           path: ${{ steps.build.outputs.output-directory }}
           if-no-files-found: error
           retention-days: 90
