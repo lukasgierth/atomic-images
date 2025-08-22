@@ -15,6 +15,7 @@ modules:
         - ublue-os-just
         - ublue-os-update-services
         - vim
+        - vim-enhanced
     install:
       packages:
         - ImageMagick
