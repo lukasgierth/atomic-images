@@ -6,6 +6,7 @@ on:
     - cron: "0 0 1 * *"
 
 env:
+  # TODO: change here to our own image?
   IMAGE_REGISTRY: quay.io/fedora-ostree-desktops
   IMAGE_NAME: silverblue
   IMAGE_TAG: 42
