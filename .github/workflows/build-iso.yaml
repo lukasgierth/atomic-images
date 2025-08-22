@@ -7,9 +7,11 @@ on:
 
 env:
   # Use image-template as base for installer iso
-  IMAGE_REGISTRY: ghcr.io/ublue-os
-  IMAGE_NAME: image-template
-  IMAGE_TAG: latest
+  # IMAGE_REGISTRY: ghcr.io/ublue-os
+  # IMAGE_NAME: image-template
+  IMAGE_REGISTRY: quay.io/fedora-ostree-desktops
+  IMAGE_NAME: base-atomic
+  IMAGE_TAG: 42
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
@@ -51,7 +53,7 @@ jobs:
         id: build
         uses: osbuild/bootc-image-builder-action@main
         with:
-          builder-image: "ghcr.io/lorbuschris/bootc-image-builder:20250608" # "quay.io/centos-bootc/bootc-image-builder:latest" - see https://github.com/osbuild/bootc-image-builder/pull/954
+          # builder-image: "ghcr.io/lorbuschris/bootc-image-builder:20250608" # "quay.io/centos-bootc/bootc-image-builder:latest" - see https://github.com/osbuild/bootc-image-builder/pull/954
           config-file: ${{ './iso.toml' }}
           image: ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           chown: ${{ env.USER_UID }}:${{ env.USER_GID }}
@@ -61,6 +63,7 @@ jobs:
       - name: Upload disk images and Checksum to Job Artifacts
         uses: actions/upload-artifact@v4
         with:
+          name: sleepy-schaf
           path: ${{ steps.build.outputs.output-directory }}
           if-no-files-found: error
           retention-days: 90
