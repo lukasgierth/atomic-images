@@ -6,9 +6,6 @@ on:
     - cron: "0 0 1 * *"
 
 env:
-  # Use image-template as base for installer iso
-  # IMAGE_REGISTRY: ghcr.io/ublue-os
-  # IMAGE_NAME: image-template
   IMAGE_REGISTRY: quay.io/fedora-ostree-desktops
   IMAGE_NAME: silverblue
   IMAGE_TAG: 42
@@ -34,10 +31,6 @@ jobs:
         run: |
           USER_UID=$(id -u)
           USER_GID=$(id -g)
-          # Concatenate the types with a hyphen
-          DISK_TYPE=$(echo "${{ matrix.disk-type }}" | tr ' ' '-')
-          # Lowercase the image uri
-          echo "DISK_TYPE=${DISK_TYPE}" >> ${GITHUB_ENV}
           echo "USER_UID=${USER_UID}" >> ${GITHUB_ENV}
           echo "USER_GID=${USER_GID}" >> ${GITHUB_ENV}
 
@@ -53,7 +46,7 @@ jobs:
         id: build
         uses: osbuild/bootc-image-builder-action@main
         with:
-          # builder-image: "ghcr.io/lorbuschris/bootc-image-builder:20250608" # "quay.io/centos-bootc/bootc-image-builder:latest" - see https://github.com/osbuild/bootc-image-builder/pull/954
+          builder-image: "quay.io/centos-bootc/bootc-image-builder:latest"
           config-file: ${{ './iso.toml' }}
           image: ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           chown: ${{ env.USER_UID }}:${{ env.USER_GID }}
