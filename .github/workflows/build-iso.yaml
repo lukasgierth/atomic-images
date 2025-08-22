@@ -10,7 +10,7 @@ env:
   # IMAGE_REGISTRY: ghcr.io/ublue-os
   # IMAGE_NAME: image-template
   IMAGE_REGISTRY: quay.io/fedora-ostree-desktops
-  IMAGE_NAME: base-atomic
+  IMAGE_NAME: silverblue
   IMAGE_TAG: 42
 
 concurrency:
