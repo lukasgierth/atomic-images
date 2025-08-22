@@ -7,7 +7,7 @@ on:
 
 env:
   # Use image-template as base for installer iso
-  IMAGE_REGISTRY: ghcr.io/ublue-os/
+  IMAGE_REGISTRY: ghcr.io/ublue-os
   IMAGE_NAME: image-template
   IMAGE_TAG: latest
 
