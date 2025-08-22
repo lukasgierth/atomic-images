@@ -23,11 +23,11 @@ jobs:
           - image_name: sleepy-schaf
             base_image: quay.io/fedora-ostree-desktops/silverblue:42
             config: "./iso-silverblue.toml"
-            disk-type: ["anaconda-iso"]
+            disk-types: "anaconda-iso"
           # - image_name: tipsy-tippete
           #   base_image: quay.io/fedora-ostree-desktops/kinoite:42
           #   config: "./iso-kinoite.toml"
-          #   disk-type: ["anaconda-iso"]
+          #   disk-types: "anaconda-iso"
 
     steps:
       - name: Prepare environment
@@ -59,7 +59,7 @@ jobs:
           config-file: ${{ matrix.config }}
           image: ${{ matrix.base_image }}
           chown: ${{ env.USER_UID }}:${{ env.USER_GID }}
-          types: ${{ matrix.disk-type }}
+          types: ${{ matrix.disk-types }}
           rootfs: ext4
           additional-args: --use-librepo=True
 
