@@ -5,6 +5,7 @@ modules:
   - from-file: modules/flatpaks.yaml
   - from-file: modules/rpm-ostreed.yaml
   - from-file: modules/fish.yaml
+  - from-file: modules/bash.yaml
   - from-file: modules/kargs.yaml
 
   - type: script
