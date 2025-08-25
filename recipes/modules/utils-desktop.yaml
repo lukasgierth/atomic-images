@@ -108,6 +108,7 @@ modules:
         - rainfrog
         - rs-tftpd
         - sjust
+        - skim # version in official repositories is too old
         - somo
         - systemctl-tui
         - sysz
