@@ -102,8 +102,10 @@ modules:
         - fisher
         - git-cliff
         - hurl
+        - hurlfmt
         - lazygit
         - oh-my-posh
+        - oh-my-posh-themes
         - oha
         - rainfrog
         - rs-tftpd
