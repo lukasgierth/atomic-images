@@ -48,5 +48,7 @@ modules:
     scripts:
       - disable-layering.sh
 
+  - from-file: modules/autorebase.yaml
+
   - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
