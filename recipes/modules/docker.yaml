@@ -19,4 +19,9 @@ modules:
 
   - type: script
     scripts:
-      - setup-docker-groups.sh
+      - setup-docker-group.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - setup-docker-group.service
