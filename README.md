@@ -28,6 +28,15 @@ The `latest` tag will automatically point to the latest build. That build will s
 ## ISO
 
 ISOs are build manually only when needed.
+- After installation rebase to the signed image, like so:
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/lukasgierth/sleepy-schaf:latest
+
+  ```
+    ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/lukasgierth/tipsy-tippete:latest
+
+  ```
 
 ## Verification
 
