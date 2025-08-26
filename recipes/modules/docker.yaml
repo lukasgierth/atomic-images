@@ -19,4 +19,4 @@ modules:
 
   - type: script
     scripts:
-      - allow-docker.sh
+      - setup-docker-groups.sh
