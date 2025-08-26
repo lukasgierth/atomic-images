@@ -44,10 +44,6 @@ modules:
       NAME: Tipsy Tippete
       PRETTY_NAME: Tipsy Tippete
 
-  - type: script
-    snippets:
-      - source /etc/os-release; sed -i "s|^PRETTY_NAME=.*|PRETTY_NAME=\"${PRETTY_NAME} ${OSTREE_VERSION}\"|" /etc/os-release
-
   # Needs to be at the end, because of dnf removing
   - type: script
     scripts:
