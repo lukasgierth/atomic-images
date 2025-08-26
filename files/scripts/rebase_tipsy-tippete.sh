@@ -15,8 +15,7 @@ Type=oneshot
 StandardOutput=journal
 ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-image-signed:docker://ghcr.io/lukasgierth/tipsy-tippete:latest
 ExecStart=/usr/bin/touch /etc/signed-autorebase
-ExecStopPost=/usr/bin/systemctl disable signed-autorebase.service
-ExecStopPost=/usr/bin/systemctl reboot
+ExecStart=/usr/bin/systemctl reboot
 
 [Install]
 WantedBy=multi-user.target
