@@ -24,10 +24,10 @@ jobs:
             base_image: quay.io/fedora-ostree-desktops/silverblue:42
             config: "./iso-silverblue.toml"
             disk-types: "anaconda-iso"
-          # - image_name: tipsy-tippete
-          #   base_image: quay.io/fedora-ostree-desktops/kinoite:42
-          #   config: "./iso-kinoite.toml"
-          #   disk-types: "anaconda-iso"
+          - image_name: tipsy-tippete
+            base_image: quay.io/fedora-ostree-desktops/kinoite:42
+            config: "./iso-kinoite.toml"
+            disk-types: "anaconda-iso"
 
     steps:
       - name: Prepare environment
