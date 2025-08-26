@@ -16,7 +16,6 @@ modules:
         - org.kde.kcolorchooser
         - org.kde.krdc
         - org.kde.krita
-        - org.kde.kwalletmanager5
         - org.kde.kwrite
         - org.kde.okular
         - org.kde.skanpage

@@ -12,10 +12,11 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-StandardOutput=journal+console
+StandardOutput=journal
 ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-image-signed:docker://ghcr.io/lukasgierth/sleepy-schaf:latest
 ExecStart=/usr/bin/touch /etc/autorebase-signed
-ExecStart=/usr/bin/systemctl disable signed-autorebase.service
+ExecStopPost=/usr/bin/systemctl disable signed-autorebase.service
+ExecStopPost=/usr/bin/systemctl reboot
 
 [Install]
 WantedBy=multi-user.target
