@@ -1,9 +1,0 @@
-modules:
-  - type: script
-    scripts:
-      - install-rebaser.sh
-
-  - type: systemd
-    system:
-      enabled:
-        - rebase-to-signed-image.service
