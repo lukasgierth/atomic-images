@@ -6,7 +6,7 @@ set -euo pipefail
 cat <<'EOF' >/usr/lib/systemd/system/signed-autorebase.service
 [Unit]
 Description=Autorebase to signed OCI and reboot
-ConditionPathExists=!/etc/autorebase-signed
+ConditionPathExists=!/etc/signed-autorebase
 After=network-online.target
 Wants=network-online.target
 
@@ -14,7 +14,7 @@ Wants=network-online.target
 Type=oneshot
 StandardOutput=journal
 ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-image-signed:docker://ghcr.io/lukasgierth/sleepy-schaf:latest
-ExecStart=/usr/bin/touch /etc/autorebase-signed
+ExecStart=/usr/bin/touch /etc/signed-autorebase
 ExecStopPost=/usr/bin/systemctl disable signed-autorebase.service
 ExecStopPost=/usr/bin/systemctl reboot
 
