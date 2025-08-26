@@ -13,6 +13,7 @@ After=multi-user.target
 Type=oneshot
 ExecStart=/usr/bin/bash -c "getent group docker &> /dev/null || groupadd -r docker; for user in $(getent passwd | grep 'home' | awk -F: '{print $1}'); do usermod -aG docker $user; done"
 ExecStart=/usr/bin/touch /etc/setup-docker-group
+ExecStart=/usr/bin/systemctl restart docker.service
 
 [Install]
 WantedBy=multi-user.target
