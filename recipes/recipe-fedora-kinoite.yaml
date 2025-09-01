@@ -37,6 +37,15 @@ modules:
       packages:
         - flatpak-kcm
 
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+      cleanup: true
+    install:
+      packages:
+        - aurora-backgrounds
+
   - type: os-release
     properties:
       ID: tipsy-tippete

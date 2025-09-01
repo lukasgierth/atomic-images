@@ -27,6 +27,15 @@ modules:
       packages:
         - gnome-shell-extension-caffeine
 
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+      cleanup: true
+    install:
+      packages:
+        - bluefin-backgrounds
+
   - type: os-release
     properties:
       ID: sleepy-schaf
