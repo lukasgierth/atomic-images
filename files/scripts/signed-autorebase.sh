@@ -13,7 +13,7 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 StandardOutput=journal
-ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-image-signed:docker://ghcr.io/lukasgierth/sleepy-schaf:latest
+ExecStart=/usr/bin/bash -c "source /etc/os-release && /usr/bin/rpm-ostree rebase --bypass-driver ostree-image-signed:docker://ghcr.io/lukasgierth/${ID}:latest"
 ExecStart=/usr/bin/touch /etc/signed-autorebase
 ExecStart=/usr/bin/systemctl reboot
 

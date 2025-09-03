@@ -57,12 +57,6 @@ modules:
   - type: script
     scripts:
       - disable-layering.sh
-      - rebase_tipsy-tippete.sh
-
-  - type: systemd
-    system:
-      enabled:
-        - signed-autorebase.service
 
   - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
