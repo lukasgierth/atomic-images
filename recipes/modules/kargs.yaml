@@ -3,5 +3,4 @@ modules:
     arch: x86_64, aarch64
     kargs:
       - mitigations=auto
-      - preempt=full
       - rd.luks.options=discard
