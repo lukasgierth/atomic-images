@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# Bash Shell
+cat <<'EOF' >/usr/lib/systemd/system/setup-dialout-group.service
+[Unit]
+Description=Set up dialout group and add all users to it
+ConditionPathExists=!/etc/setup-dialout-group
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c "getent group dialout &> /dev/null || groupadd -r dialout; for user in $(getent passwd | grep 'home' | awk -F: '{print $1}'); do usermod -aG dialout $user; done"
+ExecStart=/usr/bin/touch /etc/setup-dialout-group
+ExecStart=/usr/bin/udevadm control --reload-rules
+
+[Install]
+WantedBy=multi-user.target
+EOF
