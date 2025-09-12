@@ -17,10 +17,6 @@ modules:
       enabled:
         - docker.service
 
-  - type: script
-    scripts:
-      - setup-docker-group.sh
-
   - type: systemd
     system:
       enabled:

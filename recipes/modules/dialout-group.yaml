@@ -1,9 +1,0 @@
-modules:
-  - type: script
-    scripts:
-      - setup-dialout-group.sh
-
-  - type: systemd
-    system:
-      enabled:
-        - setup-dialout-group.service

@@ -13,9 +13,9 @@ modules:
       - hide-applications.sh
       - prefer-bootc-over-rpm-ostree.sh
       - allow-journalctl.sh
-      - signed-autorebase.sh
 
   - type: systemd
     system:
       enabled:
+        - setup-dialout-group.service
         - signed-autorebase.service

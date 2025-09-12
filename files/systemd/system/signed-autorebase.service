@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-# Bash Shell
-cat <<'EOF' >/usr/lib/systemd/system/signed-autorebase.service
 [Unit]
 Description=Autorebase to signed OCI and reboot
 ConditionPathExists=!/etc/signed-autorebase
@@ -20,4 +14,3 @@ ExecStart=/usr/bin/systemctl reboot
 
 [Install]
 WantedBy=multi-user.target
-EOF
