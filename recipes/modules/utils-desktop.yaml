@@ -107,6 +107,7 @@ modules:
         - oha
         - rainfrog
         - rs-tftpd
+        - rustnet
         - sjust
         - skim # version in official repositories is too old
         - somo
