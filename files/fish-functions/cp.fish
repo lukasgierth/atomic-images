@@ -1,3 +1,4 @@
-function cp --wraps='cp -vi' --description 'More verbose cp'
-	command cp -vi $argv;
+function cp --wraps='cp -i' --description 'cp with interactive mode enabled'
+    command cp -i $argv
+
 end

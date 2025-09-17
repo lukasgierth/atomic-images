@@ -1,3 +1,4 @@
-function rm --wraps='rm -vI' --description 'More verbose rm'
-	command rm -vI $argv;
+function rm --wraps='rm -i' --description 'rm with interactive mode enabled'
+    command rm -i $argv
+
 end
