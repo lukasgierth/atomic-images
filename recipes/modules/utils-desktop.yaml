@@ -29,6 +29,7 @@ modules:
         - borgbackup
         - borgmatic
         - btop
+        - chezmoi
         - cmake
         - ctags
         - curl
@@ -99,7 +100,6 @@ modules:
         - backgrounds-aurora
         - backgrounds-lakeside
         - blisp
-        - chezmoi
         - dfu-programmer
         - eza
         - fisher
