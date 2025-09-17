@@ -103,6 +103,7 @@ modules:
         - eza
         - fisher
         - git-cliff
+        - grype
         - hurl
         - lazygit
         - oh-my-posh
