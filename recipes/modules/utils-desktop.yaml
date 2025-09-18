@@ -118,6 +118,7 @@ modules:
         - systemctl-tui
         - sysz
         - trippy
+        - trufflehog
         - yazi
         - zellij
 
