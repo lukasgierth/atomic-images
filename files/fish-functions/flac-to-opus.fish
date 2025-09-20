@@ -6,5 +6,5 @@ function flac-to-opus
         end
     end
     command sync
-    rm *.flac
+    rm -f *.flac
 end
