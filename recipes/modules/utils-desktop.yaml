@@ -107,6 +107,8 @@ modules:
         - grype
         - hurl
         - lazygit
+        - lazyjournal
+        - lazysql
         - oh-my-posh
         - oha
         - rainfrog
