@@ -4,6 +4,8 @@ modules:
       files:
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      copr:
+        - ublue-os/packages
       nonfree: rpmfusion
       cleanup: true
     remove:
@@ -81,6 +83,8 @@ modules:
         - tealdeer
         - tmux
         - trivy
+        - ublue-os-udev-rules
+        - ublue-polkit-rules
         - unzip
         - uv
         - whipper
@@ -158,13 +162,3 @@ modules:
       packages:
         - backgrounds-aurora
         - backgrounds-lakeside
-
-  - type: dnf
-    repos:
-      copr:
-        - ublue-os/packages
-      cleanup: true
-    install:
-      packages:
-        - ublue-os-udev-rules
-        - ublue-polkit-rules
