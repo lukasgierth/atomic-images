@@ -49,6 +49,7 @@ modules:
         - gcc-c++
         - gdu
         - git
+        - git-delta
         - glibc-static
         - gzip
         - httpx
