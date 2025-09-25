@@ -101,6 +101,7 @@ modules:
         - backgrounds-aurora
         - backgrounds-lakeside
         - blisp
+        - ComChan
         - dfu-programmer
         - eza
         - fisher
