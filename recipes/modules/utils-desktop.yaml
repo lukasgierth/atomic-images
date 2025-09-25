@@ -51,6 +51,7 @@ modules:
         - git
         - git-delta
         - glibc-static
+        - golang
         - gzip
         - httpx
         - iperf3
