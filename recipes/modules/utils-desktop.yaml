@@ -101,6 +101,7 @@ modules:
       cleanup: true
     install:
       packages:
+        - binwalk # inspect binaries for hidden files
         - blindfold # gitignore generator
         - broot # different way to travel directories
         - comchan # serialport
