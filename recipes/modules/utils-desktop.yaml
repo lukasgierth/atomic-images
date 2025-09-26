@@ -31,6 +31,7 @@ modules:
         - borgbackup
         - borgmatic
         - btop
+        - cargo
         - chezmoi
         - cmake
         - ctags
@@ -71,6 +72,8 @@ modules:
         - podman-compose
         - pre-commit
         - procs
+        - python3
+        - python3-pip
         - ripgrep
         - rsync
         - ruby
