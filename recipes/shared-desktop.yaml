@@ -1,3 +1,4 @@
+---
 modules:
   - from-file: modules/utils-desktop.yaml
   - from-file: modules/virtualization.yaml

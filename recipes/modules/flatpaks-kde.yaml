@@ -1,3 +1,4 @@
+---
 modules:
   - type: default-flatpaks@v1
     notify: false
