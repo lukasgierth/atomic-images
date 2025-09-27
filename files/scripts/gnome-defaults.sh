@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+mkdir -p /etc/gnome-initial-setup
 cat <<'EOF' >/etc/gnome-initial-setup/vendor.conf
 [pages]
 # Never show "enable third party repository screen"
