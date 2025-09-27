@@ -1,9 +1,0 @@
----
-modules:
-  - from-file: modules/utils-server.yaml
-  - from-file: modules/rpm-ostreed.yaml
-
-  - type: systemd
-    system:
-      disabled:
-        - firewalld.service
