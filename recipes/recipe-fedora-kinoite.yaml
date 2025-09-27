@@ -7,36 +7,6 @@ base-image: ghcr.io/ublue-os/kinoite-main
 image-version: 42
 
 modules:
-  - from-file: shared-desktop.yaml
-  - from-file: modules/flatpaks-kde.yaml
-
-  - type: dnf
-    remove:
-      packages:
-        - plasma-discover
-        - plasma-welcome
-        - kate
-        - kwrite
-        - plasma-emojier
-        - filelight
-        - khelpcenter
-        - firewall-config
-        - kjournald
-        - kcharselect
-        - fcitx5-qt
-        - fcitx5-gtk
-        - fcitx5-chinese-addons
-        - fcitx5-hangul
-        - fcitx5-libthai
-        - fcitx5-mozc
-        - fcitx5-sayura
-        - fcitx5-unikey
-        - fcitx5-configtool
-        - kcm-fcitx5
-    install:
-      packages:
-        - flatpak-kcm
-
   - type: dnf
     repos:
       copr:
@@ -45,6 +15,32 @@ modules:
     install:
       packages:
         - aurora-backgrounds
+        - flatpak-kcm
+    remove:
+      packages:
+        - fcitx5-chinese-addons
+        - fcitx5-configtool
+        - fcitx5-gtk
+        - fcitx5-hangul
+        - fcitx5-libthai
+        - fcitx5-mozc
+        - fcitx5-qt
+        - fcitx5-sayura
+        - fcitx5-unikey
+        - filelight
+        - firewall-config
+        - kate
+        - kcharselect
+        - kcm-fcitx5
+        - khelpcenter
+        - kjournald
+        - kwrite
+        - plasma-discover
+        - plasma-emojier
+        - plasma-welcome
+
+  - from-file: shared-desktop.yaml
+  - from-file: modules/flatpaks-kde.yaml
 
   - type: os-release
     properties:
@@ -53,10 +49,5 @@ modules:
       NAME: Tipsy Tippete
       PRETTY_NAME: Tipsy Tippete
 
-  # Needs to be at the end, because of dnf removing
-  - type: script
-    scripts:
-      - disable-layering.sh
-
-  - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: initramfs
+  - type: signing

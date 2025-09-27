@@ -7,10 +7,15 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 42
 
 modules:
-  - from-file: shared-desktop.yaml
-  - from-file: modules/flatpaks-gnome.yaml
-
   - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+      cleanup: true
+    install:
+      packages:
+        - bluefin-backgrounds
+        - gnome-shell-extension-caffeine
     remove:
       packages:
         - gnome-classic-session
@@ -23,18 +28,13 @@ modules:
         - gnome-tour
         - gnome-tweaks
         - yelp
-    install:
-      packages:
-        - gnome-shell-extension-caffeine
 
-  - type: dnf
-    repos:
-      copr:
-        - ublue-os/packages
-      cleanup: true
-    install:
-      packages:
-        - bluefin-backgrounds
+  - from-file: shared-desktop.yaml
+  - from-file: modules/flatpaks-gnome.yaml
+
+  - type: script
+    scripts:
+      - gnome-defaults.sh
 
   - type: os-release
     properties:
@@ -43,10 +43,5 @@ modules:
       NAME: Sleepy Schaf
       PRETTY_NAME: Sleepy Schaf
 
-  # Needs to be at the end, because of dnf removing
-  - type: script
-    scripts:
-      - disable-layering.sh
-
-  - type: initramfs # only necessary for kernel/bootup/plymouth changes, do anyway here to be sure
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: initramfs
+  - type: signing
