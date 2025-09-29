@@ -87,6 +87,7 @@ modules:
         - tcpdump
         - tealdeer
         - tmux
+        - trash-cli
         - trivy
         - ublue-os-udev-rules
         - ublue-polkit-rules
@@ -118,7 +119,6 @@ modules:
         - nomino # renamer
         - oha # create traffic on a webserver to test
         - rainfrog # db
-        - rmt-rs # rm that deletes to Trash
         - rs-tftpd
         - rustnet # network diagnostic
         - rustscan # nmap, bang a server

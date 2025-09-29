@@ -1,4 +1,3 @@
-function rm --wraps='rm -i' --description 'rm with interactive mode enabled'
-    command rm -i $argv
-
+function rm --wraps='trash' --description 'trash instead of rm'
+    command trash $argv
 end
