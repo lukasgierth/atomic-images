@@ -14,10 +14,8 @@ modules:
       cleanup: true
     install:
       packages:
+        - bluefin-backgrounds
         - gnome-shell-extension-caffeine
-        - repo: copr:copr.fedorainfracloud.org:ublue-os:packages
-          packages:
-            - bluefin-backgrounds
     remove:
       packages:
         - gnome-classic-session

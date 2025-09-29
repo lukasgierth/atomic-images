@@ -14,10 +14,8 @@ modules:
       cleanup: true
     install:
       packages:
+        - aurora-backgrounds
         - flatpak-kcm
-        - repo: copr:copr.fedorainfracloud.org:ublue-os:packages
-          packages:
-            - aurora-backgrounds
     remove:
       packages:
         - fcitx5-chinese-addons
