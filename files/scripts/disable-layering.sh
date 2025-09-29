@@ -13,7 +13,7 @@ ls /etc/yum.repos.d > /usr/share/dnf5/repositories_files.txt
 cat /etc/yum.repos.d/* > /usr/share/dnf5/repositories_installed.txt
 
 echo "Delete repositories from image"
-rm /etc/yum.repos.d/*.repo
+rm -r /etc/yum.repos.d
 
 echo "Disable general usage of dnf & it's symlinks like yum"
 
