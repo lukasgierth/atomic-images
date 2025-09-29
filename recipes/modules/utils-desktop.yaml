@@ -117,7 +117,7 @@ modules:
         - nomino # renamer
         - oha # create traffic on a webserver to test
         - rainfrog # db
-        - rmt # rm that deletes to Trash
+        - rmt-rs # rm that deletes to Trash
         - rs-tftpd
         - rustnet # network diagnostic
         - rustscan # nmap, bang a server
