@@ -7,11 +7,13 @@ modules:
       cleanup: true
     install:
       packages:
-        - containerd.io
-        - docker-buildx-plugin
-        - docker-ce
-        - docker-ce-cli
-        - docker-compose-plugin
+        - repo: docker-ce-stable
+          packages:
+            - containerd.io
+            - docker-buildx-plugin
+            - docker-ce
+            - docker-ce-cli
+            - docker-compose-plugin
 
   - type: systemd
     system:

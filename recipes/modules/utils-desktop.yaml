@@ -14,7 +14,6 @@ modules:
         - gierth/tools-rust
         - ublue-os/packages
       cleanup: true
-
     remove:
       packages:
         - firefox
@@ -26,7 +25,6 @@ modules:
         - vim
         - vim-enhanced
         - vim-minimal
-
     install:
       packages:
         - ImageMagick
@@ -99,26 +97,17 @@ modules:
         - yamllint
         - yt-dlp
         - zoxide
-
-        - repo: copr:copr.fedorainfracloud.org/ublue-os/packages
-          packages:
-            - ublue-os-udev-rules
-            - ublue-polkit-rules
-
-        - repo: tailscale-stable
-          packages:
-            - tailscale
-
         - repo: mise-repo
           packages:
             - mise
-
-        - repo: copr:copr.fedorainfracloud.org:gierth/image-branding
+        - repo: tailscale-stable
+          packages:
+            - tailscale
+        - repo: copr:copr.fedorainfracloud.org:gierth:image-branding
           packages:
             - backgrounds-aurora
             - backgrounds-lakeside
-
-        - repo: copr:copr.fedorainfracloud.org:gierth/tools-golang
+        - repo: copr:copr.fedorainfracloud.org:gierth:tools-golang
           packages:
             - grype # check images for cve
             - lazygit # git
@@ -127,16 +116,14 @@ modules:
             - trufflehog # look for secrets in repos/patch that cant be snatched
             # - chezmoi #include again in fed43, remove from official repo again
             # - oh-my-posh #include again in fed43
-
-        - repo: copr:copr.fedorainfracloud.org:gierth/tools-misc
+        - repo: copr:copr.fedorainfracloud.org:gierth:tools-misc
           packages:
             - ansel-bin
             - blisp
             - dfu-programmer
             - fisher
             - sjust
-
-        - repo: copr:copr.fedorainfracloud.org:gierth/tools-rust
+        - repo: copr:copr.fedorainfracloud.org:gierth:tools-rust
           packages:
             - binwalk # inspect binaries for hidden files
             - blindfold # gitignore generator
@@ -160,3 +147,7 @@ modules:
             - trippy # network diagnostic
             - yazi # file manager
             - zellij # multiplexer
+        - repo: copr:copr.fedorainfracloud.org:ublue-os:packages
+          packages:
+            - ublue-os-udev-rules
+            - ublue-polkit-rules
