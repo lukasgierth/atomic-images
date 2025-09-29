@@ -114,7 +114,6 @@ modules:
         - deno # ts,js builder
         - eza # ls
         - git-cliff # for git
-        - hex-rs
         - hurl # http requests
         - nomino # renamer
         - oha # create traffic on a webserver to test
