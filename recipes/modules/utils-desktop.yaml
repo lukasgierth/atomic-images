@@ -1,20 +1,14 @@
 ---
-# yamllint disable rule:line-length
 modules:
   - type: dnf
     repos:
-      nonfree: rpmfusion
       files:
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       copr:
-        - gierth/image-branding
-        - gierth/tools-golang
-        - gierth/tools-misc
-        - gierth/tools-rust
         - ublue-os/packages
+      nonfree: rpmfusion
       cleanup: true
-
     remove:
       packages:
         - firefox
@@ -26,7 +20,6 @@ modules:
         - vim
         - vim-enhanced
         - vim-minimal
-
     install:
       packages:
         - ImageMagick
@@ -69,6 +62,7 @@ modules:
         - luajit
         - make
         - mediainfo
+        - mise
         - mosh
         - neovim
         - newsboat
@@ -88,10 +82,13 @@ modules:
         - stow
         - stress-ng
         - subfinder
+        - tailscale
         - tcpdump
         - tealdeer
         - tmux
         - trivy
+        - ublue-os-udev-rules
+        - ublue-polkit-rules
         - unzip
         - uv
         - whipper
@@ -100,63 +97,74 @@ modules:
         - yt-dlp
         - zoxide
 
-        - repo: copr:copr.fedorainfracloud.org/ublue-os/packages
-          packages:
-            - ublue-os-udev-rules
-            - ublue-polkit-rules
+  # Additional tools in rust
+  - type: dnf
+    repos:
+      copr:
+        - gierth/tools-rust
+      cleanup: true
+    install:
+      packages:
+        - binwalk # inspect binaries for hidden files
+        - blindfold # gitignore generator
+        - broot # different way to travel directories
+        - comchan # serialport
+        - deno # ts,js builder
+        - eza # ls
+        - git-cliff # for git
+        - hex-rs
+        - hurl # http requests
+        - nomino # renamer
+        - oha # create traffic on a webserver to test
+        - rainfrog # db
+        - rmt # rm that deletes to Trash
+        - rs-tftpd
+        - rustnet # network diagnostic
+        - rustscan # nmap, bang a server
+        - skim # version in official repositories is pretty old
+        - somo # ss alternative
+        - systemctl-tui
+        - trippy # network diagnostic
+        - yazi # file manager
+        - zellij # multiplexer
 
-        - repo: tailscale-stable
-          packages:
-            - tailscale
+  # Additional tools in golang
+  - type: dnf
+    repos:
+      copr:
+        - gierth/tools-golang
+      cleanup: true
+    install:
+      packages:
+        - grype # check images for cve
+        - lazygit # git
+        - lazyjournal # journalctl
+        - lazysql # sql
+        - trufflehog # look for secrets in repos/patch that cant be snatched
+        # - chezmoi #include again in fed43, remove from official repo again
+        # - oh-my-posh #include again in fed43
 
-        - repo: mise-repo
-          packages:
-            - mise
+  # Rest of the tools
+  - type: dnf
+    repos:
+      copr:
+        - gierth/tools-misc
+      cleanup: true
+    install:
+      packages:
+        - ansel-bin
+        - blisp
+        - dfu-programmer
+        - fisher
+        - sjust
 
-        - repo: copr:copr.fedorainfracloud.org:gierth/image-branding
-          packages:
-            - backgrounds-aurora
-            - backgrounds-lakeside
-
-        - repo: copr:copr.fedorainfracloud.org:gierth/tools-golang
-          packages:
-            - grype # check images for cve
-            - lazygit # git
-            - lazyjournal # journalctl
-            - lazysql # sql
-            - trufflehog # look for secrets in repos/patch that cant be snatched
-            # - chezmoi #include again in fed43, remove from official repo again
-            # - oh-my-posh #include again in fed43
-
-        - repo: copr:copr.fedorainfracloud.org:gierth/tools-misc
-          packages:
-            - ansel-bin
-            - blisp
-            - dfu-programmer
-            - fisher
-            - sjust
-
-        - repo: copr:copr.fedorainfracloud.org:gierth/tools-rust
-          packages:
-            - binwalk # inspect binaries for hidden files
-            - blindfold # gitignore generator
-            - broot # different way to travel directories
-            - comchan # serialport
-            - deno # ts,js builder
-            - eza # ls
-            - git-cliff # for git
-            - hex-rs
-            - hurl # http requests
-            - nomino # renamer
-            - oha # create traffic on a webserver to test
-            - rainfrog # db
-            - rmt # rm that deletes to Trash
-            - rs-tftpd
-            - rustnet # network diagnostic
-            - rustscan # nmap, bang a server
-            - skim # version in official repositories is pretty old
-            - somo # ss alternative
-            - systemctl-tui
-            - trippy # network diagnostic
-            - yazi # file manager
-            - zellij # multiplexer
+  # Branding
+  - type: dnf
+    repos:
+      copr:
+        - gierth/image-branding
+      cleanup: true
+    install:
+      packages:
+        - backgrounds-aurora
+        - backgrounds-lakeside
