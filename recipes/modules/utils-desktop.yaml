@@ -122,7 +122,6 @@ modules:
         - rs-tftpd
         - rustnet # network diagnostic
         - rustscan # nmap, bang a server
-        - skim # version in official repositories is pretty old
         - somo # ss alternative
         - systemctl-tui
         - trippy # network diagnostic
