@@ -67,6 +67,7 @@ modules:
         - neovim
         - newsboat
         - nodejs
+        - oh-my-posh
         - onefetch
         - pandoc
         - picocom
@@ -141,8 +142,6 @@ modules:
         - lazyjournal # journalctl
         - lazysql # sql
         - trufflehog # look for secrets in repos/patch that cant be snatched
-        # - chezmoi #include again in fed43, remove from official repo again
-        # - oh-my-posh #include again in fed43
 
   # Rest of the tools
   - type: dnf
