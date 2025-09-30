@@ -11,6 +11,7 @@ modules:
         - hu.irl.cameractrls
         - io.dbeaver.DBeaverCommunity
         - io.dbeaver.DBeaverCommunity.Client.pgsql
+        - io.github.dweymouth.supersonic
         - io.github.justinrdonnelly.bouncer
         - io.github.kolunmi.Bazaar
         - io.mpv.Mpv
