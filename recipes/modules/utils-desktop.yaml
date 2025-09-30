@@ -60,6 +60,7 @@ modules:
         - httpx
         - iperf3
         - luajit
+        - luarocks
         - make
         - mediainfo
         - mise
