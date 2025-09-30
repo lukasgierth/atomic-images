@@ -136,6 +136,7 @@ modules:
     install:
       packages:
         - grype # check images for cve
+        - hugo # build static websites
         - lazygit # git
         - lazyjournal # journalctl
         - lazysql # sql
