@@ -39,6 +39,7 @@ name='Open Files'
 command='nautilus'
 binding='<Super>f'
 EOF
+echo "Update dconf db now after changes!" && dconf update
 
 # cat <<'EOF' >/usr/share/glib-2.0/schemas/zzo-sleepy-schaf-modifications.gschema.override
 # [org.gnome.desktop.background]
