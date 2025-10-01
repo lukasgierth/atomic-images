@@ -1,0 +1,7 @@
+---
+# config for yamllint
+extends: default
+rules:
+  comments: disable
+  comments-indentation: disable
+  line-length: disable
