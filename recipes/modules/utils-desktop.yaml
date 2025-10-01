@@ -96,7 +96,6 @@ modules:
         - uv
         - whipper
         - wireshark
-        - yamllint
         - yt-dlp
         - zoxide
 
