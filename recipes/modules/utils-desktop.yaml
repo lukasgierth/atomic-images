@@ -80,6 +80,7 @@ modules:
         - ripgrep
         - rsync
         - ruby
+        - ruby-devel
         - shntool
         - stow
         - stress-ng
