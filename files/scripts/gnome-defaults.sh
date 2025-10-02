@@ -9,6 +9,9 @@ cat <<'EOF' >/etc/gnome-initial-setup/vendor.conf
 skip=software
 EOF
 
+echo "BEFORE:"
+ls -lh /etc/dconf/db/
+tree /etc/dconf
 mkdir -p /etc/dconf/db/distro.d
 cat <<'EOF' >/etc/dconf/db/distro.d/01-custom-keybindings
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
@@ -32,6 +35,9 @@ command='nautilus'
 binding='<Super>f'
 EOF
 echo "Compile dconf db now after changes!" && dconf update
+echo "AFTER:"
+ls -lh /etc/dconf/db/
+tree /etc/dconf
 
 # cat <<'EOF' >/usr/share/glib-2.0/schemas/zzo-sleepy-schaf-modifications.gschema.override
 # [org.gnome.desktop.background]
