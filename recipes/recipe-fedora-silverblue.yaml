@@ -36,6 +36,10 @@ modules:
   - type: script
     scripts:
       - gnome-defaults.sh
+  - type: systemd
+    system:
+      enabled:
+        - dconf-update.service
 
   - type: os-release
     properties:

@@ -1,0 +1,11 @@
+[Unit]
+Description=Update the dconf database at boot
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/dconf update
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
