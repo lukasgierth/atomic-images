@@ -9,7 +9,7 @@ cat <<'EOF' >/etc/gnome-initial-setup/vendor.conf
 skip=software
 EOF
 
-mkdir -p /usr/share/glib-2.0/schemas/zz0-gnome-defaults.gschema.override
+mkdir -p /usr/share/glib-2.0/schemas
 cat <<'EOF' >/usr/share/glib-2.0/schemas/zz0-gnome-defaults.gschema.override
 [org.gnome.settings-daemon.plugins.media-keys]
 # The entire array must be defined on a single line.
