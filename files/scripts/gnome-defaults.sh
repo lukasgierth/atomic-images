@@ -12,12 +12,8 @@ EOF
 mkdir -p /etc/dconf/db/distro.d
 cat <<'EOF' >/etc/dconf/db/distro.d/01-custom-keybindings
 [org/gnome/settings-daemon/plugins/media-keys]
-custom-keybindings=[
-  '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/',
-  '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/',
-  '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/',
-  '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/'
-]
+# The entire array must be defined on a single line.
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 name='Open Wezterm'
