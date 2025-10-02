@@ -9,14 +9,6 @@ cat <<'EOF' >/etc/gnome-initial-setup/vendor.conf
 skip=software
 EOF
 
-mkdir -p /usr/share/glib-2.0/schemas
-cat <<'EOF' >/usr/share/glib-2.0/schemas/zz0-gnome-defaults.gschema.override
-[org.gnome.settings-daemon.plugins.media-keys]
-# The entire array must be defined on a single line.
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3']
-EOF
-echo "Compile glib-schemas now after changes!" && glib-compile-schemas /usr/share/glib-2.0/schemas/
-
 mkdir -p /etc/dconf/db/distro.d
 cat <<'EOF' >/etc/dconf/db/distro.d/01-custom-keybindings
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
