@@ -77,6 +77,8 @@ modules:
         - procs
         - python3
         - python3-pip
+        - rclone
+        - restic
         - ripgrep
         - rsync
         - ruby
