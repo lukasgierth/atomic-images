@@ -8,13 +8,8 @@ image-version: 42
 
 modules:
   - type: dnf
-    repos:
-      copr:
-        - ublue-os/packages
-      cleanup: true
     install:
       packages:
-        - bluefin-backgrounds
         - gnome-shell-extension-caffeine
     remove:
       packages:

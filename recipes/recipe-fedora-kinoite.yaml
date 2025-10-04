@@ -8,13 +8,8 @@ image-version: 42
 
 modules:
   - type: dnf
-    repos:
-      copr:
-        - ublue-os/packages
-      cleanup: true
     install:
       packages:
-        - aurora-backgrounds
         - flatpak-kcm
     remove:
       packages:
