@@ -99,6 +99,7 @@ modules:
         - uv
         - whipper
         - wireshark
+        - wordgrinder
         - yt-dlp
         - zoxide
 
