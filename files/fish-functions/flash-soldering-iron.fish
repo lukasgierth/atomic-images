@@ -23,7 +23,7 @@ function flash-soldering-iron
                 return 1
             end
 
-        case pinecil-v1
+        case pinecil-v2
             echo "INFO: Get into flashing mode by pressing - before connecting USB, keep pressed for 15 more seconds"
             echo "Starting flashing..."
             if string match -qr '\.bin$' -- $argv[2]
@@ -35,25 +35,30 @@ function flash-soldering-iron
             end
 
         case ts100
-            echo "Starting flashing..."
-            set FW $argv[2]
-            set NAME (command lsblk -P -p -d -o NAME,MODEL | grep "DFU[ _]Disk" | awk -F'"' '{print $2}')
+            if string match -qr '\.hex$' -- $argv[2]
+                echo "Starting flashing..."
+                set FW $argv[2]
+                set NAME (command lsblk -P -p -d -o NAME,MODEL | grep "DFU[ _]Disk" | awk -F'"' '{print $2}')
 
-            if test -z "$NAME"
-                echo "Error, DFU disk not found!"
+                if test -z "$NAME"
+                    echo "Error, DFU disk not found!"
+                    return 1
+                end
+
+                sudo umount $NAME
+                sudo mkdir -p /tmp/mntdfu
+                sudo mount -t msdos $NAME /tmp/mntdfu
+
+                set BASENAME (basename $FW | string upper)
+                sudo cp $FW /tmp/mntdfu/$BASENAME; and sync
+
+                sudo umount /tmp/mntdfu
+                sudo rmdir /tmp/mntdfu
+                return 0
+            else
+                echo "Error, only .hex files allowed!"
                 return 1
             end
-
-            sudo umount $NAME
-            sudo mkdir -p /tmp/mntdfu
-            sudo mount -t msdos $NAME /tmp/dfu
-
-            set BASENAME (basename $FW | string upper)
-            sudo cp $FW /tmp/dfu/$BASENAME; and sync
-
-            sudo umount /tmp/dfu
-            sudo rmdir /tmp/mntdfu
-            return 0
 
         case '*'
             echo "Unknown option: $argv[1]"
