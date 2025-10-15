@@ -46,7 +46,6 @@ modules:
         - f3
         - fastfetch
         - fd-find
-        - ffmpeg
         - fish
         - fzf
         - gcc
@@ -102,6 +101,8 @@ modules:
         - wordgrinder
         - yt-dlp
         - zoxide
+        # disabled, already installed from negativo17 media-repo in base image, makes problems when version diverges
+        #- ffmpeg
 
   # Additional tools in rust
   - type: dnf
