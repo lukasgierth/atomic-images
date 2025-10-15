@@ -107,6 +107,7 @@ modules:
   # Additional tools in rust
   - type: dnf
     repos:
+      nonfree: negativo17
       copr:
         - gierth/tools-rust
       cleanup: true
