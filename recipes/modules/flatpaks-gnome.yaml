@@ -12,6 +12,7 @@ modules:
         - com.mattjakeman.ExtensionManager
         - com.rafaelmardojai.Blanket
         - io.github.flattool.Warehouse
+        - io.github.giantpinkrobots.varia
         - org.gnome.Calculator
         - org.gnome.Characters
         - org.gnome.Fractal
