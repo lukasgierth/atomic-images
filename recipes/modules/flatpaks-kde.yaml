@@ -15,6 +15,7 @@ modules:
         - org.kde.kcalc
         - org.kde.kcharselect
         - org.kde.kcolorchooser
+        - org.kde.kget
         - org.kde.krdc
         - org.kde.krita
         - org.kde.kwrite
