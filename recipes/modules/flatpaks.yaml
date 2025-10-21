@@ -15,6 +15,7 @@ modules:
         - io.github.gaheldev.Millisecond
         - io.github.justinrdonnelly.bouncer
         - io.github.kolunmi.Bazaar
+        - io.github.v81d.Wattage
         - io.mpv.Mpv
         - it.mijorus.gearlever
         - org.gnome.World.PikaBackup
