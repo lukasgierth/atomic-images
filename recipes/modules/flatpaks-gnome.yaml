@@ -11,6 +11,7 @@ modules:
         - com.github.tchx84.Flatseal
         - com.mattjakeman.ExtensionManager
         - com.rafaelmardojai.Blanket
+        - com.ranfdev.DistroShelf
         - io.github.flattool.Warehouse
         - io.github.giantpinkrobots.varia
         - org.gnome.Calculator

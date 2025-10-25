@@ -6,6 +6,7 @@ modules:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       install:
+        - io.github.DenysMb.Kontainer
         - org.kde.filelight
         - org.kde.francis
         - org.kde.gwenview
