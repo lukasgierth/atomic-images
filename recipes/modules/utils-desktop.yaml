@@ -160,6 +160,7 @@ modules:
         - blisp
         - dfu-programmer
         - fisher
+        - gnome-shell-extension-maximized-by-default
         - sjust
 
   # Branding
