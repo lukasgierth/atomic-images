@@ -7,6 +7,8 @@ modules:
       repo-name: flathub
       install:
         - com.google.Chrome
+        - de.capypara.FieldMonitor
+        - de.schmidhuberj.DieBahn
         - dev.vencord.Vesktop
         - hu.irl.cameractrls
         - io.dbeaver.DBeaverCommunity
