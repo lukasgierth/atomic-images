@@ -24,6 +24,7 @@ modules:
       packages:
         - ImageMagick
         - abcde
+        - alacritty
         - android-tools
         - ansible
         - aria2
