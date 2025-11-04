@@ -12,8 +12,8 @@ EOF
 mkdir -p /etc/dconf/db/distro.d
 cat <<'EOF' >/etc/dconf/db/distro.d/01-custom-keybindings
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
-name='Open Wezterm'
-command='flatpak run org.wezfurlong.wezterm'
+name='Open Alacritty'
+command='alacritty'
 binding='<Super><Shift>t'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
