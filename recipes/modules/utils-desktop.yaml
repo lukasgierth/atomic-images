@@ -174,4 +174,4 @@ modules:
       packages:
         - backgrounds-aurora
         - backgrounds-lakeside
-        - iosevka-nerd-fonts
+        - commitmono-nerd-fonts
