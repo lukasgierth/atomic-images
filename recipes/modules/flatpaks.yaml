@@ -1,32 +1,34 @@
 ---
 modules:
-  - type: default-flatpaks@v1
-    notify: false
-    system:
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      install:
-        - com.google.Chrome
-        - de.capypara.FieldMonitor
-        - de.schmidhuberj.DieBahn
-        - dev.vencord.Vesktop
-        - hu.irl.cameractrls
-        - io.dbeaver.DBeaverCommunity
-        - io.dbeaver.DBeaverCommunity.Client.pgsql
-        - io.github.dweymouth.supersonic
-        - io.github.gaheldev.Millisecond
-        - io.github.justinrdonnelly.bouncer
-        - io.github.kolunmi.Bazaar
-        - io.github.v81d.Wattage
-        - io.mpv.Mpv
-        - it.mijorus.gearlever
-        - org.gnome.World.PikaBackup
-        - org.libreoffice.LibreOffice
-        - org.mozilla.Thunderbird
-        - org.mozilla.firefox
-        - org.musicbrainz.Picard
-        - org.raspberrypi.rpi-imager
-        
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        notify: false
+        repo:
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
+          name: flathub
+        install:
+          - com.google.Chrome
+          - de.capypara.FieldMonitor
+          - de.schmidhuberj.DieBahn
+          - dev.vencord.Vesktop
+          - hu.irl.cameractrls
+          - io.dbeaver.DBeaverCommunity
+          - io.dbeaver.DBeaverCommunity.Client.pgsql
+          - io.github.dweymouth.supersonic
+          - io.github.gaheldev.Millisecond
+          - io.github.justinrdonnelly.bouncer
+          - io.github.kolunmi.Bazaar
+          - io.github.v81d.Wattage
+          - io.mpv.Mpv
+          - it.mijorus.gearlever
+          - org.gnome.World.PikaBackup
+          - org.libreoffice.LibreOffice
+          - org.mozilla.Thunderbird
+          - org.mozilla.firefox
+          - org.musicbrainz.Picard
+          - org.raspberrypi.rpi-imager
+
   - type: systemd
     system:
       enabled:
