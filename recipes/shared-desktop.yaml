@@ -8,6 +8,7 @@ modules:
   - from-file: modules/fish.yaml
   - from-file: modules/bash.yaml
   - from-file: modules/kargs.yaml
+  - from-file: modules/fonts.yaml
 
   - type: script
     scripts:
