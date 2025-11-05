@@ -172,10 +172,5 @@ modules:
       cleanup: true
     install:
       packages:
-        - agave-nerd-fonts
         - backgrounds-aurora
         - backgrounds-lakeside
-        - cascadiacode-nerd-fonts
-        - commitmono-nerd-fonts
-        - hermit-nerd-fonts
-        - victormono-nerd-fonts

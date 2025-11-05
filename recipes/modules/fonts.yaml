@@ -1,0 +1,10 @@
+---
+modules:
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - Agave
+        - CascadiaCode
+        - CommitMono
+        - Hermit
+        - VictorMono
