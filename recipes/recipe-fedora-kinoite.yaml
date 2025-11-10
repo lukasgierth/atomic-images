@@ -10,6 +10,7 @@ modules:
   - type: dnf
     install:
       packages:
+        - f43-backgrounds-kde
         - flatpak-kcm
         - spectacle
     remove:
