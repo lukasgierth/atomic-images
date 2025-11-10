@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Flatpak update every 24 hours
+Wants=network-online.target
+Requires=network-online.target
+After=network-online.target
+
+[Timer]
+OnBootSec=300
+OnUnitActiveSec=24h
+
+[Install]
+WantedBy=timers.target
