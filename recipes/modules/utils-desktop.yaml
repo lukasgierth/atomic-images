@@ -33,6 +33,9 @@ modules:
         - borgbackup
         - borgmatic
         - btop
+        - btrbk
+        - btrfs-assistant
+        - btrfs-progs
         - cargo
         - chezmoi
         - cmake
@@ -84,6 +87,7 @@ modules:
         - ruby
         - ruby-devel
         - shntool
+        - snapper
         - stow
         - stress-ng
         - subfinder
