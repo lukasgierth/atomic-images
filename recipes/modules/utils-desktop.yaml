@@ -5,6 +5,7 @@ modules:
       files:
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
         - ublue-os/packages
       nonfree: rpmfusion
@@ -68,6 +69,7 @@ modules:
         - mediainfo
         - mise
         - mosh
+        - mullvad-vpn
         - neovim
         - newsboat
         - nodejs
