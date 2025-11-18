@@ -123,7 +123,7 @@ modules:
         - blindfold # gitignore generator
         - broot # different way to travel directories
         - comchan # serialport
-        #- deno # ts,js builder
+        - deno-bin # ts,js builder
         - eza # ls
         - git-cliff # for git
         - hurl # http requests
