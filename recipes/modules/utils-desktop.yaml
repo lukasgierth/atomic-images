@@ -63,6 +63,7 @@ modules:
         - gzip
         - httpx
         - iperf3
+        - libxcrypt-compat
         - luajit
         - luarocks
         - make
@@ -167,6 +168,7 @@ modules:
         - blisp
         - dfu-programmer
         - fisher
+        - flatpak-downgrade
         - gnome-shell-extension-maximized-by-default
         - sjust
 
