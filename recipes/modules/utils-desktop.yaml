@@ -164,7 +164,6 @@ modules:
       cleanup: true
     install:
       packages:
-        - ansel-bin
         - blisp
         - dfu-programmer
         - fisher
