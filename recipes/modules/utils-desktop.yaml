@@ -38,7 +38,6 @@ modules:
         - btrfs-assistant
         - btrfs-progs
         - cargo
-        - chezmoi
         - cmake
         - ctags
         - curl
@@ -148,6 +147,7 @@ modules:
       cleanup: true
     install:
       packages:
+        - chezmoi # config manager
         - grype # check images for cve
         - hugo # build static websites
         - lazygit # git
