@@ -154,6 +154,7 @@ modules:
         - lazyjournal # journalctl
         - lazysql # sql
         - nom # rss reader
+        - stacker-bin # build images with yaml config
         - trufflehog # look for secrets in repos/patch that cant be snatched
 
   # Rest of the tools
