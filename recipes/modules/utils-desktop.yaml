@@ -122,6 +122,7 @@ modules:
         - binwalk # inspect binaries for hidden files
         - blindfold # gitignore generator
         - broot # different way to travel directories
+        - caligula # dd alternative
         - comchan # serialport
         - deno-bin # ts,js builder
         - eza # ls
@@ -144,11 +145,16 @@ modules:
     repos:
       copr:
         - gierth/tools-golang
+      files:
+        - charm.repo
       cleanup: true
     install:
       packages:
         - chezmoi # config manager
+        - crush # charm: AI assistant
         - grype # check images for cve
+        - gum # charm: shell bling
+        - glow # charm: render markdown
         - hugo # build static websites
         - lazygit # git
         - lazyjournal # journalctl
