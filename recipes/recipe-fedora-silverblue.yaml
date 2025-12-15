@@ -28,7 +28,6 @@ modules:
   - from-file: shared-desktop.yaml
   - from-file: modules/flatpaks-gnome.yaml
 
-  - type: gschema-overrides
   - type: script
     scripts:
       - gnome-defaults.sh
