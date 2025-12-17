@@ -4,7 +4,6 @@ modules:
     repos:
       copr:
         - avengemedia/dms
-        # - avengemedia/danklinux
       cleanup: true
     install:
       packages:
@@ -12,42 +11,34 @@ modules:
         - accountsservice
         - cava
         - cliphist
+        - cups
         - dgop
         - dms
         - dms-greeter
+        - dolphin
         - dsearch
         - gnome-keyring
         - gnome-keyring-pam
+        - mangowc
         - matugen
         - niri
+        - pipewire
+        - polkit-kde
+        - power-profiles-daemon
         - qt6-qtmultimedia
         - qt6ct
         - quickshell
-        - thunar
-        - thunar-archive-plugin
-        - thunar-volman
+        - sway
+        - wireplumber
         - wl-clipboard
-        - xdg-desktop-portal-gtk
         - xdg-desktop-portal-gnome
+        - xdg-desktop-portal-gtk
         - xwayland-satellite
         - zathura
-        # are those needed explicit?
-        # - pipewire
-        # - wireplumber
-        # - polkit-kde
         # - udiskie
-        # - brightnessctl
 
     # TODO:
     # sed --sandbox -i -e '/gnome_keyring.so/ s/-auth/auth/ ; /gnome_keyring.so/ s/-session/session/' /etc/pam.d/greetd
-    # add_wants_niri udiskie.service
-  # remove:
-  #  console-login-helper-messages \
-  # chrony \
-  # sssd* \
-  # use:
-  # systemctl enable systemd-timesyncd
-  # systemctl enable systemd-resolved.service
 
   - type: script
     scripts:
@@ -58,9 +49,13 @@ modules:
       enabled:
         - gnome-keyring-daemon.service
         - dsearch.service
-        # - swayidle.service
-        # - udiskie.service
+        - dms.service
     system:
       enabled:
+        - cups.service
+        - dolphin.service
+        - plasma-polkit-agent.service
         - greetd.service
+        - power-profiles-daemon.service
         - setup-greeter-group.service
+        # - udiskie.service
