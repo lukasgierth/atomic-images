@@ -36,6 +36,11 @@ modules:
       enabled:
         - dconf-update.service
 
+  - type: script
+    scripts:
+      - prefer-bootc-over-rpm-ostree.sh
+      - disable-layering.sh
+
   - type: os-release
     properties:
       ID: sleepy-schaf

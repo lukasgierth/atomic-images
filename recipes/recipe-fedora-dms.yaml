@@ -9,6 +9,11 @@ modules:
   - from-file: shared-desktop.yaml
   - from-file: modules/dankmaterialshell.yaml
 
+  - type: script
+    scripts:
+      - prefer-bootc-over-rpm-ostree.sh
+      - disable-layering.sh
+
   - type: os-release
     properties:
       ID: majestic momo

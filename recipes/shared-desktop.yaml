@@ -13,10 +13,8 @@ modules:
   - type: script
     scripts:
       - hide-applications.sh
-      - prefer-bootc-over-rpm-ostree.sh
       - allow-journalctl.sh
       - geoclue.sh
-      - disable-layering.sh
 
   - type: systemd
     system:
