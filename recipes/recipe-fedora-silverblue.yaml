@@ -28,6 +28,16 @@ modules:
   - from-file: shared-desktop.yaml
   - from-file: modules/flatpaks-gnome.yaml
 
+  - type: dnf
+    repos:
+      copr:
+        - gierth/image-branding
+      cleanup: true
+    install:
+      packages:
+        - backgrounds-aurora
+        - backgrounds-lakeside
+
   - type: script
     scripts:
       - gnome-defaults.sh

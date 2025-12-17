@@ -8,7 +8,6 @@ modules:
       cleanup: true
     install:
       packages:
-        - f43-backgrounds-kde
         - NetworkManager
         - accountsservice
         - cava
@@ -21,7 +20,7 @@ modules:
         - gnome-keyring-pam
         - matugen
         - niri
-        - qt6-multimedia
+        - qt6-qtmultimedia
         - qt6ct
         - quickshell
         - thunar
@@ -58,6 +57,7 @@ modules:
     user:
       enabled:
         - gnome-keyring-daemon.service
+        - dsearch.service
         # - swayidle.service
         # - udiskie.service
     system:
