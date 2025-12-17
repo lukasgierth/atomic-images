@@ -70,7 +70,7 @@ jobs:
           additional-args: --use-librepo=True
 
       - name: Upload disk images and Checksum to Job Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.image_name }}_${{ env.TIMESTAMP }}
           path: ${{ steps.build.outputs.output-directory }}
