@@ -19,16 +19,13 @@ modules:
         - dsearch
         - gnome-keyring
         - gnome-keyring-pam
-        # - mangowc
         - matugen
         - niri
         - pipewire
-        - polkit-kde
         - power-profiles-daemon
         - qt6-qtmultimedia
         - qt6ct
         - quickshell
-        # - sway
         - wireplumber
         - wl-clipboard
         - xdg-desktop-portal-gnome
@@ -54,7 +51,6 @@ modules:
       enabled:
         - cups.service
         - dolphin.service
-        - plasma-polkit-agent.service
         - greetd.service
         - power-profiles-daemon.service
         - setup-greeter-group.service
