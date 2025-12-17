@@ -19,7 +19,7 @@ modules:
         - dsearch
         - gnome-keyring
         - gnome-keyring-pam
-        - mangowc
+        # - mangowc
         - matugen
         - niri
         - pipewire
@@ -28,7 +28,7 @@ modules:
         - qt6-qtmultimedia
         - qt6ct
         - quickshell
-        - sway
+        # - sway
         - wireplumber
         - wl-clipboard
         - xdg-desktop-portal-gnome
