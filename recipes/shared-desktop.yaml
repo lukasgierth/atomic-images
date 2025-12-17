@@ -20,4 +20,5 @@ modules:
     system:
       enabled:
         - setup-dialout-group.service
+        - setup-input-group.service
         - signed-autorebase.service

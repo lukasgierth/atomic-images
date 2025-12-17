@@ -19,6 +19,7 @@ modules:
         - dsearch
         - gnome-keyring
         - gnome-keyring-pam
+        - material-icons-fonts
         - matugen
         - niri
         - pipewire

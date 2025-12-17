@@ -1,0 +1,14 @@
+[Unit]
+Description=Set up input group and add all users to it
+ConditionPathExists=!/etc/setup-input-group
+After=multi-user.target
+
+[Service]
+Type=oneshot
+# INFO: input group exists by default and has to be copied to /etc/group in bootc systems from /usr/lib/group
+ExecStart=/usr/bin/bash -c "grep -E '^input:' /usr/lib/group >> /etc/group; for user in $(getent passwd | grep 'home' | awk -F: '{print $1}'); do usermod -aG input $user; done"
+ExecStart=/usr/bin/touch /etc/setup-input-group
+ExecStart=/usr/bin/udevadm control --reload-rules
+
+[Install]
+WantedBy=multi-user.target
