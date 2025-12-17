@@ -27,12 +27,13 @@ modules:
         - qt6-qtmultimedia
         - qt6ct
         - quickshell
+        - swayimg # image viewer
         - wireplumber
         - wl-clipboard
         - xdg-desktop-portal-gnome
         - xdg-desktop-portal-gtk
         - xwayland-satellite
-        - zathura
+        - zathura # pdf
         # - udiskie
 
     # TODO:
