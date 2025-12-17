@@ -1,3 +1,4 @@
+---
 name: Build Images
 on:
   schedule:
@@ -21,7 +22,7 @@ jobs:
         recipe:
           - recipe-fedora-kinoite.yaml
           - recipe-fedora-silverblue.yaml
-          # - recipe-fedora-server.yaml
+          - recipe-fedora-dms.yaml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build custom image

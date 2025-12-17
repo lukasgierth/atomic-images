@@ -1,0 +1,55 @@
+---
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - avengemedia/dms
+        # - avengemedia/danklinux
+      cleanup: true
+    install:
+      packages:
+        - NetworkManager
+        - accountsservice
+        - cava
+        - cliphist
+        - dgop
+        - dms
+        - dms-greeter
+        - dsearch
+        - gnome-keyring
+        - gnome-keyring-pam
+        - matugen
+        - niri
+        - qt6-multimedia
+        - qt6ct
+        - quickshell
+        - thunar
+        - thunar-archive-plugin
+        - thunar-volman
+        - wl-clipboard
+        - xdg-desktop-portal-gtk
+        - xwayland-satellite
+        - zathura
+        # are those needed explicit?
+        # - pipewire
+        # - wireplumber
+        # - polkit-kde
+        # - udiskie
+        # - brightnessctl
+
+    # TODO:
+    # sed --sandbox -i -e '/gnome_keyring.so/ s/-auth/auth/ ; /gnome_keyring.so/ s/-session/session/' /etc/pam.d/greetd
+    # add_wants_niri udiskie.service
+    # systemctl enable --global gnome-keyring-daemon.socket
+    # systemctl enable --global gnome-keyring-daemon.service
+    # systemctl enable --global swayidle.service
+    # systemctl enable --global udiskie.service
+
+  - type: script
+    scripts:
+      - dms-setup.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - setup-greeter-group.service
