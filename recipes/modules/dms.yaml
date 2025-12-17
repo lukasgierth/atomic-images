@@ -1,12 +1,21 @@
 ---
 modules:
   - type: dnf
+    install:
+      packages:
+        - adwaita-icon-theme
+        - breeze-icon-theme
+        - material-icons-fonts
+        - papirus-icon-theme
+
+  - type: dnf
     repos:
       copr:
         - avengemedia/dms
       cleanup: true
     install:
       packages:
+        - adw-gtk3-theme
         - NetworkManager
         - accountsservice
         - cava
@@ -17,10 +26,10 @@ modules:
         - dms-greeter
         - dolphin
         - dsearch
+        - gnome-disk-utility
         - gnome-keyring
         - gnome-keyring-pam
         - golang-bin
-        - material-icons-fonts
         - matugen
         - niri
         - pipewire
