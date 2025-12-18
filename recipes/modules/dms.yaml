@@ -62,7 +62,6 @@ modules:
     system:
       enabled:
         - cups.service
-        - dolphin.service
         - greetd.service
         - power-profiles-daemon.service
         - setup-greeter-group.service
