@@ -3,10 +3,15 @@ modules:
   - type: dnf
     repos:
       files:
+        - charm.repo
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
+        - gierth/image-branding
+        - gierth/tools-golang
+        - gierth/tools-misc
+        - gierth/tools-rust
         - ublue-os/packages
       nonfree: rpmfusion
       cleanup: true
@@ -30,38 +35,63 @@ modules:
         - ansible
         - aria2
         - arp-scan
+        - backgrounds-aurora
+        - backgrounds-lakeside
         - bat
+        - binwalk # inspect binaries for hidden files
+        - blindfold # gitignore generator
+        - blisp
         - borgbackup
         - borgmatic
+        - broot # different way to travel directories
         - btop
         - btrbk
         - btrfs-assistant
         - btrfs-progs
+        - caligula # dd alternative
         - cargo
+        - chezmoi # config manager
         - cmake
+        - comchan # serialport
+        - crush # charm: AI assistant
         - ctags
         - curl
         - ddrescue
+        - deno-bin # ts,js builder
         - detox
+        - dfu-programmer
         - dfu-util
         - distrobox
         - duf
         - esptool
+        - eza # ls
         - f3
         - fastfetch
         - fd-find
         - fish
+        - fisher
+        - flatpak-downgrade
         - fzf
         - gcc
         - gcc-c++
         - gdu
         - git
+        - git-cliff # for git
         - git-delta
         - glibc-static
+        - glow # charm: render markdown
+        - gnome-shell-extension-maximized-by-default
         - golang
+        - grype # check images for cve
+        - gum # charm: shell bling
         - gzip
         - httpx
+        - hugo # build static websites
+        - hurl # http requests
         - iperf3
+        - lazygit # git
+        - lazyjournal # journalctl
+        - lazysql # sql
         - libxcrypt-compat
         - luajit
         - luarocks
@@ -73,7 +103,10 @@ modules:
         - neovim
         - newsboat
         - nodejs
+        - nom # rss reader
+        - nomino # renamer
         - oh-my-posh
+        - oha # create traffic on a webserver to test
         - onefetch
         - pandoc
         - picocom
@@ -82,23 +115,33 @@ modules:
         - procs
         - python3
         - python3-pip
+        - rainfrog # db
         - rclone
         - restic
         - ripgrep
+        - rs-tftpd
         - rsync
         - ruby
         - ruby-devel
+        - rustnet # network diagnostic
+        - rustscan # nmap, bang a server
         - shntool
+        - sjust
         - snapper
+        - somo # ss alternative
+        - stacker-bin # build images with yaml config
         - stow
         - stress-ng
         - subfinder
+        - systemctl-tui
         - tailscale
         - tcpdump
         - tealdeer
         - tmux
         - trash-cli
+        - trippy # network diagnostic
         - trivy
+        - trufflehog # look for secrets in repos/patch that cant be snatched
         - ublue-os-udev-rules
         - ublue-polkit-rules
         - unzip
@@ -106,85 +149,9 @@ modules:
         - whipper
         - wireshark
         - wordgrinder
+        - yazi # file manager
         - yt-dlp
+        - zellij # multiplexer
         - zoxide
         # disabled, already installed from negativo17 media-repo in base image, makes problems when version diverges
         #- ffmpeg
-
-  # Additional tools in rust
-  - type: dnf
-    repos:
-      copr:
-        - gierth/tools-rust
-      cleanup: true
-    install:
-      packages:
-        - binwalk # inspect binaries for hidden files
-        - blindfold # gitignore generator
-        - broot # different way to travel directories
-        - caligula # dd alternative
-        - comchan # serialport
-        - deno-bin # ts,js builder
-        - eza # ls
-        - git-cliff # for git
-        - hurl # http requests
-        - nomino # renamer
-        - oha # create traffic on a webserver to test
-        - rainfrog # db
-        - rs-tftpd
-        - rustnet # network diagnostic
-        - rustscan # nmap, bang a server
-        - somo # ss alternative
-        - systemctl-tui
-        - trippy # network diagnostic
-        - yazi # file manager
-        - zellij # multiplexer
-
-  # Additional tools in golang
-  - type: dnf
-    repos:
-      copr:
-        - gierth/tools-golang
-      files:
-        - charm.repo
-      cleanup: true
-    install:
-      packages:
-        - chezmoi # config manager
-        - crush # charm: AI assistant
-        - grype # check images for cve
-        - gum # charm: shell bling
-        - glow # charm: render markdown
-        - hugo # build static websites
-        - lazygit # git
-        - lazyjournal # journalctl
-        - lazysql # sql
-        - nom # rss reader
-        - stacker-bin # build images with yaml config
-        - trufflehog # look for secrets in repos/patch that cant be snatched
-
-  # Rest of the tools
-  - type: dnf
-    repos:
-      copr:
-        - gierth/tools-misc
-      cleanup: true
-    install:
-      packages:
-        - blisp
-        - dfu-programmer
-        - fisher
-        - flatpak-downgrade
-        - gnome-shell-extension-maximized-by-default
-        - sjust
-
-  # Branding
-  - type: dnf
-    repos:
-      copr:
-        - gierth/image-branding
-      cleanup: true
-    install:
-      packages:
-        - backgrounds-aurora
-        - backgrounds-lakeside
