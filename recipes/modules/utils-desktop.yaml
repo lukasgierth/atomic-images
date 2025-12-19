@@ -92,6 +92,7 @@ modules:
         - lazygit # git
         - lazyjournal # journalctl
         - lazysql # sql
+        - lazyssh
         - libxcrypt-compat
         - luajit
         - luarocks
