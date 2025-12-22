@@ -35,8 +35,6 @@ modules:
         - ansible
         - aria2
         - arp-scan
-        - backgrounds-aurora
-        - backgrounds-lakeside
         - bat
         - binwalk # inspect binaries for hidden files
         - blindfold # gitignore generator
