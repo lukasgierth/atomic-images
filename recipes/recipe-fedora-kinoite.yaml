@@ -8,10 +8,16 @@ image-version: 43
 
 modules:
   - type: dnf
+    repos:
+      files:
+        - https://download.opensuse.org/repositories/home:paul4us/Fedora_43/home:paul4us.repo
     install:
       packages:
+        - dolphin-plugins
         - f43-backgrounds-kde
         - flatpak-kcm
+        - kio-fuse
+        - klassy
         - spectacle
     remove:
       packages:
