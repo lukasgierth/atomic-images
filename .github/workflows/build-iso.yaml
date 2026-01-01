@@ -61,7 +61,7 @@ jobs:
         id: build
         uses: osbuild/bootc-image-builder-action@main
         with:
-          builder-image: "quay.io/centos-bootc/bootc-image-builder:latest"
+          builder-image: "quay.io/centos-bootc/bootc-image-builder:sha256-c2d6830647c095e29c8cabd1ef6ae0e903e77675b953655428ac5cef147541a0"
           config-file: ${{ matrix.config }}
           image: ${{ matrix.base_image }}
           chown: ${{ env.USER_UID }}:${{ env.USER_GID }}
