@@ -91,6 +91,7 @@ modules:
         - hugo # build static websites
         - hurl # http requests
         - iperf3
+        - jujutsu # vcs on top of git
         - lazygit # git
         - lazyjournal # journalctl
         - lazysql # sql
