@@ -11,6 +11,9 @@ modules:
     repos:
       files:
         - https://download.opensuse.org/repositories/home:paul4us/Fedora_43/home:paul4us.repo
+      copr:
+        - gierth/tools-misc
+      cleanup: true
     install:
       packages:
         - dolphin-plugins
@@ -18,6 +21,7 @@ modules:
         - flatpak-kcm
         - kio-fuse
         - klassy
+        - kwin-dynamic-workspaces
         - spectacle
     remove:
       packages:
