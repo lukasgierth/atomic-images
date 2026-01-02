@@ -41,6 +41,7 @@ modules:
         - blisp
         - borgbackup
         - borgmatic
+        - bottom # like top,btop
         - broot # different way to travel directories
         - btop
         - btrbk
@@ -53,6 +54,7 @@ modules:
         - comchan # serialport
         - crush # charm: AI assistant
         - ctags
+        - ctop # top for docker containers
         - curl
         - ddrescue
         - deno-bin # ts,js builder
