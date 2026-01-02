@@ -36,6 +36,7 @@ modules:
         - aria2
         - arp-scan
         - bat
+        - bees # btrfs dedup
         - binwalk # inspect binaries for hidden files
         - blindfold # gitignore generator
         - blisp
@@ -147,6 +148,7 @@ modules:
         - ublue-os-udev-rules
         - ublue-polkit-rules
         - unzip
+        - usbip # sharing usb device over network
         - uv
         - whipper
         - wireshark
