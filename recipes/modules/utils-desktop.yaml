@@ -137,6 +137,7 @@ modules:
         - stow
         - stress-ng
         - subfinder
+        - subtui # tui for subsonic server
         - systemctl-tui
         - tailscale
         - tcpdump
