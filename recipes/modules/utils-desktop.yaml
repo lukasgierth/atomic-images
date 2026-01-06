@@ -105,6 +105,7 @@ modules:
         - mediainfo
         - mise
         - mosh
+        - mpv
         - mullvad-vpn
         - neovim
         - newsboat
