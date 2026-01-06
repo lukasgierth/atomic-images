@@ -77,8 +77,10 @@ modules:
         - gcc-c++
         - gdu
         - git
+        - git-annex # manage big files
         - git-cliff # for git
-        - git-delta
+        - git-delta # diff
+        - git-extras # extra commands
         - glibc-static
         - glow # charm: render markdown
         - gnome-shell-extension-maximized-by-default
