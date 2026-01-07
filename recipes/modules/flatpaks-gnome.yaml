@@ -15,9 +15,9 @@ modules:
           - com.rafaelmardojai.Blanket
           - com.ranfdev.DistroShelf
           - io.github.flattool.Warehouse
-          - io.github.giantpinkrobots.varia
           - org.gnome.Calculator
           - org.gnome.Characters
+          - org.gnome.Connections
           - org.gnome.Fractal
           - org.gnome.Loupe
           - org.gnome.Papers
@@ -25,5 +25,4 @@ modules:
           - org.gnome.Solanum
           - org.gnome.TextEditor
           - org.gnome.seahorse.Application
-          - org.remmina.Remmina
           - page.tesk.Refine

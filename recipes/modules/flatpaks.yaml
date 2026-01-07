@@ -19,8 +19,8 @@ modules:
           - io.github.gaheldev.Millisecond
           - io.github.justinrdonnelly.bouncer
           - io.github.kolunmi.Bazaar
+          - io.github.leolost2605.emergency-alerts
           - io.github.v81d.Wattage
-          - it.mijorus.gearlever
           - org.darktable.Darktable
           - org.gnome.World.PikaBackup
           - org.libreoffice.LibreOffice
