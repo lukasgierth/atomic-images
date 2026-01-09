@@ -1,0 +1,11 @@
+---
+modules:
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
+      cleanup: true
+    install:
+      packages:
+        - gamescope
+        - mangohud
+        - steam
