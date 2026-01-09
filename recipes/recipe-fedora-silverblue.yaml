@@ -38,6 +38,7 @@ modules:
         - backgrounds-aurora
         - backgrounds-lakeside
 
+  - type: gschema-overrides
   - type: script
     scripts:
       - gnome-defaults.sh
