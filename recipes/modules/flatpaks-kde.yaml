@@ -8,6 +8,7 @@ modules:
           url: https://dl.flathub.org/repo/flathub.flatpakrepo
           name: flathub
         install:
+          - com.borgbase.Vorta
           - io.github.DenysMb.Kontainer
           - org.kde.filelight
           - org.kde.francis
