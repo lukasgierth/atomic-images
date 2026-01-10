@@ -84,7 +84,6 @@ modules:
         - git-extras # extra commands
         - glibc-static
         - glow # charm: render markdown
-        - gnome-shell-extension-maximized-by-default
         - golang
         - golazo # football scores
         - grype # check images for cve
