@@ -24,5 +24,4 @@ modules:
           - org.gnome.SimpleScan
           - org.gnome.Solanum
           - org.gnome.TextEditor
-          - org.gnome.seahorse.Application
           - page.tesk.Refine

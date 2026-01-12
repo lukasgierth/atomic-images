@@ -12,6 +12,7 @@ modules:
       packages:
         - f43-backgrounds-gnome
         - gnome-shell-extension-caffeine
+        - seahorse
     remove:
       packages:
         - gnome-classic-session
