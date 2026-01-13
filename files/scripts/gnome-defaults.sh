@@ -21,11 +21,6 @@ binding='<Super>t'
 name='Open Files'
 command='nautilus'
 binding='<Super>f'
-
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
-name='Use screenshotter with gradia'
-command='flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE'
-binding='Print'
 EOF
 
 echo "Compile dconf db now after possible changes!" && dconf update
