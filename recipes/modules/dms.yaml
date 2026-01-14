@@ -12,6 +12,7 @@ modules:
     repos:
       copr:
         - avengemedia/dms
+        - gierth/tools-rust
       cleanup: true
     install:
       packages:
@@ -19,7 +20,6 @@ modules:
         - NetworkManager
         - accountsservice
         - cava
-        - cliphist
         - cups
         - dgop
         - dms
@@ -39,7 +39,7 @@ modules:
         - quickshell
         - swayimg # image viewer
         - wireplumber
-        - wl-clipboard
+        - wlctl
         - xdg-desktop-portal-gnome
         - xdg-desktop-portal-gtk
         - xwayland-satellite
