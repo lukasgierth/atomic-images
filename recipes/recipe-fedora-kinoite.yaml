@@ -17,6 +17,13 @@ modules:
     install:
       packages:
         - dolphin-plugins
+        - f40-backgrounds-extras-kde
+        - f41-backgrounds-extras-kde
+        - f42-backgrounds-extras-kde
+        - f43-backgrounds-extras-kde
+        - f40-backgrounds-kde
+        - f41-backgrounds-kde
+        - f42-backgrounds-kde
         - f43-backgrounds-kde
         - flatpak-kcm
         - kio-fuse

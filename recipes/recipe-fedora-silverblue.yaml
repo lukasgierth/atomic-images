@@ -10,6 +10,13 @@ modules:
   - type: dnf
     install:
       packages:
+        - f40-backgrounds-extras-gnome
+        - f41-backgrounds-extras-gnome
+        - f42-backgrounds-extras-gnome
+        - f43-backgrounds-extras-gnome
+        - f40-backgrounds-gnome
+        - f41-backgrounds-gnome
+        - f42-backgrounds-gnome
         - f43-backgrounds-gnome
         - gnome-shell-extension-caffeine
         - seahorse
