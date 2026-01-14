@@ -8,8 +8,14 @@ image-version: 43
 
 modules:
   - type: dnf
+    repos:
+      copr:
+        - gierth/image-branding
+      cleanup: true
     install:
       packages:
+        - backgrounds-aurora
+        - backgrounds-lakeside
         - f40-backgrounds-extras-gnome
         - f41-backgrounds-extras-gnome
         - f42-backgrounds-extras-gnome
@@ -35,16 +41,6 @@ modules:
 
   - from-file: shared-desktop.yaml
   - from-file: modules/flatpaks-gnome.yaml
-
-  - type: dnf
-    repos:
-      copr:
-        - gierth/image-branding
-      cleanup: true
-    install:
-      packages:
-        - backgrounds-aurora
-        - backgrounds-lakeside
 
   - type: gschema-overrides
   - type: script
