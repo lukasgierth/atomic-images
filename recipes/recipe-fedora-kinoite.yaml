@@ -21,7 +21,7 @@ modules:
         - flatpak-kcm
         - kio-fuse
         - klassy
-        - kwin-dynamic-workspaces
+        - kyanite
         - spectacle
     remove:
       packages:
