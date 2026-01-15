@@ -30,6 +30,7 @@ modules:
       packages:
         - ImageMagick
         - abcde
+        - aerc # email client in golang
         - alacritty
         - android-tools
         - ansible
