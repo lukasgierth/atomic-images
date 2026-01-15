@@ -13,7 +13,7 @@ modules:
         - gierth/tools-misc
         - gierth/tools-rust
         - ublue-os/packages
-      nonfree: rpmfusion
+      # nonfree: rpmfusion
       cleanup: true
     remove:
       packages:
