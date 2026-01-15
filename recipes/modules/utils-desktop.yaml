@@ -108,7 +108,6 @@ modules:
         - mpv
         - mullvad-vpn
         - neovim
-        - newsboat
         - nodejs
         - nom # rss reader
         - nomino # renamer
