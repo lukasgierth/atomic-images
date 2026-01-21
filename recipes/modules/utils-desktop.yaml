@@ -36,6 +36,7 @@ modules:
         - ansible
         - aria2
         - arp-scan
+        - atuin # encrypted and synced shell history
         - bat
         - bees # btrfs dedup
         - binwalk # inspect binaries for hidden files
