@@ -1,6 +1,5 @@
-# only when in interactive shell
+# only when in interactive shell and the command exists
 if status --is-interactive
-    if type -q zoxide
-        fzf --fish | source
-    end
+    and type -q zoxide
+    fzf --fish | source
 end
