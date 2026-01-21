@@ -1,3 +1,6 @@
-if type -q zoxide
-    zoxide init fish | source
+# only when in interactive shell
+if status --is-interactive
+    if type -q zoxide
+        zoxide init fish | source
+    end
 end
