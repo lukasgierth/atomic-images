@@ -1,0 +1,30 @@
+---
+name: cosmic-carrot
+description: Image based on Atomic Cosmic
+
+base-image: ghcr.io/blue-build/base-images/fedora-cosmic
+image-version: 43
+
+modules:
+  - type: dnf
+    remove:
+      packages:
+        - cosmic-player
+
+  - from-file: shared-desktop.yaml
+  - from-file: modules/flatpaks-cosmic.yaml
+
+  - type: script
+    scripts:
+      - prefer-bootc-over-rpm-ostree.sh
+      - disable-layering.sh
+
+  - type: os-release
+    properties:
+      ID: cosmic-carrot
+      ID_LIKE: fedora
+      NAME: Cosmic Carrot
+      PRETTY_NAME: Cosmic Carrot
+
+  - type: initramfs
+  - type: signing
