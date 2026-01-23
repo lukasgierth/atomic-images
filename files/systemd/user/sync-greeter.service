@@ -4,11 +4,10 @@ ConditionPathExists=/etc/setup-greeter
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/echo "Waiting for end of user session ..."
-RemainAfterExit=yes
-ExecStop=/usr/bin/sudo /usr/bin/wheel-allow-all enable
-ExecStop=/usr/bin/dms greeter sync
-ExecStop=/usr/bin/sudo /usr/bin/wheel-allow-all disable
+StandardOutput=journal
+ExecStart=/usr/bin/sudo /usr/bin/wheel-allow-all enable
+ExecStart=/usr/bin/dms greeter sync
+ExecStart=/usr/bin/sudo /usr/bin/wheel-allow-all disable
 
 [Install]
 WantedBy=default.target
