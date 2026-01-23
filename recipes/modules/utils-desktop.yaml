@@ -122,7 +122,6 @@ modules:
         - pre-commit
         - procs
         - python3
-        - python3-pip
         - rainfrog # db
         - rclone
         - restic
@@ -162,6 +161,7 @@ modules:
         - yazi # file manager
         - yt-dlp
         - zellij # multiplexer
+        - zizmor # check github/gitea-actions for vuln.
         - zoxide
         # disabled, already installed from negativo17 media-repo in base image, makes problems when version diverges
         #- ffmpeg
