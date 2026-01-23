@@ -1,5 +1,5 @@
 ---
-name: dms
+name: majestic-momo
 description: Image based on ublue mainline
 
 base-image: ghcr.io/ublue-os/base-main
