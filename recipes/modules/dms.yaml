@@ -26,6 +26,7 @@ modules:
         - dms-greeter
         - dolphin
         - dsearch
+        - fprintd
         - gnome-disk-utility
         - gnome-keyring
         - gnome-keyring-pam
@@ -57,6 +58,7 @@ modules:
     user:
       enabled:
         - gnome-keyring-daemon.service
+        - sync-greeter.service
         - dsearch.service
         - dms.service
     system:
@@ -64,5 +66,5 @@ modules:
         - cups.service
         - greetd.service
         - power-profiles-daemon.service
-        - setup-greeter-group.service
+        - setup-greeter.service
         # - udiskie.service

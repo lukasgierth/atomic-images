@@ -1,0 +1,14 @@
+[Unit]
+Description=Sync greeter visuals
+ConditionPathExists=/etc/setup-greeter
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/echo "Waiting for end of user session ..."
+RemainAfterExit=yes
+ExecStop=/usr/bin/sudo /usr/bin/wheel-allow-all enable
+ExecStop=/usr/bin/dms greeter sync
+ExecStop=/usr/bin/sudo /usr/bin/wheel-allow-all disable
+
+[Install]
+WantedBy=default.target
