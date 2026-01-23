@@ -14,8 +14,6 @@ modules:
       cleanup: true
     install:
       packages:
-        - backgrounds-aurora
-        - backgrounds-lakeside
         - gnome-shell-extension-caffeine
         - seahorse
     remove:
