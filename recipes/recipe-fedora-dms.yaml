@@ -18,7 +18,7 @@ modules:
     properties:
       ID: majestic momo
       ID_LIKE: fedora
-      NAME: Tipsy Majestic Momo
+      NAME: Majestic Momo
       PRETTY_NAME: Majestic Momo
 
   - type: initramfs
