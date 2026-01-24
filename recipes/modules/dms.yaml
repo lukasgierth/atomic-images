@@ -68,3 +68,8 @@ modules:
         - power-profiles-daemon.service
         - setup-greeter.service
         # - udiskie.service
+
+  - type: files
+    files:
+      - source: dms-skel
+        destination: /etc/skel
