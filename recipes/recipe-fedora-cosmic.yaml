@@ -21,10 +21,12 @@ modules:
 
   - type: os-release
     properties:
-      ID: cosmic-carrot
+      ID: fedora
       ID_LIKE: fedora
       NAME: Cosmic Carrot
       PRETTY_NAME: Cosmic Carrot
+      VARIANT: Cosmic Carrot
+      VARIANT_ID: cosmic-carrot
 
   - type: initramfs
   - type: signing

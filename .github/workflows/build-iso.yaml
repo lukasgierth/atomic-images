@@ -35,7 +35,7 @@ jobs:
             config: "./iso-dms.toml"
             disk-types: "anaconda-iso"
           - image_name: cosmic-carrot
-            base_image: quay.io/fedora-ostree-desktops/base-atomic:43
+            base_image: ghcr.io/lukasgierth/cosmic-carrot:latest
             config: "./iso-cosmic.toml"
             disk-types: "anaconda-iso"
 
