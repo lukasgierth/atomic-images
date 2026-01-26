@@ -11,6 +11,3 @@ echo "Save package list to image"
 echo "Save repository list to image"
 ls /etc/yum.repos.d >/usr/share/dnf5/repositories_files.txt
 cat /etc/yum.repos.d/* >/usr/share/dnf5/repositories_installed.txt
-
-echo "Delete repositories from image"
-rm -r /etc/yum.repos.d
