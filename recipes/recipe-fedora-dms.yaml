@@ -20,6 +20,8 @@ modules:
       ID_LIKE: fedora
       NAME: Majestic Momo
       PRETTY_NAME: Majestic Momo
+      VARIANT: Majestic Momo
+      VARIANT_ID: majestic-momo
 
   - type: initramfs
   - type: signing

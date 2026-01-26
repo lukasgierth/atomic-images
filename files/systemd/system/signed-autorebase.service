@@ -8,7 +8,7 @@ Wants=network-online.target
 Type=oneshot
 StandardOutput=journal
 EnvironmentFile=/etc/os-release
-ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-image-signed:docker://ghcr.io/lukasgierth/${ID}:latest
+ExecStart=/usr/bin/rpm-ostree rebase --bypass-driver ostree-image-signed:docker://ghcr.io/lukasgierth/${VARIANT_ID}:latest
 ExecStart=/usr/bin/touch /etc/signed-autorebase
 ExecStart=/usr/bin/systemctl reboot
 

@@ -1,10 +1,9 @@
 [customizations.installer.kickstart]
 contents = """
-bootc --source-imgref=registry:ghcr.io/lukasgierth/majestic-momo:latest
-"""
 # %post
 # bootc switch --mutate-in-place --transport registry ghcr.io/lukasgierth/majestic-momo:latest
 # %end
+"""
 
 [customizations.installer.modules]
 enable = [
