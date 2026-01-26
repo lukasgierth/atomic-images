@@ -54,6 +54,7 @@ modules:
       PRETTY_NAME: Sleepy Schaf
       VARIANT: Sleepy Schaf
       VARIANT_ID: sleepy-schaf
+      DEFAULT_HOSTNAME: sleepy-schaf
 
   - type: initramfs
   - type: signing

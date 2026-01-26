@@ -27,6 +27,7 @@ modules:
       PRETTY_NAME: Cosmic Carrot
       VARIANT: Cosmic Carrot
       VARIANT_ID: cosmic-carrot
+      DEFAULT_HOSTNAME: cosmic-carrot
 
   - type: initramfs
   - type: signing

@@ -22,6 +22,7 @@ modules:
       PRETTY_NAME: Majestic Momo
       VARIANT: Majestic Momo
       VARIANT_ID: majestic-momo
+      DEFAULT_HOSTNAME: majestic-momo
 
   - type: initramfs
   - type: signing
