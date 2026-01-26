@@ -31,7 +31,8 @@ jobs:
           #   config: "./iso-kinoite.toml"
           #   disk-types: "anaconda-iso"
           - image_name: majestic-momo
-            base_image: quay.io/fedora-ostree-desktops/base-atomic:43
+            base_image: ghcr.io/lukasgierth/majestic-momo:latest
+            # base_image: quay.io/fedora-ostree-desktops/base-atomic:43
             config: "./iso-dms.toml"
             disk-types: "anaconda-iso"
 
