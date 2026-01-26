@@ -1,9 +1,10 @@
 [customizations.installer.kickstart]
 contents = """
-%post
-bootc switch --mutate-in-place --transport registry ghcr.io/lukasgierth/majestic-momo:latest
-%end
+bootc --source-imgref=registry:ghcr.io/lukasgierth/majestic-momo:latest
 """
+# %post
+# bootc switch --mutate-in-place --transport registry ghcr.io/lukasgierth/majestic-momo:latest
+# %end
 
 [customizations.installer.modules]
 enable = [
@@ -15,7 +16,6 @@ enable = [
   "org.fedoraproject.Anaconda.Modules.Users",
   "org.fedoraproject.Anaconda.Modules.Timezone"
 ]
-
 disable = [
   "org.fedoraproject.Anaconda.Modules.Subscription",
 ]
