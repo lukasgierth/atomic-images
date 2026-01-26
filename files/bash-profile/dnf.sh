@@ -10,14 +10,4 @@ if [[ $- == *i* ]]; then
 		echo "/usr/bin/dnf5"
 		exit 1
 	}
-	microdnf() {
-		echo "Layering disabled, but if you really need to use microdnf:"
-		echo "/usr/bin/microdnf"
-		exit 1
-	}
-	yum() {
-		echo "Layering disabled, but if you really need to use yum:"
-		echo "/usr/bin/yum"
-		exit 1
-	}
 fi

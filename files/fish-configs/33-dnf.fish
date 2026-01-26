@@ -10,14 +10,4 @@ if status --is-interactive
         echo /usr/bin/dnf5
         exit 1
     end
-    function microdnf
-        echo "Layering disabled, but if you really need to use microdnf:"
-        echo /usr/bin/microdnf
-        exit 1
-    end
-    function yum
-        echo "Layering disabled, but if you really need to use yum:"
-        echo /usr/bin/yum
-        exit 1
-    end
 end
