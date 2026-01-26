@@ -1,5 +1,6 @@
 [Unit]
 Description=Update the dconf database at boot
+ConditionPathExists=/usr/bin/dconf
 After=network.target
 
 [Service]

@@ -55,10 +55,12 @@ modules:
 
   - type: os-release
     properties:
-      ID: tipsy-tippete
+      ID: fedora
       ID_LIKE: fedora
       NAME: Tipsy Tippete
       PRETTY_NAME: Tipsy Tippete
+      VARIANT: Tipsy Tippete
+      VARIANT_ID: tipsy-tippete
 
   - type: initramfs
   - type: signing
