@@ -22,17 +22,16 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          # - image_name: sleepy-schaf
-          #   base_image: quay.io/fedora-ostree-desktops/silverblue:43
-          #   config: "./iso-silverblue.toml"
-          #   disk-types: "anaconda-iso"
-          # - image_name: tipsy-tippete
-          #   base_image: quay.io/fedora-ostree-desktops/kinoite:43
-          #   config: "./iso-kinoite.toml"
-          #   disk-types: "anaconda-iso"
+          - image_name: sleepy-schaf
+            base_image: ghcr.io/lukasgierth/sleepy-schaf:latest
+            config: "./iso-silverblue.toml"
+            disk-types: "anaconda-iso"
+          - image_name: tipsy-tippete
+            base_image: ghcr.io/lukasgierth/tipsy-tippete:latest
+            config: "./iso-kinoite.toml"
+            disk-types: "anaconda-iso"
           - image_name: majestic-momo
             base_image: ghcr.io/lukasgierth/majestic-momo:latest
-            # base_image: quay.io/fedora-ostree-desktops/base-atomic:43
             config: "./iso-dms.toml"
             disk-types: "anaconda-iso"
 
