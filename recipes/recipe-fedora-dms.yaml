@@ -1,5 +1,5 @@
 ---
-name: majestic-momo
+name: amusing-aubergine
 description: Image based on ublue mainline
 
 base-image: ghcr.io/ublue-os/base-main
@@ -18,11 +18,11 @@ modules:
     properties:
       ID: fedora
       ID_LIKE: fedora
-      NAME: Majestic Momo
-      PRETTY_NAME: Majestic Momo
-      VARIANT: Majestic Momo
-      VARIANT_ID: majestic-momo
-      DEFAULT_HOSTNAME: majestic-momo
+      NAME: Amusing Aubergine
+      PRETTY_NAME: Amusing Aubergine
+      VARIANT: Amusing Aubergine
+      VARIANT_ID: amusing-aubergine
+      DEFAULT_HOSTNAME: amusing-aubergine
 
   - type: initramfs
   - type: signing

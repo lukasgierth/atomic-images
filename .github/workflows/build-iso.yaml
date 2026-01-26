@@ -30,8 +30,8 @@ jobs:
             base_image: ghcr.io/lukasgierth/tipsy-tippete:latest
             config: "./iso-kinoite.toml"
             disk-types: "anaconda-iso"
-          - image_name: majestic-momo
-            base_image: ghcr.io/lukasgierth/majestic-momo:latest
+          - image_name: amusing-aubergine
+            base_image: ghcr.io/lukasgierth/amusing-aubergine:latest
             config: "./iso-dms.toml"
             disk-types: "anaconda-iso"
           - image_name: cosmic-carrot
