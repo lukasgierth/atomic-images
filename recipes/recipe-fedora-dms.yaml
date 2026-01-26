@@ -16,7 +16,7 @@ modules:
 
   - type: os-release
     properties:
-      ID: majestic-momo
+      ID: fedora
       ID_LIKE: fedora
       NAME: Majestic Momo
       PRETTY_NAME: Majestic Momo
