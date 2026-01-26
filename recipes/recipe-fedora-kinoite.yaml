@@ -61,6 +61,7 @@ modules:
       PRETTY_NAME: Tipsy Tippete
       VARIANT: Tipsy Tippete
       VARIANT_ID: tipsy-tippete
+      DEFAULT_HOSTNAME: tipsy-tippete
 
   - type: initramfs
   - type: signing
