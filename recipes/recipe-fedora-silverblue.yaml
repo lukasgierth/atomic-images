@@ -48,10 +48,12 @@ modules:
 
   - type: os-release
     properties:
-      ID: sleepy-schaf
+      ID: fedora
       ID_LIKE: fedora
       NAME: Sleepy Schaf
       PRETTY_NAME: Sleepy Schaf
+      VARIANT: Sleepy Schaf
+      VARIANT_ID: sleepy-schaf
 
   - type: initramfs
   - type: signing
