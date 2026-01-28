@@ -100,6 +100,11 @@ animations {
         spring damping-ratio=0.85 stiffness=800 epsilon=0.0001
     }
 }
+// open all as maximized
+window-rule {
+	open-maximized true
+}
+//
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width {}
