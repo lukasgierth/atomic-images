@@ -73,6 +73,7 @@ modules:
         - f3
         - fastfetch
         - fd-find
+        - firewall-config
         - fish
         - fisher
         - flatpak-downgrade
