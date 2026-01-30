@@ -16,6 +16,7 @@ modules:
       cleanup: true
     install:
       packages:
+        - MouseTiler
         - dolphin-plugins
         - flatpak-kcm
         - kio-fuse
