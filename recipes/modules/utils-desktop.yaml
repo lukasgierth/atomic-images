@@ -126,7 +126,6 @@ modules:
         - procs
         - python3
         - python3-neovim
-        - python3-setuptools
         - rainfrog # db
         - rclone
         - restic
@@ -160,7 +159,6 @@ modules:
         - unzip
         - usbip # sharing usb device over network
         - uv
-        - whipper
         - wireshark
         - wordgrinder
         - yazi # file manager
