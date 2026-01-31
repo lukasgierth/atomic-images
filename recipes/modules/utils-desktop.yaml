@@ -59,6 +59,7 @@ modules:
         - ctags
         - ctop # top for docker containers
         - curl
+        - cyanrip # accurate disc ripper
         - ddrescue
         - deno-bin # ts,js builder
         - detox
