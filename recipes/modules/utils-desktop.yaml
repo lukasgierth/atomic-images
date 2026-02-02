@@ -108,7 +108,11 @@ modules:
         - iperf3
         - jujutsu # vcs on top of git
         - k9s
-        - kubecolor
+        - kompose
+        - krew # kubectl plugins
+        - kubecolor # kubectl wrapper
+        - kubectl
+        - kubie # change k8s cluster/ns
         - kustomize
         - lazygit # git
         - lazyjournal # journalctl
@@ -151,6 +155,7 @@ modules:
         - sjust
         - snapper
         - somo # ss alternative
+        - sops
         - stacker-bin # build images with yaml config
         - stow
         - stress-ng
@@ -158,6 +163,7 @@ modules:
         - subtui # tui for subsonic server
         - systemctl-tui
         - tailscale
+        - talosctl
         - tcpdump
         - tealdeer
         - tmux
