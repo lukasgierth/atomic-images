@@ -4,6 +4,7 @@ modules:
     repos:
       files:
         - charm.repo
+        - https://kubecolor.github.io/packages/rpm/kubecolor.repo
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
@@ -107,6 +108,7 @@ modules:
         - iperf3
         - jujutsu # vcs on top of git
         - k9s
+        - kubecolor
         - kustomize
         - lazygit # git
         - lazyjournal # journalctl
