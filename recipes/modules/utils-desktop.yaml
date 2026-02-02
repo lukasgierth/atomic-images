@@ -36,6 +36,7 @@ modules:
         - ansible
         - aria2
         - arp-scan
+        - asciinema # record terminal easily
         - atuin # encrypted and synced shell history
         - bat
         - bees # btrfs dedup
@@ -63,9 +64,11 @@ modules:
         - ddrescue
         - deno-bin # ts,js builder
         - detox
+        - dive # inspect OCI images
         - dfu-programmer
         - dfu-util
         - distrobox
+        - doggo # a nicer dig/nslookup
         - duf
         - du-dust
         - eilmeldung # rss
@@ -91,10 +94,11 @@ modules:
         - glow # charm: render markdown
         - golang
         - golazo # football scores
+        - gping # ping with graph
         - grype # check images for cve
         - gum # charm: shell bling
         - gzip
-        - httpx
+        - httping # ping but for http
         - hugo # build static websites
         - hurl # http requests
         - hyperfine # cli benchmarking

@@ -41,7 +41,7 @@ modules:
         - qt6ct
         - quickshell
         - swayimg # image viewer
-        - wiremix
+        - wiremix # FIX: use official package when more uptodate
         - wireplumber
         - wlctl
         - xdg-desktop-portal-gnome
