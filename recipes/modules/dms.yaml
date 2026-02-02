@@ -19,6 +19,7 @@ modules:
         - adw-gtk3-theme
         - NetworkManager
         - accountsservice
+        - bluetui
         - cava
         - cups
         - dgop
@@ -40,6 +41,7 @@ modules:
         - qt6ct
         - quickshell
         - swayimg # image viewer
+        - wiremix
         - wireplumber
         - wlctl
         - xdg-desktop-portal-gnome
