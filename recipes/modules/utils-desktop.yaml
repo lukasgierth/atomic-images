@@ -31,6 +31,7 @@ modules:
         - ImageMagick
         - abcde
         - aerc # email client in golang
+        - age
         - alacritty
         - android-tools
         - ansible
@@ -98,12 +99,15 @@ modules:
         - grype # check images for cve
         - gum # charm: shell bling
         - gzip
+        - helm
         - httping # ping but for http
         - hugo # build static websites
         - hurl # http requests
         - hyperfine # cli benchmarking
         - iperf3
         - jujutsu # vcs on top of git
+        - k9s
+        - kustomize
         - lazygit # git
         - lazyjournal # journalctl
         - lazysql # sql
