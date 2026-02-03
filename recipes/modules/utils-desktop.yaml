@@ -57,6 +57,7 @@ modules:
         - chezmoi # config manager
         - cmake
         - comchan # serialport
+        - cosign
         - crush # charm: AI assistant
         - ctags
         - ctop # top for docker containers
