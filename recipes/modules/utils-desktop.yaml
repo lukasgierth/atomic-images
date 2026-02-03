@@ -162,6 +162,7 @@ modules:
         - stress-ng # stress your cpu for tests
         - subfinder
         - subtui # tui for subsonic server
+        - surge # downloader
         - systemctl-tui
         - tailscale
         - talosctl
