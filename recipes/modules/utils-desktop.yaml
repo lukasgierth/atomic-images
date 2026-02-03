@@ -30,7 +30,6 @@ modules:
     install:
       packages:
         - ImageMagick
-        - abcde
         - aerc # email client in golang
         - age
         - alacritty
@@ -102,7 +101,6 @@ modules:
         - gzip
         - helm
         - httping # ping but for http
-        - hugo # build static websites
         - hurl # http requests
         - hyperfine # cli benchmarking
         - iperf3
@@ -133,7 +131,7 @@ modules:
         - nomino # renamer
         - oh-my-posh
         - oha # create traffic on a webserver to test
-        - onefetch
+        - onefetch # fastfetch but for git repos
         - pandoc
         - picocom
         - podman-compose
@@ -141,7 +139,7 @@ modules:
         - procs
         - python3
         - python3-neovim
-        - rainfrog # db
+        - rainfrog # db tui
         - rclone
         - restic
         - ripgrep
@@ -166,7 +164,6 @@ modules:
         - talosctl
         - tcpdump
         - tealdeer
-        - tmux
         - trash-cli
         - trippy # network diagnostic
         - trivy
@@ -174,10 +171,8 @@ modules:
         - ublue-os-udev-rules
         - ublue-polkit-rules
         - unzip
-        - usbip # sharing usb device over network
-        - uv
+        - uv # python venv
         - wireshark
-        - wordgrinder
         - yazi # file manager
         - yt-dlp
         - zellij # multiplexer
