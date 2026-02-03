@@ -113,9 +113,10 @@ modules:
         - kubie # change k8s cluster/ns
         - kustomize
         - lazygit # git
+        - lazyjj # jujutsu
         - lazyjournal # journalctl
         - lazysql # sql
-        - lazyssh
+        - lazyssh # ssh
         - libxcrypt-compat
         - luajit
         - luarocks
