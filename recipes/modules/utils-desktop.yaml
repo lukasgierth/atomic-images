@@ -47,7 +47,6 @@ modules:
         - blindfold # gitignore
         - blisp
         - borgbackup
-        - borgmatic
         - btop
         - btrbk
         - btrfs-assistant
