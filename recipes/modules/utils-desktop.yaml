@@ -95,6 +95,7 @@ modules:
         - glow # charm: render markdown
         - golang
         - golazo # football scores
+        - gonzo # analyse log files
         - gping # ping with graph
         - grype # check images for cve
         - gum # charm: shell bling
@@ -133,6 +134,7 @@ modules:
         - oh-my-posh
         - oha # create traffic on a webserver to test
         - onefetch # fastfetch but for git repos
+        - otel-tui
         - pandoc
         - picocom
         - podman-compose
