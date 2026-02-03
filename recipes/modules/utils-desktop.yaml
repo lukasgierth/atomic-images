@@ -42,12 +42,12 @@ modules:
         - autorestic # backup
         - bat # cat-in-prettier
         - bees # btrfs-dedup
+        - binsider # inspect binaries
         - binwalk # inspect binaries
         - blindfold # gitignore
         - blisp
         - borgbackup
         - borgmatic
-        - broot # navigate dirs
         - btop
         - btrbk
         - btrfs-assistant
