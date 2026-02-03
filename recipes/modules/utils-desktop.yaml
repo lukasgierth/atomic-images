@@ -39,6 +39,7 @@ modules:
         - arp-scan
         - asciinema # record terminal easily
         - atuin # encrypted and synced shell history
+        - autorestic # restic config in yaml
         - bat
         - bees # btrfs dedup
         - binwalk # inspect binaries for hidden files
@@ -64,7 +65,6 @@ modules:
         - cyanrip # accurate disc ripper
         - ddrescue
         - deno-bin # ts,js builder
-        - detox
         - dive # inspect OCI images
         - dfu-programmer
         - dfu-util
@@ -99,7 +99,7 @@ modules:
         - grype # check images for cve
         - gum # charm: shell bling
         - gzip
-        - helm
+        - helm # k8s pkg manager
         - httping # ping but for http
         - hurl # http requests
         - hyperfine # cli benchmarking
@@ -120,15 +120,15 @@ modules:
         - luajit
         - luarocks
         - make
-        - mediainfo
-        - mise
-        - mosh
+        - mediainfo # see media file information
+        - mise # manage envs/tools/dirs
+        - mosh # more robust ssh backup
         - mpv
         - mullvad-vpn
         - neovim
         - nodejs
         - nom # rss reader
-        - nomino # renamer
+        - nomino # rename files in batch
         - oh-my-posh
         - oha # create traffic on a webserver to test
         - onefetch # fastfetch but for git repos
@@ -142,7 +142,7 @@ modules:
         - rainfrog # db tui
         - rclone
         - restic
-        - ripgrep
+        - ripgrep # newer grep
         - rs-tftpd
         - rsync
         - ruby
@@ -151,12 +151,12 @@ modules:
         - rustscan # nmap, bang a server
         - shntool
         - sjust
-        - snapper
+        - snapper # btrfs snapshot management
         - somo # ss alternative
         - sops
         - stacker-bin # build images with yaml config
-        - stow
-        - stress-ng
+        - stow # symlinker
+        - stress-ng # stress your cpu for tests
         - subfinder
         - subtui # tui for subsonic server
         - systemctl-tui
