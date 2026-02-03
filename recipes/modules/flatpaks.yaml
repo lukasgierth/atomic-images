@@ -23,7 +23,6 @@ modules:
           - io.github.v81d.Wattage
           - org.darktable.Darktable
           - org.gnome.DejaDup
-          - org.gnome.World.PikaBackup
           - org.libreoffice.LibreOffice
           - org.mozilla.Thunderbird
           - org.mozilla.firefox
