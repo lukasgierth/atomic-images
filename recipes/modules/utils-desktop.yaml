@@ -150,6 +150,7 @@ modules:
         - rsync
         - ruby
         - ruby-devel
+        - rustic # restic in rust
         - rustnet # network diagnostic
         - rustscan # nmap, bang a server
         - shntool
