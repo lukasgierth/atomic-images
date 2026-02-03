@@ -29,26 +29,25 @@ modules:
         - vim-minimal
     install:
       packages:
-        - ImageMagick
-        - aerc # email client in golang
-        - age
-        - alacritty
+        - ImageMagick # media
+        - aerc # email
+        - age # cloud
+        - alacritty # terminal
         - android-tools
-        - ansible
-        - aria2
-        - arp-scan
-        - asciinema # record terminal easily
-        - atuin # encrypted and synced shell history
-        - autorestic # restic config in yaml
-        - bat
-        - bees # btrfs dedup
-        - binwalk # inspect binaries for hidden files
-        - blindfold # gitignore generator
+        - ansible # automation
+        - aria2 # download
+        - arp-scan # network
+        - asciinema # recorder
+        - atuin # history
+        - autorestic # backup
+        - bat # cat-in-prettier
+        - bees # btrfs-dedup
+        - binwalk # inspect binaries
+        - blindfold # gitignore
         - blisp
         - borgbackup
         - borgmatic
-        - bottom # like top,btop
-        - broot # different way to travel directories
+        - broot # navigate dirs
         - btop
         - btrbk
         - btrfs-assistant
@@ -58,6 +57,7 @@ modules:
         - chezmoi # config manager
         - cmake
         - comchan # serialport
+        - cosign
         - crush # charm: AI assistant
         - ctags
         - ctop # top for docker containers
@@ -65,13 +65,13 @@ modules:
         - cyanrip # accurate disc ripper
         - ddrescue
         - deno-bin # ts,js builder
-        - dive # inspect OCI images
         - dfu-programmer
         - dfu-util
         - distrobox
-        - doggo # a nicer dig/nslookup
-        - duf
+        - dive # OCI
+        - doggo # dns
         - du-dust
+        - duf
         - eilmeldung # rss
         - esptool
         - eza # ls
