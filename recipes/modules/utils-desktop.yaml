@@ -90,6 +90,7 @@ modules:
         - git-cliff # for git
         - git-delta # diff
         - git-extras # extra commands
+        - git-who # blame for whole dirs etc.
         - glibc-static
         - glow # charm: render markdown
         - golang
