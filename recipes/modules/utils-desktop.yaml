@@ -55,6 +55,7 @@ modules:
         - chezmoi # config manager
         - cmake
         - comchan # serialport
+        - copr-cli
         - cosign
         - crush # charm: AI assistant
         - ctags
@@ -132,6 +133,7 @@ modules:
         - oh-my-posh
         - oha # create traffic on a webserver to test
         - onefetch # fastfetch but for git repos
+        - osc # obs cli
         - otel-tui
         - pandoc
         - picocom
