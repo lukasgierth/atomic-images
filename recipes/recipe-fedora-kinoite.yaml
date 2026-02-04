@@ -25,6 +25,7 @@ modules:
         - spectacle
     remove:
       packages:
+        - cosign # will be replaced by my version
         - fcitx5-chinese-addons
         - fcitx5-configtool
         - fcitx5-gtk

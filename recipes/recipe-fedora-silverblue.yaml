@@ -18,6 +18,7 @@ modules:
         - seahorse
     remove:
       packages:
+        - cosign # will be replaced by my version
         - gnome-classic-session
         - gnome-shell-extension-apps-menu
         - gnome-shell-extension-background-logo
