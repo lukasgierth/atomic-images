@@ -46,7 +46,6 @@ modules:
         - binwalk # inspect binaries
         - blindfold # gitignore
         - blisp
-        - borgbackup
         - btop
         - btrbk
         - btrfs-assistant
