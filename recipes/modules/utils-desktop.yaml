@@ -35,6 +35,7 @@ modules:
         - alacritty # terminal
         - android-tools
         - ansible # automation
+        - aqua # pkg manager
         - aria2 # download
         - arp-scan # network
         - asciinema # recorder
