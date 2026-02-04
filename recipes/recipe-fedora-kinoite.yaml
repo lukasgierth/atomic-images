@@ -19,6 +19,7 @@ modules:
         - MouseTiler
         - dolphin-plugins
         - flatpak-kcm
+        - karousel
         - kio-fuse
         - klassy
         - kyanite
