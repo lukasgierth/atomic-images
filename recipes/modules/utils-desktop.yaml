@@ -104,6 +104,8 @@ modules:
         - hurl # http requests
         - hyperfine # cli benchmarking
         - iperf3
+        - jaq
+        - jq
         - jujutsu # vcs on top of git
         - k9s
         - kompose
