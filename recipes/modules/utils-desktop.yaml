@@ -82,7 +82,7 @@ modules:
         - fzf
         - gcc
         - gcc-c++
-        - gdu
+        - gdu # like ncdu
         - git
         - git-annex # manage big files
         - git-cliff # for git
@@ -142,6 +142,7 @@ modules:
         - python3-neovim
         - rainfrog # db tui
         - rclone
+        - redu # gdu for restic
         - restic
         - ripgrep # newer grep
         - rs-tftpd
