@@ -96,6 +96,7 @@ modules:
         - golang
         - golazo # football scores
         - gonzo # analyse log files
+        - gophertube # watch yt videos
         - gping # ping with graph
         - grype # check images for cve
         - gum # charm: shell bling
