@@ -41,6 +41,7 @@ modules:
         - qt6ct
         - quickshell
         - swayimg # image viewer
+        - udiskie # automount
         - wiremix # FIX: use official package when more uptodate
         - wireplumber
         - wlctl
@@ -48,7 +49,6 @@ modules:
         - xdg-desktop-portal-gtk
         - xwayland-satellite
         - zathura # pdf
-        # - udiskie
 
     # TODO:
     # sed --sandbox -i -e '/gnome_keyring.so/ s/-auth/auth/ ; /gnome_keyring.so/ s/-session/session/' /etc/pam.d/greetd
@@ -70,7 +70,7 @@ modules:
         - greetd.service
         - power-profiles-daemon.service
         - setup-greeter.service
-        # - udiskie.service
+        - udiskie.service
 
   - type: files
     files:
