@@ -1,5 +1,4 @@
-# only when in interactive shell and the command exists
+# only when in interactive shell
 if status --is-interactive
-    and type -q zoxide
     zoxide init fish | source
 end

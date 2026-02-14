@@ -4,6 +4,7 @@ modules:
     repos:
       files:
         - charm.repo
+        - https://kubecolor.github.io/packages/rpm/kubecolor.repo
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
@@ -28,24 +29,24 @@ modules:
         - vim-minimal
     install:
       packages:
-        - ImageMagick
-        - abcde
-        - aerc # email client in golang
-        - alacritty
+        - ImageMagick # media
+        - aerc # email
+        - age # cloud
+        - alacritty # terminal
         - android-tools
-        - ansible
-        - aria2
-        - arp-scan
-        - atuin # encrypted and synced shell history
-        - bat
-        - bees # btrfs dedup
-        - binwalk # inspect binaries for hidden files
-        - blindfold # gitignore generator
+        - ansible # automation
+        - aqua # pkg manager
+        - aria2 # download
+        - arp-scan # network
+        - asciinema # recorder
+        - atuin # history
+        - autorestic # backup
+        - bat # cat-in-prettier
+        - bees # btrfs-dedup
+        - binsider # inspect binaries
+        - binwalk # inspect binaries
+        - blindfold # gitignore
         - blisp
-        - borgbackup
-        - borgmatic
-        - bottom # like top,btop
-        - broot # different way to travel directories
         - btop
         - btrbk
         - btrfs-assistant
@@ -55,69 +56,90 @@ modules:
         - chezmoi # config manager
         - cmake
         - comchan # serialport
+        - copr-cli
+        - cosign
         - crush # charm: AI assistant
         - ctags
         - ctop # top for docker containers
         - curl
+        - cyanrip # accurate disc ripper
         - ddrescue
         - deno-bin # ts,js builder
-        - detox
         - dfu-programmer
         - dfu-util
         - distrobox
-        - duf
+        - dive # OCI
+        - doggo # dns
         - du-dust
+        - duf
         - eilmeldung # rss
         - esptool
         - eza # ls
         - f3
         - fastfetch
         - fd-find
+        - firewall-config
         - fish
         - fisher
-        - flatpak-downgrade
         - fzf
         - gcc
         - gcc-c++
-        - gdu
+        - gdu # like ncdu
         - git
         - git-annex # manage big files
         - git-cliff # for git
         - git-delta # diff
         - git-extras # extra commands
+        - git-who # blame for whole dirs etc.
         - glibc-static
         - glow # charm: render markdown
         - golang
         - golazo # football scores
+        - gonzo # analyse log files
+        - gophertube # watch yt videos
+        - gping # ping with graph
         - grype # check images for cve
         - gum # charm: shell bling
         - gzip
-        - httpx
-        - hugo # build static websites
+        - helm # k8s pkg manager
+        - httping # ping but for http
         - hurl # http requests
         - hyperfine # cli benchmarking
         - iperf3
+        - jaq
+        - jq
         - jujutsu # vcs on top of git
+        - k9s
+        - kompose
+        - krew # kubectl plugins
+        - kubecolor # kubectl wrapper
+        - kubectl
+        - kubie # change k8s cluster/ns
+        - kustomize
         - lazygit # git
+        - lazyjj # jujutsu
         - lazyjournal # journalctl
         - lazysql # sql
-        - lazyssh
+        - lazyssh # ssh
         - libxcrypt-compat
         - luajit
         - luarocks
         - make
-        - mediainfo
-        - mise
-        - mosh
+        - mediainfo # see media file information
+        - mise # manage envs/tools/dirs
+        - mosh # more robust ssh backup
         - mpv
         - mullvad-vpn
         - neovim
         - nodejs
         - nom # rss reader
-        - nomino # renamer
+        - nomino # rename files in batch
         - oh-my-posh
         - oha # create traffic on a webserver to test
-        - onefetch
+        - onefetch # fastfetch but for git repos
+        - osc # obs cli
+        - otel-tui
+        - ov # pager
         - pandoc
         - picocom
         - podman-compose
@@ -125,30 +147,34 @@ modules:
         - procs
         - python3
         - python3-neovim
-        - rainfrog # db
+        - rainfrog # db tui
         - rclone
+        - redu # gdu for restic
         - restic
-        - ripgrep
+        - ripgrep # newer grep
         - rs-tftpd
         - rsync
         - ruby
         - ruby-devel
+        - rustic # restic in rust
         - rustnet # network diagnostic
         - rustscan # nmap, bang a server
         - shntool
         - sjust
-        - snapper
+        - snapper # btrfs snapshot management
         - somo # ss alternative
+        - sops
         - stacker-bin # build images with yaml config
-        - stow
-        - stress-ng
+        - stow # symlinker
+        - stress-ng # stress your cpu for tests
         - subfinder
         - subtui # tui for subsonic server
+        - surge # downloader
         - systemctl-tui
         - tailscale
+        - talosctl
         - tcpdump
         - tealdeer
-        - tmux
         - trash-cli
         - trippy # network diagnostic
         - trivy
@@ -156,11 +182,8 @@ modules:
         - ublue-os-udev-rules
         - ublue-polkit-rules
         - unzip
-        - usbip # sharing usb device over network
-        - uv
-        - whipper
+        - uv # python venv
         - wireshark
-        - wordgrinder
         - yazi # file manager
         - yt-dlp
         - zellij # multiplexer
