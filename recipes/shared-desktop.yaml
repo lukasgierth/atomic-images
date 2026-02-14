@@ -20,6 +20,7 @@ modules:
   - type: systemd
     system:
       enabled:
+        - mullvad-daemon.service
         - setup-dialout-group.service
         - setup-input-group.service
         - signed-autorebase.service
