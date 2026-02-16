@@ -11,10 +11,12 @@ modules:
     repos:
       copr:
         - gierth/image-branding
+        - gierth/tools-misc
       cleanup: true
     install:
       packages:
         - gnome-shell-extension-caffeine
+        - gnome-shell-extension-copyous
         - seahorse
     remove:
       packages:
