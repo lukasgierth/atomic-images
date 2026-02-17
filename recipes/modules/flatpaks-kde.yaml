@@ -25,3 +25,4 @@ modules:
           - org.kde.kwrite
           - org.kde.okular
           - org.kde.skanpage
+          - org.rncbc.qpwgraph
