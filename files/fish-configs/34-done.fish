@@ -7,7 +7,7 @@ if status --is-interactive
             set -l duration_s (math -s0 "$CMD_DURATION / 1000")
             set -l command_text (string join " " $argv | string sub --length 50)
             test (string length (string join " " $argv)) -gt 50; and set command_text "$command_text..."
-            notify-send -u normal -i utilities-terminal "Command Finished ($duration_s s)" "$command_text"
+            notify-send -u low -i utilities-terminal "Command Finished ($duration_s s)" "$command_text"
         end
     end
 end
