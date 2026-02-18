@@ -136,6 +136,7 @@ modules:
         - nomino # rename files in batch
         - oh-my-posh
         - oha # create traffic on a webserver to test
+        - ollama
         - onefetch # fastfetch but for git repos
         - opencode-bin # AI assistant
         - osc # obs cli
