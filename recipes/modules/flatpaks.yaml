@@ -9,6 +9,7 @@ modules:
           name: flathub
         install:
           - com.google.Chrome
+          - com.jeffser.Alpaca
           - de.capypara.FieldMonitor
           - de.schmidhuberj.DieBahn
           - dev.vencord.Vesktop
