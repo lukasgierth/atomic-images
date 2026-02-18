@@ -140,7 +140,6 @@ modules:
         - onefetch # fastfetch but for git repos
         - opencode-bin # AI assistant
         - osc # obs cli
-        - otel-tui
         - ov # pager
         - pandoc
         - picocom
