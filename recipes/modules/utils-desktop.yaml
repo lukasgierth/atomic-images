@@ -142,6 +142,7 @@ modules:
         - ov # pager
         - pandoc
         - picocom
+        - pnpm
         - podman-compose
         - pre-commit
         - procs
