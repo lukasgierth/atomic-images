@@ -137,6 +137,7 @@ modules:
         - oh-my-posh
         - oha # create traffic on a webserver to test
         - onefetch # fastfetch but for git repos
+        - opencode-bin # AI assistant
         - osc # obs cli
         - otel-tui
         - ov # pager
