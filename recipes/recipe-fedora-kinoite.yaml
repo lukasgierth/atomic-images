@@ -38,7 +38,6 @@ modules:
         - fcitx5-unikey
         - filelight
         - firewall-config
-        - kate
         - kcharselect
         - kcm-fcitx5
         - khelpcenter
