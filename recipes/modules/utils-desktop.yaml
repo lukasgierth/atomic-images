@@ -158,6 +158,7 @@ modules:
         - rsync
         - ruby
         - ruby-devel
+        - runc # oci minimal runtime
         - rustic # restic in rust
         - rustnet # network diagnostic
         - rustscan # nmap, bang a server
@@ -183,6 +184,7 @@ modules:
         - trufflehog # look for secrets in repos/patch that cant be snatched
         - ublue-os-udev-rules
         - ublue-polkit-rules
+        - umoci # oci minimal container inspection tool
         - unzip
         - uv # python venv
         - wireshark
