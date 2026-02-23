@@ -16,6 +16,8 @@ modules:
           - com.rafaelmardojai.Blanket
           - com.ranfdev.DistroShelf
           - com.saivert.pwvucontrol
+          - com.sidevesh.Luminance
+          - dev.qwery.AddWater
           - io.github.dp0sk.Crosspipe
           - io.github.flattool.Warehouse
           - io.github.swordpuffin.rewaita
