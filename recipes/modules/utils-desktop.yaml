@@ -4,6 +4,7 @@ modules:
     repos:
       files:
         - charm.repo
+        - goreleaser.repo
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -97,6 +98,7 @@ modules:
         - golazo # football scores
         - gonzo # analyse log files
         - gophertube # watch yt videos
+        - goreleaser
         - gping # ping with graph
         - grype # check images for cve
         - gum # charm: shell bling
