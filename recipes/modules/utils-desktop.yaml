@@ -101,7 +101,6 @@ modules:
         - goreleaser
         - gping # ping with graph
         - grype # check images for cve
-        - gum # charm: shell bling
         - gzip
         - helm # k8s pkg manager
         - httping # ping but for http
