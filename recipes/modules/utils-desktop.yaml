@@ -143,6 +143,7 @@ modules:
         - osc # obs cli
         - ov # pager
         - pandoc
+        - pangolin-cli
         - picocom
         - pnpm
         - podman-compose
