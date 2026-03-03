@@ -192,6 +192,7 @@ modules:
         - wireshark
         - yazi # file manager
         - yt-dlp
+        - yq # jq but for yaml
         - zellij # multiplexer
         - zizmor # check github/gitea-actions for vuln.
         - zoxide
