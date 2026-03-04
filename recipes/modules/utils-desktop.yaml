@@ -37,6 +37,7 @@ modules:
         - android-tools
         - ansible # automation
         - aqua # pkg manager
+        # - argocd # enabled with fedora 44
         - aria2 # download
         - arp-scan # network
         - asciinema # recorder
@@ -52,6 +53,7 @@ modules:
         - btrbk
         - btrfs-assistant
         - btrfs-progs
+        - calicoctl
         - caligula # dd alternative
         - cargo
         - chezmoi # config manager
@@ -138,6 +140,7 @@ modules:
         - oh-my-posh
         - oha # create traffic on a webserver to test
         - ollama
+        # - omnictl # enabled with fedora 44
         - onefetch # fastfetch but for git repos
         - opencode-bin # AI assistant
         - osc # obs cli
