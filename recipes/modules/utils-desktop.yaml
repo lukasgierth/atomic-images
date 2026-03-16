@@ -37,7 +37,7 @@ modules:
         - android-tools
         - ansible # automation
         - aqua # pkg manager
-        # - argocd # enabled with fedora 44
+        - argocd
         - aria2 # download
         - arp-scan # network
         - asciinema # recorder
@@ -140,7 +140,6 @@ modules:
         - oh-my-posh
         - oha # create traffic on a webserver to test
         - ollama
-        # - omnictl # enabled with fedora 44
         - onefetch # fastfetch but for git repos
         - opencode-bin # AI assistant
         - osc # obs cli

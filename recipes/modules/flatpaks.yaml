@@ -14,8 +14,6 @@ modules:
           - de.schmidhuberj.DieBahn
           - dev.vencord.Vesktop
           - hu.irl.cameractrls
-          - io.dbeaver.DBeaverCommunity
-          - io.dbeaver.DBeaverCommunity.Client.pgsql
           - io.github.dweymouth.supersonic
           - io.github.gaheldev.Millisecond
           - io.github.justinrdonnelly.bouncer
