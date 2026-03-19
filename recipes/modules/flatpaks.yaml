@@ -19,6 +19,7 @@ modules:
           - io.github.justinrdonnelly.bouncer
           - io.github.kolunmi.Bazaar
           - io.github.leolost2605.emergency-alerts
+          - io.github.totoshko88.RustConn
           - io.github.v81d.Wattage
           - org.darktable.Darktable
           - org.gnome.DejaDup
