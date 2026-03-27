@@ -12,6 +12,7 @@ modules:
           - be.alexandervanhee.gradia
           - com.github.finefindus.eyedropper
           - com.github.tchx84.Flatseal
+          - com.jeffser.Nocturne
           - com.mattjakeman.ExtensionManager
           - com.pojtinger.felicitas.Sessions
           - com.rafaelmardojai.Blanket
