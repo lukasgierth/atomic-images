@@ -14,6 +14,8 @@ modules:
           - de.schmidhuberj.DieBahn
           - dev.vencord.Vesktop
           - hu.irl.cameractrls
+          - io.beekeeperstudio.Studio
+          - io.github.dweymouth.supersonic
           - io.github.gaheldev.Millisecond
           - io.github.justinrdonnelly.bouncer
           - io.github.kolunmi.Bazaar
