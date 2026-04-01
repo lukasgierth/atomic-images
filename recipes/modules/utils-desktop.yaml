@@ -38,6 +38,7 @@ modules:
         - ansible # automation
         - aqua # pkg manager
         - argocd
+        - argonaut #tui for argocd
         - aria2 # download
         - arp-scan # network
         - asciinema # recorder
@@ -84,6 +85,8 @@ modules:
         - firewall-config
         - fish
         - fisher
+        - fluxcd
+        - flux9s # tui for fluxcd
         - fzf
         - gcc
         - gcc-c++
