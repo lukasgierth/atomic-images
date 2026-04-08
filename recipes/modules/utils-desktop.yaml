@@ -68,6 +68,7 @@ modules:
         - curl
         - cyanrip # accurate disc ripper
         - ddrescue
+        - deadbranch # cleanup git branches
         - deno-bin # ts,js builder
         - dfu-programmer
         - dfu-util
@@ -128,6 +129,7 @@ modules:
         - lazysql # sql
         - lazyssh # ssh
         - libxcrypt-compat
+        - llmfit
         - luajit
         - luarocks
         - make
