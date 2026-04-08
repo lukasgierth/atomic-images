@@ -5,6 +5,7 @@ modules:
       files:
         - charm.repo
         - goreleaser.repo
+        - https://cli.github.com/packages/rpm/gh-cli.repo
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo
         - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -92,6 +93,8 @@ modules:
         - gcc
         - gcc-c++
         - gdu # like ncdu
+        - gh # github cli
+        - gh-dash
         - git
         - git-annex # manage big files
         - git-cliff # for git
