@@ -15,6 +15,7 @@ modules:
       cleanup: true
     install:
       packages:
+        - backgrounds-mixed
         - gnome-shell-extension-caffeine
         - gnome-shell-extension-copyous
         - seahorse
