@@ -29,6 +29,7 @@ modules:
           - org.mozilla.firefox
           - org.musicbrainz.Picard
           - org.raspberrypi.rpi-imager
+          - org.signal.Signal
 
   - type: systemd
     system:
