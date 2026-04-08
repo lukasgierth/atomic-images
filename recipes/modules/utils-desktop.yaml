@@ -101,6 +101,7 @@ modules:
         - git-delta # diff
         - git-extras # extra commands
         - git-who # blame for whole dirs etc.
+        - gitsocial
         - glibc-static
         - glow # charm: render markdown
         - golang
@@ -159,6 +160,7 @@ modules:
         - podman-compose
         - pre-commit
         - procs
+        - purple #ssh-manager in rust
         - python3
         - python3-neovim
         - rainfrog # db tui
