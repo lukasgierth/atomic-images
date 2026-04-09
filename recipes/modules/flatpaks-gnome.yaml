@@ -28,7 +28,9 @@ modules:
           - org.gnome.Connections
           - org.gnome.Fractal
           - org.gnome.Loupe
+          - org.gnome.Mahjongg
           - org.gnome.Papers
           - org.gnome.SimpleScan
+          - org.gnome.Sudoku
           - org.gnome.TextEditor
           - page.tesk.Refine
