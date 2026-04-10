@@ -179,7 +179,6 @@ modules:
         - shntool
         - sjust
         - snapper # btrfs snapshot management
-        - soft-serve # cli git server and client
         - somo # ss alternative
         - sops
         - stacker-bin # build images with yaml config
