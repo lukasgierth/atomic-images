@@ -23,6 +23,7 @@ modules:
           - io.github.dp0sk.Crosspipe
           - io.github.flattool.Warehouse
           - io.github.swordpuffin.rewaita
+          - io.m51.Gelly
           - org.gnome.Calculator
           - org.gnome.Characters
           - org.gnome.Connections
