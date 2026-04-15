@@ -9,3 +9,8 @@ echo 'Hidden=true' >>/usr/share/applications/gcdmaster.desktop
 echo 'Hidden=true' >>/usr/share/applications/nvim.desktop
 echo 'Hidden=true' >>/usr/share/applications/nvtop.desktop
 echo 'Hidden=true' >>/usr/share/applications/btrfs-assistant.desktop
+
+if [ -f /usr/share/applications/org.gnome.Extensions.desktop ]; then
+	echo "Detected GNOME environment, also hide the basic Extensions App"
+	echo 'Hidden=true' >>/usr/share/applications/org.gnome.Extensions.desktop
+fi
