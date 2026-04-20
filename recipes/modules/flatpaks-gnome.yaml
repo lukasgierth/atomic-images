@@ -11,6 +11,7 @@ modules:
           - app.fotema.Fotema
           - be.alexandervanhee.gradia
           - com.github.finefindus.eyedropper
+          - com.github.marhkb.Pods
           - com.github.tchx84.Flatseal
           - com.jeffser.Nocturne
           - com.mattjakeman.ExtensionManager
@@ -30,6 +31,7 @@ modules:
           - org.gnome.Fractal
           - org.gnome.Loupe
           - org.gnome.Mahjongg
+          - org.gnome.Maps
           - org.gnome.Papers
           - org.gnome.SimpleScan
           - org.gnome.Sudoku
