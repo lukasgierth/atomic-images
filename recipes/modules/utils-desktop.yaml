@@ -146,7 +146,7 @@ modules:
         - nodejs
         - nom # rss reader
         - nomino # rename files in batch
-        - oh-my-posh
+        - oh-my-posh # prompt engine
         - oha # create traffic on a webserver to test
         - ollama
         - onefetch # fastfetch but for git repos
@@ -182,6 +182,7 @@ modules:
         - somo # ss alternative
         - sops
         - stacker-bin # build images with yaml config
+        - starship # prompt engine
         - stow # symlinker
         - stress-ng # stress your cpu for tests
         - subfinder
