@@ -21,6 +21,11 @@ binding='<Super>t'
 name='Open Files'
 command='nautilus'
 binding='<Super>f'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+name='Gradia'
+command='flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE'
+binding='<Ctrl>Print'
 EOF
 
 echo "Compile dconf db now after possible changes!" && dconf update
