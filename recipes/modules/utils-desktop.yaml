@@ -151,6 +151,7 @@ modules:
         - ollama
         - onefetch # fastfetch but for git repos
         - opencode-bin # AI assistant
+        - oras # oci tool
         - osc # obs cli
         - ov # pager
         - pandoc
