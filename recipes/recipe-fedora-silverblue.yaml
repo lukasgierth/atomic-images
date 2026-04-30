@@ -3,7 +3,7 @@ name: sleepy-schaf
 description: Image based on ublue Silverblue
 
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 43
+image-version: 44
 
 modules:
   - type: dnf
