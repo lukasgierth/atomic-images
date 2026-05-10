@@ -21,6 +21,7 @@ modules:
           - com.saivert.pwvucontrol
           - com.sidevesh.Luminance
           - dev.qwery.AddWater
+          - io.github.bhack.mini-eq
           - io.github.dp0sk.Crosspipe
           - io.github.flattool.Warehouse
           - io.github.swordpuffin.rewaita
