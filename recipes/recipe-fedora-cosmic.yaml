@@ -3,7 +3,7 @@ name: cosmic-carrot
 description: Image based on Atomic Cosmic
 
 base-image: ghcr.io/blue-build/base-images/fedora-cosmic
-image-version: 43
+image-version: 44
 
 modules:
   - type: dnf
