@@ -10,6 +10,7 @@ modules:
         install:
           - com.google.Chrome
           - com.jeffser.Alpaca
+          - com.orcaslicer.OrcaSlicer
           - de.capypara.FieldMonitor
           - de.schmidhuberj.DieBahn
           - dev.vencord.Vesktop
