@@ -178,6 +178,7 @@ modules:
         - rustnet # network diagnostic
         - rustscan # nmap, bang a server
         - shntool
+        - siomon # sensor monitor
         - sjust
         - snapper # btrfs snapshot management
         - somo # ss alternative
