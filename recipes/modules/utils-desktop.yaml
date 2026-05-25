@@ -125,6 +125,7 @@ modules:
         - krew # kubectl plugins
         - kubecolor # kubectl wrapper
         - kubectl
+        - kubectx
         - kubie # change k8s cluster/ns
         - kustomize
         - lazygit # git
