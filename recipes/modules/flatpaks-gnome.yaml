@@ -20,11 +20,13 @@ modules:
           - com.ranfdev.DistroShelf
           - com.saivert.pwvucontrol
           - com.sidevesh.Luminance
+          - de.wwwtech.gitte
           - dev.qwery.AddWater
           - io.github.bhack.mini-eq
           - io.github.dp0sk.Crosspipe
           - io.github.flattool.Warehouse
           - io.github.swordpuffin.rewaita
+          - io.gitlab.luiggircardoso.Draft
           - io.m51.Gelly
           - org.gnome.Calculator
           - org.gnome.Characters
