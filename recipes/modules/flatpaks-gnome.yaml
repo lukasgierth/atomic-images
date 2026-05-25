@@ -28,6 +28,7 @@ modules:
           - io.github.swordpuffin.rewaita
           - io.gitlab.luiggircardoso.Draft
           - io.m51.Gelly
+          - io.missioncenter.MissionCenter
           - org.gnome.Calculator
           - org.gnome.Characters
           - org.gnome.Connections
