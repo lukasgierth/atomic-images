@@ -13,7 +13,7 @@ modules:
     repos:
       copr:
         - ublue-os/packages
-        - lgierth/tools-rust
+        - gierth/tools-rust
       cleanup: true
     install:
       packages:
