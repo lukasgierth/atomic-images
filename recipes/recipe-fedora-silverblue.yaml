@@ -60,8 +60,8 @@ modules:
     properties:
       ID: fedora
       ID_LIKE: fedora
-      NAME: Sleepy Schaf
-      PRETTY_NAME: Sleepy Schaf
+      NAME: Sleepy Schaf 44
+      PRETTY_NAME: Sleepy Schaf 44
       VARIANT: Sleepy Schaf
       VARIANT_ID: sleepy-schaf
       DEFAULT_HOSTNAME: sleepy-schaf

@@ -23,8 +23,8 @@ modules:
     properties:
       ID: fedora
       ID_LIKE: fedora
-      NAME: Amusing Aubergine
-      PRETTY_NAME: Amusing Aubergine
+      NAME: Amusing Aubergine 44
+      PRETTY_NAME: Amusing Aubergine 44
       VARIANT: Amusing Aubergine
       VARIANT_ID: amusing-aubergine
       DEFAULT_HOSTNAME: amusing-aubergine

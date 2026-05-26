@@ -23,8 +23,8 @@ modules:
     properties:
       ID: fedora
       ID_LIKE: fedora
-      NAME: Cosmic Carrot
-      PRETTY_NAME: Cosmic Carrot
+      NAME: Cosmic Carrot 44
+      PRETTY_NAME: Cosmic Carrot 44
       VARIANT: Cosmic Carrot
       VARIANT_ID: cosmic-carrot
       DEFAULT_HOSTNAME: cosmic-carrot
