@@ -23,8 +23,10 @@ modules:
           - io.github.leolost2605.emergency-alerts
           - io.github.totoshko88.RustConn
           - io.github.v81d.Wattage
+          - org.blender.Blender
           - org.darktable.Darktable
           - org.gnome.DejaDup
+          - org.kde.krita
           - org.libreoffice.LibreOffice
           - org.mozilla.Thunderbird
           - org.mozilla.firefox

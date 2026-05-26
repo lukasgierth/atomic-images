@@ -22,7 +22,6 @@ modules:
           - org.kde.kcolorchooser
           - org.kde.koko
           - org.kde.krdc
-          - org.kde.krita
           - org.kde.kwrite
           - org.kde.okular
           - org.kde.skanpage
