@@ -8,6 +8,7 @@ modules:
           url: https://dl.flathub.org/repo/flathub.flatpakrepo
           name: flathub
         install:
+          - app.drey.Damask
           - app.fotema.Fotema
           - be.alexandervanhee.gradia
           - com.github.finefindus.eyedropper
