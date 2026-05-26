@@ -13,10 +13,12 @@ modules:
     repos:
       copr:
         - ublue-os/packages
+        - lgierth/tools-rust
       cleanup: true
     install:
       packages:
         - ublue-os-libvirt-workarounds
+        - vm-curator
 
   - type: systemd
     system:
