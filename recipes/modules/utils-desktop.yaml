@@ -70,7 +70,6 @@ modules:
         - cyanrip # accurate disc ripper
         - ddrescue
         - deadbranch # cleanup git branches
-        - deno-bin # ts,js builder
         - dfu-programmer
         - dfu-util
         - distrobox
