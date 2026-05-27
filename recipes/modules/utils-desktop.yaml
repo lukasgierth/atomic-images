@@ -151,7 +151,6 @@ modules:
         - oha # create traffic on a webserver to test
         - ollama
         - onefetch # fastfetch but for git repos
-        - opencode-bin # AI assistant
         - oras # oci tool
         - osc # obs cli
         - ov # pager
