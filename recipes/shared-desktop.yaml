@@ -9,6 +9,7 @@ modules:
   - from-file: modules/bash.yaml
   - from-file: modules/kargs.yaml
   - from-file: modules/fonts.yaml
+  - from-file: modules/nix.yaml
 
   - type: script
     scripts:
