@@ -6,7 +6,6 @@ modules:
         - charm.repo
         - goreleaser.repo
         - https://cli.github.com/packages/rpm/gh-cli.repo
-        - https://kubecolor.github.io/packages/rpm/kubecolor.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
@@ -33,13 +32,11 @@ modules:
       packages:
         - ImageMagick # media
         - aerc # email
-        - age # cloud
+        - age # encryption tool
         - alacritty # terminal
         - android-tools
         - ansible # automation
         - aqua # pkg manager
-        - argocd
-        - argonaut #tui for argocd
         - aria2 # download
         - arp-scan # network
         - asciinema # recorder
@@ -55,7 +52,6 @@ modules:
         - btrbk
         - btrfs-assistant
         - btrfs-progs
-        - calicoctl
         - caligula # dd alternative
         - cargo
         - chezmoi # config manager
@@ -65,7 +61,6 @@ modules:
         - cosign
         - crush # charm: AI assistant
         - ctags
-        - ctop # top for docker containers
         - curl
         - cyanrip # accurate disc ripper
         - ddrescue
@@ -73,7 +68,6 @@ modules:
         - dfu-programmer
         - dfu-util
         - distrobox
-        - dive # OCI
         - doggo # dns
         - du-dust
         - duf
@@ -86,8 +80,6 @@ modules:
         - firewall-config
         - fish
         - fisher
-        - fluxcd
-        - flux9s # tui for fluxcd
         - fzf
         - gcc
         - gcc-c++
@@ -107,11 +99,8 @@ modules:
         - golazo # football scores
         - gonzo # analyse log files
         - gophertube # watch yt videos
-        - goreleaser
         - gping # ping with graph
-        - grype # check images for cve
         - gzip
-        - helm # k8s pkg manager
         - httping # ping but for http
         - hurl # http requests
         - hyperfine # cli benchmarking
@@ -119,14 +108,7 @@ modules:
         - jaq
         - jq
         - jujutsu # vcs on top of git
-        - k9s
-        - kompose
-        - krew # kubectl plugins
-        - kubecolor # kubectl wrapper
-        - kubectl
-        - kubectx
-        - kubie # change k8s cluster/ns
-        - kustomize
+        - krew # kubectl plugin manager
         - lazygit # git
         - lazyjj # jujutsu
         - lazyjournal # journalctl
@@ -143,20 +125,16 @@ modules:
         - mullvad-vpn
         - neovim
         - nodejs
-        - nom # rss reader
         - nomino # rename files in batch
         - oh-my-posh # prompt engine
         - oha # create traffic on a webserver to test
-        - ollama
         - onefetch # fastfetch but for git repos
-        - oras # oci tool
         - osc # obs cli
         - ov # pager
         - pandoc
         - pangolin-cli
         - picocom
         - pnpm
-        - podman-compose
         - pre-commit
         - procs
         - purple #ssh-manager in rust
@@ -180,7 +158,6 @@ modules:
         - sjust
         - snapper # btrfs snapshot management
         - somo # ss alternative
-        - sops
         - stacker-bin # build images with yaml config
         - starship # prompt engine
         - stow # symlinker
@@ -190,16 +167,13 @@ modules:
         - surge # downloader
         - systemctl-tui
         - tailscale
-        - talosctl
         - tcpdump
         - tealdeer
         - trash-cli
         - trippy # network diagnostic
-        - trivy
         - trufflehog # look for secrets in repos/patch that cant be snatched
         - ublue-os-udev-rules
         - ublue-polkit-rules
-        - umoci # oci minimal container inspection tool
         - unzip
         - uv # python venv
         - wireshark
@@ -207,7 +181,6 @@ modules:
         - yt-dlp
         - yq # jq but for yaml
         - zellij # multiplexer
-        - zizmor # check github/gitea-actions for vuln.
         - zoxide
         # disabled, already installed from negativo17 media-repo in base image, makes problems when version diverges
         #- ffmpeg
