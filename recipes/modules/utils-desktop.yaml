@@ -105,7 +105,6 @@ modules:
         - python3-neovim
         - rclone
         - ripgrep # newer grep
-        - rs-tftpd
         - rsync
         - ruby
         - ruby-devel
