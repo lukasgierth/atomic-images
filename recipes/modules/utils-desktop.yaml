@@ -171,7 +171,6 @@ modules:
         - tealdeer
         - trash-cli
         - trippy # network diagnostic
-        - trufflehog # look for secrets in repos/patch that cant be snatched
         - ublue-os-udev-rules
         - ublue-polkit-rules
         - unzip
