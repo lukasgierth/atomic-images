@@ -81,8 +81,6 @@ modules:
         - gcc
         - gcc-c++
         - gdu # like ncdu
-        - gh # github cli
-        - gh-dash
         - git
         - git-annex # manage big files
         - git-cliff # for git
@@ -128,7 +126,6 @@ modules:
         - osc # obs cli
         - ov # pager
         - pandoc
-        - pangolin-cli
         - picocom
         - pnpm
         - pre-commit
@@ -154,7 +151,6 @@ modules:
         - sjust
         - snapper # btrfs snapshot management
         - somo # ss alternative
-        - stacker-bin # build images with yaml config
         - starship # prompt engine
         - stow # symlinker
         - stress-ng # stress your cpu for tests
