@@ -93,7 +93,6 @@ modules:
         - glibc-static
         - glow # charm: render markdown
         - golang
-        - golazo # football scores
         - gonzo # analyse log files
         - gophertube # watch yt videos
         - gping # ping with graph
