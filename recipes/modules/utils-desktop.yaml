@@ -124,7 +124,6 @@ modules:
         - onefetch # fastfetch but for git repos
         - osc # obs cli
         - ov # pager
-        - pandoc
         - picocom
         - pnpm
         - pre-commit
