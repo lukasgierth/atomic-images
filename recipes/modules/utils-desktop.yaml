@@ -130,8 +130,6 @@ modules:
         - lazygit # git
         - lazyjj # jujutsu
         - lazyjournal # journalctl
-        - lazysql # sql
-        - lazyssh # ssh
         - libxcrypt-compat
         - llmfit
         - luajit
