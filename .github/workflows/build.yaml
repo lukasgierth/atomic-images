@@ -21,7 +21,6 @@ jobs:
       matrix:
         recipe:
           - recipe-fedora-cosmic.yaml
-          - recipe-fedora-dms.yaml
           - recipe-fedora-kinoite.yaml
           - recipe-fedora-silverblue.yaml
     steps:
