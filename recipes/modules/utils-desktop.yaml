@@ -139,6 +139,7 @@ modules:
         - make
         - mediainfo # see media file information
         - mise # manage envs/tools/dirs
+        - mise-completions-sync
         - mosh # more robust ssh backup
         - mpv
         - mullvad-vpn
