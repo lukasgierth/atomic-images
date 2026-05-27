@@ -4,7 +4,6 @@ modules:
     repos:
       files:
         - charm.repo
-        - goreleaser.repo
         - https://cli.github.com/packages/rpm/gh-cli.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
@@ -58,8 +57,6 @@ modules:
         - cmake
         - comchan # serialport
         - copr-cli
-        - cosign
-        - crush # charm: AI assistant
         - ctags
         - curl
         - cyanrip # accurate disc ripper
