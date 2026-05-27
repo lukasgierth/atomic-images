@@ -28,7 +28,7 @@ modules:
           - org.gnome.DejaDup
           - org.kde.krita
           - org.libreoffice.LibreOffice
-          - org.mozilla.Thunderbird
+          - org.mozilla.thunderbird
           - org.mozilla.firefox
           - org.musicbrainz.Picard
           - org.raspberrypi.rpi-imager
