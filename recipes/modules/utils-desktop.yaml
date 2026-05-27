@@ -1,4 +1,4 @@
----
+--
 modules:
   - type: dnf
     repos:
@@ -7,7 +7,6 @@ modules:
         - goreleaser.repo
         - https://cli.github.com/packages/rpm/gh-cli.repo
         - https://kubecolor.github.io/packages/rpm/kubecolor.repo
-        - https://mise.jdx.dev/rpm/mise.repo
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
@@ -15,6 +14,7 @@ modules:
         - gierth/tools-golang
         - gierth/tools-misc
         - gierth/tools-rust
+        - jdxcode/mise
         - ublue-os/packages
       # nonfree: rpmfusion
       cleanup: true
