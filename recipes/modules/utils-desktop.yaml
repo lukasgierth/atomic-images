@@ -32,7 +32,6 @@ modules:
         - btrfs-assistant
         - btrfs-progs
         - chezmoi
-        - comchan # serialport
         - curl
         - distrobox
         - fastfetch
