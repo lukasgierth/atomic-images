@@ -12,6 +12,7 @@ modules:
         - gnome-shell-extension-blur-my-shell
         - gnome-shell-extension-caffeine
         - gnome-shell-extension-dash-to-dock
+        - libgda-sqlite # for copyous
         - seahorse
     remove:
       packages:
