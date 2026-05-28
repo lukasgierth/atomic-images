@@ -53,8 +53,9 @@ modules:
 
   - type: script
     scripts:
-      - install-mousetiler.sh
+      - install-karousel.sh
       - install-kyanite.sh
+      - install-mousetiler.sh
 
   - type: script
     scripts:
