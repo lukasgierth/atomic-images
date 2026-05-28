@@ -53,6 +53,10 @@ modules:
 
   - type: script
     scripts:
+      - install-mousetiler.sh
+
+  - type: script
+    scripts:
       - prefer-bootc-over-rpm-ostree.sh
       - disable-layering.sh
 
