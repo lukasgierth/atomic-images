@@ -10,18 +10,13 @@ modules:
     repos:
       files:
         - https://download.opensuse.org/repositories/home:paul4us/Fedora_43/home:paul4us.repo
-      copr:
-        - gierth/tools-misc
       cleanup: true
     install:
       packages:
-        - MouseTiler
         - dolphin-plugins
         - flatpak-kcm
-        - karousel
         - kio-fuse
         - klassy
-        - kyanite
         - spectacle
     remove:
       packages:

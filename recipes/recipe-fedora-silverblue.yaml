@@ -7,15 +7,10 @@ image-version: 44
 
 modules:
   - type: dnf
-    repos:
-      copr:
-        - gierth/tools-misc
-      cleanup: true
     install:
       packages:
         - gnome-shell-extension-blur-my-shell
         - gnome-shell-extension-caffeine
-        - gnome-shell-extension-copyous
         - gnome-shell-extension-dash-to-dock
         - seahorse
     remove:
@@ -32,23 +27,25 @@ modules:
         - gnome-tweaks
         - yelp
 
-  - type: script
-    snippets:
-      - "gnome-extensions disable blur-my-shell@aunetx"
-      - "gnome-extensions disable dash-to-dock@micxgx.gmail.com"
-
   - from-file: shared-desktop.yaml
   - from-file: modules/flatpaks-gnome.yaml
 
   - type: gschema-overrides
+
   - type: script
     scripts:
       - gnome-defaults.sh
       - install-gnome-shell-extension-copyous.sh
+
   - type: systemd
     system:
       enabled:
         - dconf-update.service
+
+  - type: script
+    snippets:
+      - "gnome-extensions disable blur-my-shell@aunetx"
+      - "gnome-extensions disable dash-to-dock@micxgx.gmail.com"
 
   - type: script
     scripts:

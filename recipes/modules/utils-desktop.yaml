@@ -7,9 +7,6 @@ modules:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
       copr:
-        - gierth/image-branding
-        - gierth/tools-misc
-        - jdxcode/mise
         - ublue-os/packages
       # nonfree: rpmfusion
       cleanup: true
@@ -36,8 +33,6 @@ modules:
         - distrobox
         - fastfetch
         - firewall-config
-        - fish
-        - fisher
         - gcc
         - gcc-c++
         - git
@@ -45,13 +40,10 @@ modules:
         - glow # charm: render markdown
         - gzip
         - libxcrypt-compat
-        - mise # manage envs/tools/dirs
-        - mise-completions-sync
         - mpv
         - mullvad-vpn
         - picocom
         - rsync
-        - sjust
         - snapper # btrfs snapshot management
         - tailscale
         - tcpdump
