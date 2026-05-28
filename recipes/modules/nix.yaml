@@ -1,0 +1,17 @@
+---
+modules:
+  - type: files
+    files:
+      - source: nix
+        destination: /
+
+  - type: script
+    scripts:
+      - install-lix.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - nix-overlay.service
+        - nix-daemon.service
+        - nix-daemon.socket

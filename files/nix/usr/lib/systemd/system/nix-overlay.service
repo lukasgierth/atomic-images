@@ -1,0 +1,15 @@
+[Unit]
+Description=Bind-mount /var/lib/nix-store to /nix
+DefaultDependencies=no
+After=local-fs.target
+RequiresMountsFor=/var /var/lib/nix-store
+Before=nix-daemon.service nix-daemon.socket
+ConditionPathExists=/usr/bin/mount-nix.sh
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mount-nix.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=sysinit.target
