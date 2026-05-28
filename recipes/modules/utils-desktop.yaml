@@ -27,13 +27,11 @@ modules:
     install:
       packages:
         - alacritty # terminal
-        - android-tools
         - bees # btrfs-dedup
         - btrbk
         - btrfs-assistant
         - btrfs-progs
         - chezmoi
-        - cmake
         - comchan # serialport
         - curl
         - distrobox
