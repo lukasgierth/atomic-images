@@ -58,6 +58,8 @@ modules:
     files:
       - source: gnome-backgrounds
         destination: /
+      - source: gnome-utils
+        destination: /
 
   - type: os-release
     properties:

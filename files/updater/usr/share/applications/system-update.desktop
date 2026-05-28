@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=System Update
+Icon=system-update
+Categories=ConsoleOnly;System;
+Terminal=true
+Exec=/usr/libexec/system-update.sh

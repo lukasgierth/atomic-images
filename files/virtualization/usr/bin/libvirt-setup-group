@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+sudo groupadd --system -f libvirt
+sudo usermod -a -G libvirt "$(whoami)"

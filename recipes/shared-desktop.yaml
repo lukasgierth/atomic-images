@@ -25,3 +25,8 @@ modules:
         - setup-dialout-group.service
         - setup-input-group.service
         - signed-autorebase.service
+
+  - type: files
+    files:
+      - source: updater
+        destination: /
