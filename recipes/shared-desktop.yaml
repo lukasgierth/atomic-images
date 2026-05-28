@@ -16,7 +16,6 @@ modules:
       - hide-applications.sh
       - allow-journalctl.sh
       - geoclue.sh
-      - fix-utf8.sh
 
   - type: systemd
     system:

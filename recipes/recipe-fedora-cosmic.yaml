@@ -16,6 +16,10 @@ modules:
 
   - type: script
     scripts:
+      - fix-utf8.sh
+
+  - type: script
+    scripts:
       - prefer-bootc-over-rpm-ostree.sh
       - disable-layering.sh
 
