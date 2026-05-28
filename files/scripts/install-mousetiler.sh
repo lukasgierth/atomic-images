@@ -5,7 +5,7 @@ set -euo pipefail
 UUID="mousetiler"
 # renovate: datasource=github-releases depName=rxappdev/MouseTiler extractVersion=true
 VERSION=6.3.2
-TMPDIR="/tmp/mousetiler"
+TMPDIR="/tmp/$UUID"
 EXTDIR="/usr/share/kwin-wayland/scripts/$UUID"
 
 rm -rf "$TMPDIR"

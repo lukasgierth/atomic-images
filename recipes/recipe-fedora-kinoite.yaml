@@ -54,6 +54,7 @@ modules:
   - type: script
     scripts:
       - install-mousetiler.sh
+      - install-kyanite.sh
 
   - type: script
     scripts:
