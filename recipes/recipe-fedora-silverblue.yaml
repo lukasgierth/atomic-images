@@ -9,12 +9,10 @@ modules:
   - type: dnf
     repos:
       copr:
-        - gierth/image-branding
         - gierth/tools-misc
       cleanup: true
     install:
       packages:
-        - backgrounds-mixed
         - gnome-shell-extension-blur-my-shell
         - gnome-shell-extension-caffeine
         - gnome-shell-extension-copyous
@@ -55,6 +53,11 @@ modules:
     scripts:
       - prefer-bootc-over-rpm-ostree.sh
       - disable-layering.sh
+
+  - type: files
+    files:
+      - source: gnome-backgrounds
+        destination: /
 
   - type: os-release
     properties:

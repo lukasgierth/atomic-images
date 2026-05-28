@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+    <wallpaper>
+        <name>Charlie Henson - 788</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/788.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 789</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/789.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 829 Forest</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/829_forest.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 829 Lake</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/829_lake.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 840 Rocky</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/840_rocky.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 840 Waves</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/840_waves.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 922 Left</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/922_left.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 922 Right</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/922_right.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+    <wallpaper>
+        <name>Charlie Henson - 1136</name>
+		<filename>/usr/share/backgrounds/mixed/charlie-henson/1136.jpg</filename>
+        <options>stretched</options>
+    </wallpaper>
+</wallpapers>
