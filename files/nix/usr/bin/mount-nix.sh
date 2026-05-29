@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# NOTE:
+# we only sync when there is no store, no syncing afterwards ever!
+# nix/lix from that point on is managed through itself
+# the rpm package is only used for population of the initial store
+
 set -euo pipefail
 
 # Bind-mount /var/lib/nix-store to /nix.
@@ -7,26 +12,14 @@ set -euo pipefail
 mkdir -p /usr/share/nix-store /var/lib/nix-store /nix
 
 copy_seed_store() {
-	echo "$(date --iso-8601=seconds)  Enter $FUNCNAME"
 	if command -v rsync >/dev/null 2>&1; then
 		rsync -aH --delete /usr/share/nix-store/ /var/lib/nix-store/
 	else
 		cp -a /usr/share/nix-store/. /var/lib/nix-store/
 	fi
-	echo "$(date --iso-8601=seconds)  Exit $FUNCNAME"
-}
-
-sync_missing_store() {
-	echo "$(date --iso-8601=seconds)  Enter $FUNCNAME"
-	# Ensure any baked store paths exist in /var without clobbering user additions.
-	if command -v rsync >/dev/null 2>&1; then
-		rsync -aH --ignore-existing /usr/share/nix-store/store/ /var/lib/nix-store/store/
-	fi
-	echo "$(date --iso-8601=seconds)  Exit $FUNCNAME"
 }
 
 ensure_system_profile() {
-	echo "$(date --iso-8601=seconds)  Enter $FUNCNAME"
 	local seed_profile="/usr/share/nix-store/var/nix/profiles/system"
 	local target_profile="/var/lib/nix-store/var/nix/profiles/system"
 
@@ -36,33 +29,37 @@ ensure_system_profile() {
 		{ [ -e "$seed_profile" ] || [ -L "$seed_profile" ]; }; then
 		cp -a "$seed_profile" "$target_profile"
 	fi
-	echo "$(date --iso-8601=seconds)  Exit $FUNCNAME"
 }
 
 if ! mountpoint -q /nix; then
+	# ONE-SHOT BOOTSTRAP: Only runs if the persistent store is completely empty
 	if [ -z "$(ls -A /var/lib/nix-store 2>/dev/null)" ] && compgen -G "/usr/share/nix-store/*" >/dev/null; then
 		copy_seed_store
+
+		ensure_system_profile
+
+		# Run the heavy SELinux relabeling ONLY once in the machine's lifetime
+		if command -v restorecon >/dev/null 2>&1; then
+			restorecon -RF /var/lib/nix-store || true
+		fi
 	fi
 
-	ensure_system_profile
-	sync_missing_store
+	# --- Every normal boot handles only these quick lines (~0.001s total) ---
 
-	echo "$(date --iso-8601=seconds)  Try mount --bind"
 	mount --bind /var/lib/nix-store /nix
-	echo "$(date --iso-8601=seconds)  mount --bind done..."
+
 	# Force an executable SELinux context on the bind mount so systemd can exec nix-daemon.
-	# Use a permissive fallback if the label option is rejected.
 	if ! mount -o remount,bind,exec,context=system_u:object_r:bin_t:s0 /nix 2>/dev/null; then
-		echo "$(date --iso-8601=seconds)  Remount"
 		mount -o remount,bind,exec /nix
-		echo "$(date --iso-8601=seconds)  Remount done..."
 	fi
 
 	# Ensure daemon paths exist and labels are sane.
 	if command -v systemd-tmpfiles >/dev/null 2>&1; then
 		systemd-tmpfiles --create /usr/lib/tmpfiles.d/nix-daemon.conf
 	fi
+
+	# Ensure the top-level mount point label is happy (instant check, non-recursive)
 	if command -v restorecon >/dev/null 2>&1; then
-		restorecon -RF /var/lib/nix-store /nix || true
+		restorecon -F /nix || true
 	fi
 fi
