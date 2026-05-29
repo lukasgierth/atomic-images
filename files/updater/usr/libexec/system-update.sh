@@ -3,7 +3,7 @@
 failed=0
 
 echo "== Update Fisher =="
-if fish -c "source /usr/share/fish/vendor_conf.d/10-fisher.fish; if type -q fisher; if string length --quiet (fisher list); fisher update >/dev/null; end; end"; then
+if fish -c "if type -q fisher; if string length --quiet (fisher list); fisher update >/dev/null; end; end"; then
 	:
 else
 	echo "fisher update failed"
