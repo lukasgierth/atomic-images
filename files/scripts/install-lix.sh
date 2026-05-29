@@ -40,7 +40,7 @@ ensure_list_value "substituters" "$lix_cache_url"
 ensure_list_value "trusted-public-keys" "$lix_cache_key"
 
 # Enable flakes, add flox also
-ensure_list_value "experimental-features" "nix-command flakes"
+ensure_list_value "experimental-features" "nix-command flakes cgroups"
 ensure_list_value "extra-trusted-substituters" "https://cache.flox.dev"
 ensure_list_value "extra-trusted-public-keys" "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
 
