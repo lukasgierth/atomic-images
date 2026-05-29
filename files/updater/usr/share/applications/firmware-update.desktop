@@ -5,3 +5,4 @@ Icon=firmware-update
 Categories=ConsoleOnly;System;
 Terminal=true
 Exec=/usr/libexec/firmware-update.sh
+Hidden=true
