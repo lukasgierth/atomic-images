@@ -37,7 +37,7 @@ modules:
         - gcc-c++
         - git
         - glibc-static
-        - glow # charm: render markdown
+        - gum # fancy scripts
         - gzip
         - libxcrypt-compat
         - mpv
