@@ -20,24 +20,6 @@ if command -v mise >/dev/null; then
 	fi
 fi
 
-if command -v krewfile >/dev/null; then
-	echo "== Update Krewfile =="
-	if krewfile -upgrade; then
-		:
-	else
-		echo "krewfile -upgrade failed"
-		failed=1
-	fi
-elif command -v krew >/dev/null; then
-	echo "== Update Krew Tools =="
-	if krew upgrade; then
-		:
-	else
-		echo "krew upgrade failed"
-		failed=1
-	fi
-fi
-
 if command -v home-manager >/dev/null; then
 	if [ -d ~/.config/home-manager ]; then
 		echo "== Home-Manager Tools =="
