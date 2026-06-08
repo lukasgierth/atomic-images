@@ -2,14 +2,6 @@
 
 failed=0
 
-echo "== Update Fisher =="
-if fish -c "if type -q fisher; if string length --quiet (fisher list); fisher update >/dev/null; end; end"; then
-	:
-else
-	echo "fisher update failed"
-	failed=1
-fi
-
 if command -v mise >/dev/null; then
 	echo "== Update Mise Tools =="
 	if mise upgrade; then
