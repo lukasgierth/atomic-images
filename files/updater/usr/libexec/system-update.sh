@@ -15,7 +15,7 @@ fi
 if command -v home-manager >/dev/null; then
 	if [ -d ~/.config/home-manager ]; then
 		echo "== Home-Manager Tools =="
-		(cd ~/.config/home-manager && nix flake update && home-manager switch)
+		(cd ~/.config/home-manager && home-manager switch)
 	else
 		echo "home-manager: ~/.config/home-manager not found, skipping"
 	fi
