@@ -2,25 +2,6 @@
 
 failed=0
 
-if command -v mise >/dev/null; then
-	echo "== Update Mise Tools =="
-	if mise upgrade; then
-		:
-	else
-		echo "mise upgrade failed"
-		failed=1
-	fi
-fi
-
-if command -v home-manager >/dev/null; then
-	if [ -d ~/.config/home-manager ]; then
-		echo "== Home-Manager Tools =="
-		(cd ~/.config/home-manager && home-manager switch)
-	else
-		echo "home-manager: ~/.config/home-manager not found, skipping"
-	fi
-fi
-
 echo "== Update Flatpak Applications =="
 if flatpak update --assumeyes --noninteractive; then
 	:

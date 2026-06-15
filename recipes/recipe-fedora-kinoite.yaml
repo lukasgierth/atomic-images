@@ -48,12 +48,6 @@ modules:
 
   - type: script
     scripts:
-      - install-karousel.sh
-      - install-kyanite.sh
-      - install-mousetiler.sh
-
-  - type: script
-    scripts:
       - prefer-bootc-over-rpm-ostree.sh
       - disable-layering.sh
 

@@ -9,12 +9,9 @@ modules:
   - type: dnf
     install:
       packages:
-        - gnome-shell-extension-blur-my-shell
         - gnome-shell-extension-caffeine
         - gnome-shell-extension-dash-to-dock
-        - libgda-sqlite # for copyous
         - seahorse
-        - sushi
     remove:
       packages:
         - cosign # will be replaced by my version
@@ -37,7 +34,6 @@ modules:
   - type: script
     scripts:
       - gnome-defaults.sh
-      - install-gnome-shell-extension-copyous.sh
 
   - type: systemd
     system:
@@ -46,7 +42,6 @@ modules:
 
   - type: script
     snippets:
-      - "gnome-extensions disable blur-my-shell@aunetx"
       - "gnome-extensions disable dash-to-dock@micxgx.gmail.com"
 
   - type: script
