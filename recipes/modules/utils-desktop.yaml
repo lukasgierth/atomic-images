@@ -23,7 +23,6 @@ modules:
         - vim-minimal
     install:
       packages:
-        - alacritty # terminal
         - bees # btrfs-dedup
         - btrbk
         - btrfs-assistant
