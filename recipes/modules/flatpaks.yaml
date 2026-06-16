@@ -18,6 +18,7 @@ modules:
           - io.beekeeperstudio.Studio
           - io.github.dweymouth.supersonic
           - io.github.gaheldev.Millisecond
+          - io.github.getnf.embellish
           - io.github.justinrdonnelly.bouncer
           - io.github.kolunmi.Bazaar
           - io.github.leolost2605.emergency-alerts
