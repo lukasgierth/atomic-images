@@ -28,10 +28,6 @@ jobs:
             base_image: ghcr.io/lukasgierth/tipsy-tippete:latest
             config: "./iso-kinoite.toml"
             disk-types: "anaconda-iso"
-          - image_name: cosmic-carrot
-            base_image: ghcr.io/lukasgierth/cosmic-carrot:latest
-            config: "./iso-cosmic.toml"
-            disk-types: "anaconda-iso"
 
     steps:
       - name: Prepare environment

@@ -20,7 +20,6 @@ jobs:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
         recipe:
-          - recipe-fedora-cosmic.yaml
           - recipe-fedora-kinoite.yaml
           - recipe-fedora-silverblue.yaml
     steps:
