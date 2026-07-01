@@ -9,31 +9,17 @@ modules:
           name: flathub
         install:
           - com.google.Chrome
-          - com.jeffser.Alpaca
-          - com.orcaslicer.OrcaSlicer
-          - de.capypara.FieldMonitor
           - de.schmidhuberj.DieBahn
-          - dev.vencord.Vesktop
           - hu.irl.cameractrls
-          - io.beekeeperstudio.Studio
           - io.github.dweymouth.supersonic
-          - io.github.gaheldev.Millisecond
           - io.github.getnf.embellish
-          - io.github.justinrdonnelly.bouncer
           - io.github.kolunmi.Bazaar
           - io.github.leolost2605.emergency-alerts
-          - io.github.totoshko88.RustConn
-          - io.github.v81d.Wattage
-          - org.blender.Blender
-          - org.darktable.Darktable
           - org.gnome.DejaDup
-          - org.kde.krita
           - org.libreoffice.LibreOffice
           - org.mozilla.thunderbird
           - org.mozilla.firefox
-          - org.musicbrainz.Picard
           - org.raspberrypi.rpi-imager
-          - org.signal.Signal
 
   - type: systemd
     system:

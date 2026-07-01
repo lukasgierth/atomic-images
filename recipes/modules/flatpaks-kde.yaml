@@ -10,7 +10,6 @@ modules:
         install:
           - com.borgbase.Vorta
           - io.github.DenysMb.Kontainer
-          - io.github.dweymouth.supersonic
           - org.kde.filelight
           - org.kde.francis
           - org.kde.gwenview
@@ -25,4 +24,3 @@ modules:
           - org.kde.kwrite
           - org.kde.okular
           - org.kde.skanpage
-          - org.rncbc.qpwgraph
