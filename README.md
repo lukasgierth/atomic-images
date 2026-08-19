@@ -1,4 +1,4 @@
-# BlueBuild Images &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/lukasgierth/atomic-images/actions/workflows/build.yml)
+# BlueBuild Images &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/lukasgierth/atomic-images/actions/workflows/build.yaml)
 
 See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
 
