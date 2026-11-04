@@ -3,7 +3,7 @@ name: tipsy-tippete
 description: Image based on ublue Kinoite
 
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 44
+image-version: 45
 
 modules:
   - type: dnf
@@ -38,8 +38,8 @@ modules:
     properties:
       ID: fedora
       ID_LIKE: fedora
-      NAME: Tipsy Tippete 44
-      PRETTY_NAME: Tipsy Tippete 44
+      NAME: Tipsy Tippete 45
+      PRETTY_NAME: Tipsy Tippete 45
       VARIANT: Tipsy Tippete
       VARIANT_ID: tipsy-tippete
       DEFAULT_HOSTNAME: tipsy-tippete
