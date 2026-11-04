@@ -7,35 +7,18 @@ image-version: 44
 
 modules:
   - type: dnf
-    repos:
-      files:
-        - https://download.opensuse.org/repositories/home:paul4us/Fedora_43/home:paul4us.repo
-      cleanup: true
     install:
       packages:
         - dolphin-plugins
         - flatpak-kcm
         - kio-fuse
-        - klassy
         - spectacle
     remove:
       packages:
         - cosign # will be replaced by my version
-        - fcitx5-chewing
-        - fcitx5-chinese-addons
-        - fcitx5-configtool
-        - fcitx5-gtk
-        - fcitx5-hangul
-        - fcitx5-libthai
-        - fcitx5-m17n
-        - fcitx5-mozc
-        - fcitx5-qt
-        - fcitx5-sayura
-        - fcitx5-unikey
         - filelight
         - firewall-config
         - kcharselect
-        - kcm-fcitx5
         - khelpcenter
         - kjournald
         - kwrite
